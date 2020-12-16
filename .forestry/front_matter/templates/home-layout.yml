@@ -2,6 +2,16 @@
 label: Home Layout
 hide_body: true
 fields:
+- name: video_background
+  type: field_group
+  config: {}
+  fields:
+  - name: video
+    type: text
+    config:
+      required: false
+    label: Video Link
+  label: Video Background
 - name: slideshow
   type: field_group_list
   fields:
