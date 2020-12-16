@@ -92,7 +92,7 @@ sections:
   path: config.toml
   label: Configuration
 upload_dir: ''
-public_path: https://res.cloudinary.com/hungryram19/image/upload
+public_path: https://res.cloudinary.com/hungryram19/yoori-park/yooripark
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
