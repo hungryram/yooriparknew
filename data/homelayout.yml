@@ -44,3 +44,5 @@ home_sections:
 - template: home-blog
   heading: Our Blog
   body: Keep up with latest posts
+video_background:
+  video: https://hungryram.s3-us-west-1.amazonaws.com/yooriparkvideo.mp4
