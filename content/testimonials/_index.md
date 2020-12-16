@@ -1,41 +1,28 @@
 +++
 body = "View Client reviews"
-meta_description = "Our clients put their trust in our team"
-title = "Testimonial"
+meta_description = "See why clients love working with Yoori Park "
+title = "Testimonials"
 title_tag = "Testimonial"
 [menu.main]
-name = "Testimonials"
 parent = "Resources"
 weight = 1
 [[testimonials]]
-date = "Sep 20, 2020"
-name = "Roger Benn"
+date = ""
+name = "Rebecca O."
 source = ""
 source_label = ""
-testimonial = "This is such a great theme. Very powerful. Thank you so much"
+testimonial = "I’ve used Yoori Park, and I have had great experiences working with her and her team! I would recommend her to any of my family or friends looking to buy real estate from first time buyers to experienced investors looking for a great investment. Yoori is very knowledgeable in the industry and helped me to find a property with incredible AVR potential! She has an eye and vision for investment opportunities and upcoming areas in Los Angeles."
 [[testimonials]]
-date = "Mar 15, 2018"
-name = "John Pagani"
-source = "https://www.hungryram.com/customers/wallstreet-realty/"
-source_label = "Hungry Ram"
-testimonial = "Our partnership has always been professional and valuable. The team is very responsive and gets things done faster than expected. I'm so glad I made the switch from my other website provider because now my site is always updated. Thank you Ram!"
+date = ""
+name = "Dae"
+source = ""
+source_label = ""
+testimonial = "Buying a house is a major decision and commitment and expectations high. Yoori understands and is committed to providing service that does not disappoint. After having gone through disappointing agents who didn’t follow through, Yoori gave us list of properties that excited our search, narrowing it down to our dream home. Yoori was with us through each step and helped us negotiate the process of escrow, and closing the deal for us."
 [[testimonials]]
-date = "Sep 30, 2020"
-name = "Darrin Flanagan"
-source = "https://www.hungryram.com/customers/launch-and-go-workspace/"
-source_label = "Hungry Ram"
-testimonial = "The design that Ram did is amazing! I went to Ram from a referral and it has been great working with him."
-[[testimonials]]
-date = "Sep 21, 2020"
-name = "Karina Crisp"
-source = "Hungry Ram"
-source_label = "https://www.hungryram.com/customers/karina-crisp-summit-realty/"
-testimonial = "Ram made me the best website I could ever ask for. Thank you so much!"
-[[testimonials]]
-date = "Jul 10, 2020"
-name = "Andrea Ellery"
-source = "Hungry Ram"
-source_label = "https://www.hungryram.com/customers/real-estate-gateway/"
-testimonial = "I would recommend Ram. The site was built super fast and he was updating my site even after launching to improve it. Thank you so much!"
+date = ""
+name = "Nelly A."
+source = ""
+source_label = ""
+testimonial = "Yoori Park is not only my real estate agent but we are now life long friends! She made my home buying experience one to remember. Yoori gained my trust and respect very early on; I felt cared for and at ease that everything would turn out the way it was supposed to. She made herself available to me at all times and always followed through on her promises. I can’t say enough good things about her."
 
 +++
