@@ -1,0 +1,23 @@
+{{ $logo := .Site.Data.appearance.branding.logo }}
+{{ $profile := .Site.Data.profile.search_engine_optimization }}
+
+<!-- TWITTER CARD -->
+<meta name="twitter:site" content="{{ .Permalink }}">
+{{ with .Params.title_tag | default .Title }}
+<meta name="twitter:title" content="{{ . | truncate 70 }}" />
+{{ end }}
+<meta name="twitter:description" content="{{ .Content | truncate 200 }}">
+{{ with .Params.featured_image | default $logo }}
+<meta name="twitter:image" content="{{ . }}" />
+{{ end }}
+{{ with $profile.twitter.twitter_username }}
+<meta name="twitter:site" content="@{{ $profile.twitter.twitter_username }}" />
+<meta name="twitter:creator" content="@{{ $profile.twitter.twitter_username }}" />
+{{ end }}
+<meta name="twitter:image:alt" content="{{ .Params.image_alt_tag }}">
+<meta name="twitter:card" content="summary_large_image"/>
+
+<!-- FACEBOOK -->
+{{- with $profile.facebook.app_id -}}
+<meta property="fb:app_id" content="{{ . }}" />
+{{- end -}}

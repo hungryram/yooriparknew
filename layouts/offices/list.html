@@ -1,0 +1,105 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container">
+        <div class="columns is-variable is-8">
+            <div class="column is-8">
+                <main>
+                    {{ $officeCount := len (where .Site.RegularPages "Section" "==" "offices")  }}
+                    {{ $agentContact := .Params.contact }}
+                    {{ if gt $officeCount 0 }}
+                    <div class="inner-container">
+                        <div class="columns is-multiline">
+                            {{ $paginator := .Paginate (where .Pages "Type" "offices") 5 }}
+                            {{ range $paginator.Pages.ByWeight }}
+                            <div class="column is-full agent-container mb-4 pl-0 pr-0">
+                                <div class="card">
+                                    <div class="columns is-vcentered is-variable is-3">
+                                        <div class="column is-4 pb-0 pt-0">
+                                            {{ if .Params.photos.photo }}
+                                            <img src="{{ .Params.photos.photo }}" alt="" style="width:100%;height:250px;object-fit:cover">
+                                            {{ else }}
+                                              <img src="/assets/nohouse.jpg" alt="no house" style="object-fit: cover;">
+                                            {{ end }}
+                                        </div>
+                                        <div class="column">
+                                            <div class="content pr-4 pl-4">
+                                                <h1 class="title is-4 mb-2">{{ .Title }}</h1>
+                                                {{ if .Params.details.title }}<span class="is-block mb-4">{{ .Params.details.title }}</span>{{ end }}
+                                                {{ if .Params.contact.office_phone }}
+                                                <div class="level mb-0 is-mobile">
+                                                    <div class="level-left">
+                                                        <div class="level-item">
+                                                            <div>
+                                                                <strong>Cell:</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="level-right">
+                                                        <div class="level-item">
+                                                            <div>
+                                                                <a href="tel:{{ .Params.contact.office_phone }}" class="has-text-black">{{ .Params.contact.office_phone }}</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{ end }}
+                                                {{ if .Params.contact.fax_number }}
+                                                <div class="level mb-0 is-mobile">
+                                                    <div class="level-left">
+                                                        <div class="level-item">
+                                                            <div>
+                                                                <strong>Fax:</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="level-right">
+                                                        <div class="level-item">
+                                                            <div>
+                                                                <a href="tel:{{ .Params.contact.fax_number }}" class="has-text-black">{{ .Params.contact.fax_number }}</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{ end }}
+                                                {{ if .Params.contact.email }}
+                                                <div class="level is-mobile">
+                                                    <div class="level-left">
+                                                        <div class="level-item">
+                                                            <div>
+                                                                <strong>Email:</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="level-right">
+                                                        <div class="level-item">
+                                                            <div>
+                                                                <a href="tel:{{ .Params.contact.cell }}" class="has-text-black">{{ .Params.contact.email }}</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{ end }}
+                                                <div class="content">
+                                                    <a href="{{ .Permalink }}" class="link">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                        {{ partial "templates/pagination" . }}
+                    </div>
+                    {{ else }}
+                    <div class="inner-container">
+                        <h2 class="title is-4">No office has been added</h2>
+                    </div>
+                    {{ end }}
+                </main>
+            </div>
+                {{ partial "templates/sidebar" . }}
+        </div>
+    </div>
+</div>
+{{ end }}

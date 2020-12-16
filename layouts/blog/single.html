@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container">
+        <div class="columns is-variable is-8">
+            <div class="column is-8">
+                <main>
+                    <div class="inner-container">
+                        <div class="content">
+                            {{ if .Params.featured_image }}
+                            <img src="{{ .Params.featured_image }}" alt="{{ .Params.image_alt_tag }}" class="mb-6">
+                            {{ else }}
+                            <img src="/assets/nophoto.jpg" alt="no photo">
+                            {{ end }}
+                            {{ .Content }}
+                        </div>
+                        {{ partial "templates/share" . }}
+                        <div class="section">
+                            {{ if .Params.author }}<p>
+                                {{ with .Site.GetPage .Params.author }}
+                                <div class="columns notification">
+                                    <div class="column is-4 has-text-centered">
+                                        <img src="{{ .Params.details.agent_photo }}" alt="" style="object-fit: cover;height:150px;width:150px;border-radius:50%;margin: 0 auto;">
+                                    </div>
+                                    <div class="column content pl-0 pr-0">
+                                        <h4 class="subtitle is-4">{{ .Title }}</h4>
+                                        <h6 class="subtitle is-6">{{ .Params.details.title }}</h6>
+                                        <p>{{ .Summary }}</p>
+                                        <a href="{{ .Permalink }}" class="secondary-btn"><strong>Read more...</strong></a>
+                                    </div>
+                                </div>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                    </div>
+                </main>
+            </div>
+            {{ partial "templates/sidebar" . }}
+        </div>
+    </div>
+</div>
+{{ end }}

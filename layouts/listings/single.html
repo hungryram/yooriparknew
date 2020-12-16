@@ -1,0 +1,279 @@
+{{ define "main" }}
+{{/*  SCHEMA  */}}
+<script type="application/ld+json">
+    {
+        "@context":"http://schema.org",
+        "@type":"Residence",
+        "image": "{{ index .Params.photos.gallery 0 }}",
+        "address":{
+           "@type":"PostalAddress",
+           "streetAddress":"{{ .Title }}",
+           "addressLocality":"{{ .Params.cities }}",
+           "addressRegion":"{{ .Params.states }}",
+           "postalCode":"{{ index .Params "zip-codes" }}"
+        }
+     }
+</script>
+<script type="application/ld+json">
+    {
+        "@context":"http://schema.org",
+        "@type":"Product",
+        "image": "{{ index .Params.photos.gallery 0 }}",
+        "name":"{{ .Title }}, {{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}",
+        "offers":{
+           "@type":"Offer",
+           "price": {{ .Params.schema_price}},
+           "priceCurrency":"USD",
+           "url":"{{ .Permalink }}"
+        }
+     }
+</script>
+
+<div class="section listing-single">
+    <div class="container">
+        <div class="columns is-variable is-8">
+            <div class="column is-8">
+                <main>
+                    <div class="single-property">
+                        <div class="box">
+                            <div class="columns">
+                                <div class="column pr-2 pl-2">
+                                    <div class="level">
+                                        <div class="level-left">
+                                            <div class="level-item">
+                                                <div>
+                                                    <div class="content">
+                                                        <div class="single-status">
+                                                            {{ if .Params.status }}<span class="accent">{{ .Params.status }}</span>{{ end }}
+                                                            {{ if .Params.properties }}<span class="property-type">{{ .Params.properties }}</span>{{ end }}
+                                                        </div>
+                                                        <h1 class="title is-4 mb-2">{{ .Params.short_title }}</h1>
+                                                        <div class="single-address">
+                                                            <img src="/assets/map-pin.svg" alt="" width="30">
+                                                            <h4 class="title mb-0 ml-3 is-6 has-text-weight-normal">{{ .Title }}, {{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="level-right">
+                                            <div class="level-item">
+                                                <div>
+                                                    <h4 class="title is-5">{{ .Params.price }}</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ if .Params.photos.gallery }}
+                            <div class="container">
+                                <div class="card">
+                                    <div class="slider-for">
+                                        {{ range .Params.photos.gallery }}
+                                        <a href="{{ . }}">
+                                        <img src="{{ . }}" alt="{{ $.Site.Data.profile.primary_company_name }}" class="img-holder">
+                                        </a>
+                                        {{end}}
+                                    </div>
+                                    <div class="slider-nav">
+                                    {{ range .Params.photos.gallery }}
+                                    <img src="{{ . }}" alt="{{ $.Site.Data.profile.primary_company_name }}" style="margin: 0 3px;height:60px;object-fit:cover">
+                                    {{end}}
+                                    </div>
+                                </div>
+                            </div>
+                            {{else}}
+                            <div class="container">
+                                <div class="card">
+                                    <div class="slider-for">
+                                        <img src="/assets/nohouse.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        {{end}}
+
+                        <div class="box mt-5">
+                            <div class="overview">
+                                <h5 class="title is-6">Overview</h5>
+                                <div class="columns is-mobile is-multiline">
+                                    {{ if .Params.details.bedrooms }}
+                                    <div class="column">
+                                        <div class="align-center">
+                                            <img src="/assets/bed.svg" alt="Bed icon" width="25" class="mr-3">
+                                            <strong>{{ .Params.details.bedrooms }}</strong>
+                                        </div>
+                                        <p>Bedrooms</p>
+                                    </div>
+                                    {{ end }}
+                                    {{ if .Params.details.bathrooms }}
+                                    <div class="column">
+                                        <div class="align-center">
+                                            <img src="/assets/shower-line.svg" alt="shower icon" width="25" class="mr-3">
+                                            <strong>{{ .Params.details.bathrooms }}</strong>
+                                        </div>
+                                        <p>Bathrooms</p>
+                                    </div>
+                                    {{ end }}
+                                    {{ if .Params.details.garage }}
+                                    <div class="column">
+                                        <div class="align-center">
+                                            <img src="/assets/garage.svg" alt="garage icon" width="25" class="mr-3">
+                                            <strong>{{ .Params.details.garage }}</strong>
+                                        </div>
+                                        <p>Garage</p>
+                                    </div>
+                                    {{ end }}
+                                    {{ if .Params.details.square_footage }}
+                                    <div class="column">
+                                        <div class="align-center">
+                                            <img src="/assets/tile.svg" alt="tile icon" width="25" class="mr-3">
+                                            <strong>{{ .Params.details.square_footage }}</strong>
+                                        </div>
+                                        <p>Sq. Ft.</p>
+                                    </div>
+                                    {{ end }}
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h5 class="title is-6">Description</h5>
+                            <div class="content">
+                                {{ .Content }}
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h5 class="title is-6">Details</h5>
+                            <div class="single-details-list">
+                                <ul>
+                                    {{ with .Params.property }}<li><strong>Property type</strong><span>{{ . }}</span></li>{{ end }}
+                                    {{ with .Params.details.mls_number }}<li><strong>Property ID</strong><span>{{ . }}</span></li>{{ end }}
+                                    {{ with .Params.status }}<li><strong>Status</strong><span>{{ . }}</span></li>{{ end }}
+                                    {{ with .Params.price }}<li><strong>Price</strong><span>{{ . }}</span></li>{{ end }}
+                                    {{ with .Params.details.bedrooms }}<li><strong>Bedrooms</strong><span>{{ . }}</span></li>{{ end }}
+                                    {{ with .Params.details.bathrooms }}<li><strong>Bathrooms</strong><span>{{ . }}</span></li>{{ end }}
+                                    {{ with .Params.details.garage }}<li><strong>Garage</strong><span>{{ . }}</span></li>{{ end }}
+                                    {{ with .Params.details.square_footage }}<li><strong>Size Sq Ft.</strong><span>{{ . }} Sq. Ft</span></li>{{ end }}
+                                    {{ with .Params.details.year_built }}<li><strong>Year Built</strong><span>{{ . }}</span></li>{{ end }}
+                                    {{ with .Params.details.hoa }}<li><strong>HOA</strong><span>${{ . }}/month</span></li>{{ end }}
+                                  </ul>
+                            </div>
+                        </div>
+                        <!-- INTERIOR DETAIL -->
+                        {{ if .Params.utilities_and_features.interior_details.show_interior_details }}
+                        <div class="box single-features-list">
+                        <h5 class="title is-6">Property Interior</h5>
+                          <h3 class="title is-6 mb-2"><strong>Rooms</strong></h3>
+                          <ul class="mb-4">
+                          {{ range .Params.utilities_and_features.interior_details.interior_rooms }}
+                            <li><img src="/assets/check.svg" width="20" alt="check icon" class="mr-2">{{ . }}</li>
+                          {{ else }}
+                          <p>No rooms listed</p>
+                          {{end}}
+                          </ul>
+                          <h3 class="title is-6 mb-2"><strong>Flooring</strong></h3>
+                          <ul class="mb-4">
+                          {{ range .Params.utilities_and_features.interior_details.interior_flooring }}
+                            <li><img src="/assets/check.svg" width="20" alt="check icon" class="mr-2">{{ . }}</li>
+                          {{ else }}
+                          <p>No flooring listed</p>
+                          {{end}}
+                          </ul>
+                          <h3 class="title is-6 mb-2"><strong>Appliances</strong></h3>
+                          <ul class="mb-4">
+                          {{ range .Params.utilities_and_features.interior_details.interior_appliances }}
+                            <li><img src="/assets/check.svg" width="20" alt="check icon" class="mr-2">{{ . }}</li>
+                          {{ else }}
+                          <p>No appliances listed</p>
+                          {{end}}
+                          </ul>
+                          <h3 class="title is-6 mb-2"><strong>Additional Interior Details</strong></h3>
+                          <ul class="mb-4">
+                          {{ range .Params.utilities_and_features.interior_details.additional_interior_details }}
+                            <li><img src="/assets/check.svg" width="20" alt="check icon" class="mr-2">{{ . }}</li>
+                          {{ else }}
+                          <p>No additional details</p>
+                          {{end}}
+                          </ul>
+                        </div>
+                        {{ else }}
+                        {{ end }}
+
+                        <!-- EXTERIOR -->
+                        {{ if .Params.utilities_and_features.exterior.show_exterior_details }}
+                        <div class="box single-features-list">
+                            <h5 class="title is-6">Property Exterior</h5>
+                          <h3 class="title is-6 mb-2"><strong>Details</strong></h3>
+                          <ul class="mb-4">
+                          {{ range .Params.utilities_and_features.exterior.exterior_details }}
+                            <li><img src="/assets/check.svg" width="20" alt="check icon" class="mr-2">{{ . }}</li>
+                          {{ else }}
+                          <p>No rooms listed</p>
+                          {{end}}
+                          </ul>
+                          <h3 class="title is-6 mb-2"><strong>Roof</strong></h3>
+                          <ul class="mb-4">
+                          {{ range .Params.utilities_and_features.exterior.exterior_roof }}
+                            <li><img src="/assets/check.svg" width="20" alt="check icon" class="mr-2">{{ . }}</li>
+                          {{ else }}
+                          <p>No roofing listed</p>
+                          {{end}}
+                          </ul>
+                          <h3 class="title is-6 mb-2"><strong>Additional Exterior Details</strong></h3>
+                          <ul class="mb-4">
+                          {{ range .Params.utilities_and_features.exterior.additional_exterior_details }}
+                            <li><img src="/assets/check.svg" width="20" alt="check icon" class="mr-2">{{ . }}</li>
+                          {{ else }}
+                          <p>No additional details</p>
+                          {{end}}
+                          </ul>
+                        </div>
+                        {{ else }}
+                        {{ end }}
+                        <!-- COMMUNITY -->
+                        {{ if .Params.utilities_and_features.community_features.show_community_details }}
+                        <div class="box single-features-list">
+                            <h5 class="title is-6">Community</h5>
+                            <h3 class="title is-6 mb-2"><strong>Details</strong></h3>
+                            <ul class="mb-4">
+                            {{ range .Params.utilities_and_features.community_features.community_features_choice }}
+                            <li><img src="/assets/check.svg" width="20" alt="check icon" class="mr-2">{{ . }}</li>
+                            {{ else }}
+                            <p>No details listed</p>
+                            {{end}}
+                            </ul>
+                            <h3 class="title is-6 mb-2"><strong>Additional Exterior Details</strong></h3>
+                            <ul class="mb-4">
+                            {{ range .Params.utilities_and_features.community_features.additional_community_details }}
+                            <li><img src="/assets/check.svg" width="20" alt="check icon" class="mr-2">{{ . }}</li>
+                            {{ else }}
+                            <p>No additional details</p>
+                            {{end}}
+                            </ul>
+                        </div>
+                        {{ else }}
+                        {{ end }}
+
+                        {{ if .Params.tools.youtube_link }}
+                        <div class="box vt-single">
+                          <h2 class="title is-6">Video</h2>
+                          <iframe style="width:100%;height:500px" src="https://www.youtube.com/embed/{{ .Params.tools.youtube_link }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        {{end}}
+
+                        {{ if .Params.tools.matterport_link }}
+                        <div class="box vt-single">
+                          <h2 class="title is-6">Virtual Tour</h2>
+                          <iframe src="{{ .Params.tools.matterport_link }}" frameborder="0" allowfullscreen allow="vr" style="width:100%;height:500px"></iframe>
+                        </div>
+                        {{end}}
+                        
+                    </div>
+                </main>
+            </div>
+                {{ partial "templates/property-sidebar" . }}
+        </div>
+    </div>
+</div>
+{{ end }}

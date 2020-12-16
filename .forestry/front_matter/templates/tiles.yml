@@ -1,0 +1,98 @@
+---
+label: Tiles
+hide_body: true
+fields:
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body
+- name: tile_one
+  type: field_group
+  config: {}
+  fields:
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: image
+    type: file
+    config:
+      maxSize: 2
+    label: Image
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+  label: Tile One
+- name: tile_two
+  type: field_group
+  config: {}
+  fields:
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+  label: Tile Two
+- name: tile_three
+  type: field_group
+  config: {}
+  fields:
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: image
+    type: file
+    config:
+      maxSize: 2
+    label: Image
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+  label: Tile Three
+- name: tile_four
+  type: field_group
+  config: {}
+  fields:
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: image
+    type: file
+    config:
+      maxSize: 2
+    label: Image
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+  label: Tile Four

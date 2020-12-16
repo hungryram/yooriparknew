@@ -1,0 +1,73 @@
+{{ partial "templates/mobile-filter" . }}
+<div class="column">
+  <div class="filter-nav has-text-right mb-6">
+    <span style="font-size:16px;cursor:pointer;float:right" onclick="openNav()" class="align-center"><img src="/assets/filter.svg" alt="" width="20"> Filter</span>
+  </div>
+  <div class="mb-6">
+    <form action="{{ "search" | absURL }}">
+      <div class="field">
+        <div class="control">
+          <input id="search-query" name="s" class="input" placeholder="Search by address, state, zip, city or MLS #" title="Search by address, state, zip, city or MLS #"/>
+        </div>
+        <div class="control">
+          <button class="button mt-2" type="submit">
+            Search
+          </button>
+        </div>
+      </div>
+    </form>  
+  </div>
+
+  <div class="filter-list">
+    {{ if .Site.Taxonomies.cities }}
+    <div class="search-filter mb-6">
+      <h2 class="subtitle is-6 mb-2">Filter City</h2>
+        <ul>
+            {{ range $city, $taxonomy := .Site.Taxonomies.cities }}
+          <li class="align-center">
+            <img src="/assets/caret-right.svg" width="20"><a href="/cities{{ $city | urlize | relURL }}" class="secondary-btn">{{ $city | humanize }}</a>
+          </li>
+          {{end}}
+        </ul>
+    </div>
+    {{ end }}
+    {{ if .Site.Taxonomies.states }}
+    <div class="search-filter mb-6">
+      <h2 class="subtitle is-6 mb-2">Filter State</h2>
+        <ul>
+            {{ range $state, $taxonomy := .Site.Taxonomies.states }}
+          <li class="align-center">
+            <img src="/assets/caret-right.svg" width="20"><a href="/states{{ $state | urlize | relURL }}" class="secondary-btn">{{ $state | humanize }}</a>
+          </li>
+          {{end}}
+  
+        </ul>
+    </div>
+    {{ end }}
+    {{ if index .Site.Taxonomies "zip-codes" }}
+    <div class="search-filter mb-6">
+      <h2 class="subtitle is-6 mb-2">Filter Zip Code</h2>
+        <ul>
+            {{ range $zip, $taxonomy := index .Site.Taxonomies "zip-codes" }}
+          <li class="align-center">
+            <img src="/assets/caret-right.svg" width="20"><a href="/zip-codes{{ $zip | urlize | relURL }}" class="secondary-btn">{{ $zip }}</a>
+          </li>
+          {{end}}
+  
+        </ul>
+    </div>
+    {{ end }}
+    {{ if .Site.Taxonomies.properties }}
+    <div class="search-filter mb-6">
+        <h2 class="subtitle is-6 mb-2">Filter by Property Type</h2>
+          <ul>
+              {{ range $prop, $taxonomy := .Site.Taxonomies.properties }}
+            <li class="align-center">
+              <img src="/assets/caret-right.svg" width="20"><a href="/properties{{ $prop | urlize | relURL }}" class="secondary-btn" style="text-transform:capitalize">{{ $prop }}</a>
+            </li>
+            {{end}}
+          </ul>
+    </div>
+    {{ end }}
+  </div>
+</div>

@@ -1,0 +1,26 @@
+---
+company_name: Real Estate Company
+social_media:
+  instagram: https://instagram.com
+  twitter: http://twitter.com/
+  facebook: https://facebook.com
+  pinterest: https://pinterest.com
+  yelp: https://www.yelp.com/
+contact_information:
+  phone: "5555555555"
+  name: Demo Account
+  cell: 658-445-6326
+  address: '412 Westside Rd. '
+  email: ram@hungryram.com
+  license: BRE 8431654
+  city: Riverside
+  state: CA
+  zip_code: "92882"
+search_engine_optimization:
+  title_tag: Real Estate Theme
+  meta_description: No page builders or drag and drop. Experience a new technology
+    stack
+  twitter_card:
+    twitter_username: ''
+  facebook:
+    app_id: ''

@@ -1,0 +1,87 @@
+div.hero-foot {
+    margin-bottom:50px;
+}
+/* IDX HOME SCROLL */
+
+div#ihf-main-container .thumbnail {
+    border: none;
+    background-color: transparent;
+    margin-bottom: 70px;
+}
+
+.thumbnail div.row.gallery-prop-info {
+        display: flex;
+        margin-top: 20px;
+}
+
+img.ihf-slider-img {
+    width: 600px;
+    object-fit: cover;
+}
+
+div.col-xs-12.address.gallery-address{
+    text-align: center;
+    font-family: 'Raleway', serif;
+    margin-bottom: 20px;
+}
+
+div#ihf-main-container a {
+    color: #000;
+    font-size: 1rem;
+    text-transform: capitalize;
+    line-height: 0px;
+
+}
+
+div#ihf-main-container a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+div.row.gallery-prop-info {
+    text-align: center!important;
+    margin: 0 auto;
+}
+
+div#ihf-main-container .col-xs-6,
+#ihf-main-container > div > div.row.ihf-vcenter > div > div > div.ihf-slide.cycle-slide.cycle-slide-active > div > div:nth-child(1) > div > div.row.gallery-prop-info > div:nth-child(2) {
+    text-align:center!important;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+div#ihf-main-container .pagination>li>a, #ihf-main-container .pagination>li>span {
+    background: transparent;
+}
+
+div#ihf-main-container .glyphicon-chevron-left:before,
+    div#ihf-main-container .glyphicon-chevron-right:before {
+    font-size: 14px;
+}
+
+div#ihf-main-container .btn-primary, div.ihf-main-container .btn-primary {
+    background-color: #10257F;
+    color: #fff;
+    border: none;
+}
+
+div#ihf-main-container input.form-control,
+div#ihf-main-container select.form-control {
+    border-radius: 0!important;
+}
+
+@media screen and (max-width:768px){
+    div.hero-foot {
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px){
+    div.mobile-qs {
+        display: none;
+    }
+    div.hero-body {
+        position:relative;
+        top:100px;
+      }
+}

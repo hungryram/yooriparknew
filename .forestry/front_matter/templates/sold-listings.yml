@@ -1,0 +1,19 @@
+---
+label: Sold Listings
+hide_body: true
+fields:
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+  default: Sold Listings
+- name: body
+  type: textarea
+  default: View sold listings in the office
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body

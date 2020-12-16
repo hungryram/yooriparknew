@@ -1,0 +1,19 @@
+---
+label: Agent Showcase
+hide_body: true
+fields:
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+  default: Our Team
+- name: body
+  type: textarea
+  default: Let our team of professionals help you.
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body

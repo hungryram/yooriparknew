@@ -1,0 +1,26 @@
+---
+label: Heading and Body
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Heading
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body
+- name: seo
+  type: include
+  config: {}
+  template: seo
+  label: SEO
+pages:
+- content/contact/_index.md
+- content/partners/_index.md

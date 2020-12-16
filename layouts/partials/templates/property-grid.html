@@ -1,0 +1,81 @@
+<div class="card property-grid mb-4">
+<a href="{{ .Permalink }}">
+<div class="card-image">
+    <figure class="image is-3by2 darkoverlay">
+      {{ if .Params.photos.gallery }}
+      <img src="{{ index .Params.photos.gallery 0 }}" alt="{{ .Title }}" style="object-fit:cover">
+      {{ else }}
+      <img src="/assets/nohouse.jpg" alt="no house" style="object-fit: cover;">
+      {{ end }}
+    </figure>
+    <div class="level tag-wrapper is-mobile">
+      <div class="level-left">
+        <div class="level-item">
+          <div>
+            {{ if .Params.status }}<span class="status">{{ .Params.status }}</span>{{ end }}
+            {{ if .Params.featured }}<span class="featured">{{ .Params.featured }}</span>{{ end }}
+          </div>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+          <div>
+            <span class="grid-price">{{ .Params.price }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="level property-title is-mobile">
+      <div class="level-left">
+        <div class="level-item">
+          <div>
+            <div class="is-block">
+              <span class="short-title">{{ .Params.short_title }}</span>
+            </div>
+            <div class="is-block">
+              <span class="grid-address">{{ .Title }}</span>
+            </div>
+            <div class="is-block" style="margin-top:-12px">
+              <span class="grid-address">{{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<footer class="card-footer">
+  {{ if .Params.details.bedrooms }}
+  <span class="card-footer-item">
+      <img src="/assets/bed.svg" alt="bed icon" width="20">
+      <span class="ml-2">{{ .Params.details.bedrooms }} Beds</span>
+  </span>
+  {{ end }}
+  {{ if .Params.details.bathrooms }}
+  <span class="card-footer-item">
+    <img src="/assets/shower-line.svg" alt="bed icon" width="20">
+    <span class="ml-2">{{ .Params.details.bathrooms }} Baths</span>
+  </span>
+  {{ end }}
+</footer>
+<footer class="card-footer">
+  {{ if .Params.details.square_footage }}
+  <span class="card-footer-item">
+    <img src="/assets/tile.svg" alt="bed icon" width="20">
+    <span class="ml-2">{{ .Params.details.square_footage }} Sq. Ft.</span>
+  </span>
+  {{ end }}
+  {{ if .Params.details.garage }}
+  <span class="card-footer-item">
+    <img src="/assets/garage.svg" alt="bed icon" width="20">
+    <span class="ml-2">{{ .Params.details.garage }} Garage</span>
+  </span>
+  {{ end }}
+</footer>
+{{ if .Params.properties }}
+<footer class="card-footer">
+  <span class="card-footer-item">{{ .Params.properties }}</span>
+</footer>
+{{ end }}
+</a>
+</div>

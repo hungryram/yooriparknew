@@ -1,0 +1,30 @@
+<div id="share-buttons" class="mb-4">           
+  <h5 class="title is-6">Share this listing</h5>
+
+    <!-- Email -->
+    <a href="mailto:?Subject=Check%20Out%20This%20Listing&amp;Body=Check%20out%20this%20listing%20from%20{{ .Permalink | absURL }}">
+      <img src="/assets/envelope.svg" alt="email icon" width="25">
+    </a>    
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u={{ .Permalink | absURL }}" target="_blank">
+      <img src="/assets/facebook.svg" alt="facebook icon" width="25">
+    </a>     
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ .Permalink | absURL }}" target="_blank">
+      <img src="/assets/linkedin.svg" alt="linkedin icon" width="25">
+    </a>            
+    <!-- Twitter -->
+    <a href="https://twitter.com/share?url={{ .Permalink | absURL }}&amp;text=Check%20out%20this%20listing%20from%20{{ .Site.Data.profile.logo_and_title.website_title }}" target="_blank">
+      <img src="/assets/twitter.svg" alt="twitter icon" width="25">
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://www.pinterest.com/pin-builder/?url={{ .Permalink }}&media={{ index .Params.photos.gallery 0 }}&description={{ .Params.short_title }}&method=button" target="_blank">
+      <img src="/assets/pinterest.svg" alt="twitter icon" width="25">
+    </a>
+
+    <!-- Whatsapp -->
+    <a href="https://api.whatsapp.com/send?text={{ .Params.short_title }}%20{{ .Permalink }}" target="_blank">
+      <img src="/assets/whatsapp.svg" alt="Whatsapp icon" width="25">
+    </a>
+</div> <!-- end share buttons -->

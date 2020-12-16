@@ -1,0 +1,44 @@
+<div class="column">
+    <h4 class="title is-6">Contact Information</h4>
+    {{ $contactSocial := .Site.Data.profile.social_media }}
+    {{ $contactPage := .Site.Data.profile.contact_information }}
+    <ul class="contact-page-icons">
+        {{ if $contactPage.address }}<li class="align-center mb-2">
+            <strong class="mr-2">Address:</strong>
+            <a href="https://www.google.com/maps/place/{{ $contactPage.address }}" target="_blank" class="has-text-black has-text-weight-light">{{ $contactPage.address }}, {{ $contactPage.city }}, {{ $contactPage.state }} {{ $contactPage.zip_code }}</a></li>{{ end }}
+        {{ if $contactPage.email }}<li class="align-center mb-2">
+            <strong class="mr-2">Email:</strong>
+            <a href="mailto:{{ $contactPage.email }}" class="has-text-black has-text-weight-light">{{ $contactPage.email }}</a></li> {{ end }}
+      {{ if $contactPage.cell }}<li class="align-center mb-2">
+        <strong class="mr-2">Cell:</strong>
+        <a href="tel:{{ $contactPage.cell }}" class="has-text-black has-text-weight-light">{{ $contactPage.cell }}</a></li> {{ end }}
+      {{ if $contactPage.phone }}<li class="align-center mb-2">
+        <strong class="mr-2">Office:</strong>
+        <a href="tel:{{ $contactPage.phone }}" class="has-text-black has-text-weight-light">{{ $contactPage.phone }}</a></li> {{ end }}    
+    </ul>
+    <div class="contact-social mt-4">
+        <ul>
+        {{ if $contactSocial.facebook }}<li class="is-inline mr-4 is-size-7"><a href="{{ $contactSocial.facebook }}" target="_blank"contactSocial>
+            <img src="/assets/facebook.svg" alt="" width="30">
+        </a></li>{{ end }}
+        {{ if $contactSocial.instagram }}<li class="is-inline mr-4 is-size-7"><a href="{{ $contactSocial.instagram }}" target="_blank"contactSocial>
+            <img src="/assets/instagram.svg" alt="" width="30">
+        </a></li>{{ end }}
+        {{ if $contactSocial.twitter }}<li class="is-inline mr-4 is-size-7"><a href="{{ $contactSocial.twitter }}" target="_blank"contactSocial>
+            <img src="/assets/twitter.svg" alt="" width="30">
+        </a></li>{{ end }}
+        {{ if $contactSocial.pinterest }}<li class="is-inline mr-4 is-size-7"><a href="{{ $contactSocial.pinterest }}" target="_blank"contactSocial>
+            <img src="/assets/pinterest.svg" alt="" width="30">
+        </a></li>{{ end }}
+        {{ if $contactSocial.youtube }}<li class="is-inline mr-4 is-size-7"><a href="{{ $contactSocial.youtube }}" target="_blank"contactSocial>
+            <img src="/assets/youtube.svg" alt="" width="30">
+        </a></li>{{ end }}
+        {{ if $contactSocial.linkedin }}<li class="is-inline mr-4 is-size-7"><a href="{{ $contactSocial.linkedin }}" target="_blank"contactSocial>
+            <img src="/assets/linkedin.svg" alt="" width="30">
+        </a></li>{{ end }}
+        {{ if $contactSocial.yelp }}<li class="is-inline mr-4 is-size-7"><a href="{{ $contactSocial.yelp }}" target="_blank"contactSocial>
+            <img src="/assets/yelp.svg" alt="" width="30">
+        </a></li>{{ end }}
+        </ul>
+    </div>
+</div>

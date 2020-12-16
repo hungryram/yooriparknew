@@ -1,0 +1,13 @@
+<div class="tabs is-centered">
+    <ul>
+      <li><a href="/listings">All Listings</a></li>
+      <li><a href="/featured/featured">Featured</a></li>
+        {{ range $name, $taxonomy := .Site.Taxonomies.status }}
+      <li>
+        <a href="/status/{{ $name | urlize }}">{{ $name | humanize }}</a>
+      </li>
+      {{end}}
+
+      <li>
+    </ul>
+  </div>

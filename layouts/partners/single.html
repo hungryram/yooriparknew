@@ -1,0 +1,102 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container">
+        <div class="columns is-variable is-8">
+            <div class="column is-8">
+                <main>
+                    <div class="inner-container">
+                        <div class="column">
+                            <div class="content">
+                                <h1 class="title is-3 mb-2">{{ .Title }}</h1>
+                                {{ if .Params.details.category }}<span class="is-block">{{ .Params.details.category }}</span>{{ end }}
+                            </div>
+                        </div>
+                        <div class="column is-full agent-container mb-4 pl-0 pr-0">
+                            <div class="card">
+                                <div class="columns is-vcentered is-variable is-3">
+                                    <div class="column is-4 pb-0 pt-0">
+                                        {{ if .Params.photo_or_logo }}
+                                        <img src="{{ .Site.Params.cloudinary_url }}{{ .Params.photo_or_logo }}" alt="{{ .Title }}" style="width:100%;height:300px;object-fit:cover">
+                                        {{ else }}
+                                        <img src="assets/user.jpg" alt="User icon" style="width:100%;height:300px;object-fit:cover">
+                                        {{ end }}
+                                    </div>
+                                    <div class="column pl-0 pr-0">
+                                        <div class="content pr-6 pl-6">
+                                            {{ if .Params.contact.cell }}
+                                            <div class="level mb-0 is-mobile">
+                                                <div class="level-left">
+                                                    <div class="level-item">
+                                                        <div>
+                                                            <strong>Cell:</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="level-right">
+                                                    <div class="level-item">
+                                                        <div>
+                                                            <a href="tel:{{ .Params.contact.cell }}" class="has-text-black">{{ .Params.contact.cell }}</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {{ end }}
+                                            {{ if .Params.contact.phone }}
+                                            <div class="level mb-0 is-mobile">
+                                                <div class="level-left">
+                                                    <div class="level-item">
+                                                        <div>
+                                                            <strong>Phone:</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="level-right">
+                                                    <div class="level-item">
+                                                        <div>
+                                                            <a href="tel:{{ .Params.contact.cell }}" class="has-text-black">{{ .Params.contact.phone }}</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {{ end }}
+                                            {{ if .Params.contact.email }}
+                                            <div class="level is-mobile">
+                                                <div class="level-left">
+                                                    <div class="level-item">
+                                                        <div>
+                                                            <strong>Email:</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="level-right">
+                                                    <div class="level-item">
+                                                        <div>
+                                                            <a href="tel:{{ .Params.contact.cell }}" class="has-text-black">{{ .Params.contact.email }}</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {{ end }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column pl-0 pr-0">
+                            <div class="card">
+                                <header class="card-header">
+                                    <h4 class="title is-6 card-header-title">About</h4>
+                                </header>
+                                <div class="card-content content">
+                                    {{ .Content }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+                {{ partial "templates/sidebar" . }}
+        </div>
+    </div>
+</div>
+{{ end }}

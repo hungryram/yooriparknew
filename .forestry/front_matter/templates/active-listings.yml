@@ -1,0 +1,19 @@
+---
+label: Active Listings
+hide_body: true
+fields:
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+  default: Active Listings
+- name: body
+  type: textarea
+  default: View active listings in the MLS
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body

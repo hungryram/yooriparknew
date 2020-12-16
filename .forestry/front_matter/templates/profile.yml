@@ -1,0 +1,121 @@
+---
+label: Profile
+hide_body: false
+fields:
+- name: company_name
+  type: text
+  config:
+    required: false
+  label: Company Name
+- name: social_media
+  type: field_group
+  config: {}
+  fields:
+  - name: instagram
+    type: text
+    config:
+      required: false
+    label: Instagram
+  - name: twitter
+    type: text
+    config:
+      required: false
+    label: Twitter
+  - name: facebook
+    type: text
+    config:
+      required: false
+    label: Facebook
+  - name: pinterest
+    type: text
+    config:
+      required: false
+    label: Pinterest
+  - name: yelp
+    type: text
+    config:
+      required: false
+    label: Yelp
+  label: Social Media
+- name: contact_information
+  type: field_group
+  config: {}
+  fields:
+  - name: license
+    type: text
+    config:
+      required: false
+    label: License Number
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+  - name: phone
+    type: text
+    config:
+      required: false
+    label: Phone
+  - name: cell
+    type: text
+    config:
+      required: false
+    label: Cell
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+  - name: address
+    type: text
+    config:
+      required: false
+    label: Address
+  - name: city
+    type: text
+    config:
+      required: false
+    label: City
+  - name: state
+    type: text
+    config:
+      required: false
+    label: State
+  - name: zip_code
+    type: text
+    config:
+      required: false
+    label: Zip Code
+  label: Contact Information
+- name: search_engine_optimization
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  - name: twitter_card
+    type: field_group
+    config: {}
+    fields:
+    - name: twitter_username
+      type: text
+      config:
+        required: false
+      label: Twitter Username
+    label: Twitter Card
+  - name: facebook
+    type: field_group
+    config: {}
+    fields:
+    - name: app_id
+      type: text
+      config:
+        required: false
+      label: App ID
+    label: Facebook
+  label: Search Engine Optimization
+pages:
+- data/profile.yml

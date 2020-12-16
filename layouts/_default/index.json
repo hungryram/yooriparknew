@@ -1,0 +1,5 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range where .Site.RegularPages "Type" "listings" -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "state" .Params.states "city" .Params.cities "zip" (index .Params "zip-codes") "mls" .Params.details.mls_number "status" .Params.status "bed" .Params.details.bedrooms "bath" .Params.details.bathrooms "square" .Params.details.square_footage "garage" .Params.details.garage "property" .Params.properties "price" .Params.price "shorttitle" .Params.short_title "featured" .Params.featured "image" .Params.photos.gallery "contents" .Plain "permalink" .Permalink) -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

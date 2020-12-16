@@ -1,0 +1,22 @@
+{{ partial "global/head" . }}
+{{ partial "global/navbar" . }}
+
+
+<div style="padding-top:40px;padding-bottom:40px;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{ .Site.Data.appearance.pages.image }}) no-repeat center; background-size: cover;">
+    <div class="section">
+        <div class="container">
+            <div class="columns has-text-centered">
+                <div class="column has-text-white">
+                    <h2 class="title is-3 has-text-white mb-4 is-size-5-mobile">{{ replace .Name "-" " " | title }}</h2>
+                    {{ if .Params.body }}
+                        {{ .Params.body | markdownify }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ block "main" . }}
+
+{{ end }}
+{{ partial "global/footer.html" . }}

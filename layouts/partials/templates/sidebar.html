@@ -1,0 +1,46 @@
+<div class="column">
+    {{ range .Site.Data.appearance.sidebar.sidebar }}
+    {{ if eq "side-blog-category" .template }}
+    <div class="pt-6 pb-6">
+        <h4 class="title is-6">Blog Categories</h4>
+        <ul class="sidebar-category">
+            {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
+          <li class="align-center">
+            <img src="/assets/caret-right.svg" alt="" width="20"> <a href="/categories{{ $name | urlize | relURL }}" class="has-text-black has-text-weight-light">{{ $name | humanize }}</a>
+          </li>
+          {{else}}
+          <p>No blog categories just yet</p>
+          {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+
+    {{ if eq "latest-posts" .template }}
+    <div class="pt-6 pb-6">
+        <h4 class="title is-6">Latest Posts</h4>
+        {{ range  first 4 ( where $.Site.RegularPages "Type" "blog") }}
+        <a href="{{ .Permalink }}">
+            <article class="media mb-5">
+                <div class="media-left">
+                  <figure class="image is-96x96">
+                    {{ if .Params.featured_image }}
+                    <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+                    {{ else }}
+                    <img src="/assets/nophoto.jpg" alt="{{ .Title }}">
+                    {{ end }}
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <div class="content">
+                      <h1 class="title is-6" style="margin: 0;">{{ .Params.title }}</h1>
+                      <time><small class="has-text-black">{{.Date.Format "Jan 2, 2006" }}</small></time><br>
+                </div>
+            </article>
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+  {{ end }}
+</div>
+

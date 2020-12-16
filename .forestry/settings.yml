@@ -1,0 +1,108 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: static/admin
+webhook_url: 
+sections:
+- type: document
+  path: data/profile.yml
+  label: Profile
+- type: document
+  path: data/appearance.yml
+  label: Appearance
+- type: document
+  path: data/homelayout.yml
+  label: Home Layout
+- type: document
+  path: content/idx-admin/_index.md
+  label: IDX Admin
+  read_only: true
+- type: document
+  path: data/idx.yaml
+  label: IDX Set Up
+- type: directory
+  path: content
+  label: Pages
+  create: documents
+  match: "*"
+  templates:
+  - pages
+- type: heading
+  label: Blog
+- type: directory
+  path: content/blog
+  label: Add Post
+  create: documents
+  match: "**/*"
+  templates:
+  - heading-and-body
+  - blog
+- type: heading
+  label: Default Pages
+- type: directory
+  path: content/listings
+  label: Listings
+  create: documents
+  match: "**/*"
+  templates:
+  - heading-and-body
+  - property
+- type: directory
+  path: content/offices
+  label: Offices
+  create: documents
+  match: "**/*"
+  templates:
+  - heading-and-body
+  - offices
+- type: directory
+  path: content/our-team
+  label: My Team
+  create: documents
+  match: "**/*"
+  templates:
+  - heading-and-body
+  - our-team
+- type: directory
+  path: content/partners
+  label: Partners
+  create: documents
+  match: "**/*"
+  templates:
+  - partners
+  - heading-and-body
+- type: document
+  path: content/testimonials/_index.md
+  label: Testimonials
+- type: document
+  path: content/contact/_index.md
+  label: Contact
+- type: heading
+  label: Legal
+- type: directory
+  path: content/legal
+  label: Policies
+  create: documents
+  match: "**/*"
+  templates:
+  - legal
+- type: heading
+  label: Developer Access
+- type: document
+  path: config.toml
+  label: Configuration
+upload_dir: templates/realestate2
+public_path: https://res.cloudinary.com/hungryram19/image/upload
+front_matter_path: ''
+use_front_matter_path: 
+file_template: ":filename:"
+build:
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.76.5
+  preview_output_directory: public
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: hugo server -D -E -F --renderToDisk -d public
+version: 0.76.5

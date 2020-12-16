@@ -1,0 +1,19 @@
+---
+label: Rental Listings
+hide_body: true
+fields:
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+  default: Rental Listings
+- name: body
+  type: textarea
+  default: View rental listings in the office
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body

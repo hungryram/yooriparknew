@@ -1,0 +1,516 @@
+{{ partial "global/head" . }}
+{{ partial "home/slideshow" . }}
+<div class="home-section">
+{{ range .Site.Data.homelayout.home_sections }}
+
+{{ if eq "featured-idx-listings" .template }}
+<div class="section">
+<div class="container">
+    <div class="columns">
+        <div class="column">
+            {{ if .heading }}<h1 class="title is-4 has-text-centered">{{ .heading }}</h1>{{ end }}
+            {{ if .body }}
+            <p class="has-text-centered">{{ .body | markdownify }}</p>
+            {{ end }}
+        </div>
+    </div>
+    {{ if $.Site.Data.idx.incomplete_subdomain }}
+    <script type="text/javascript" src="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/site/listing/gallery/slider/{{ $.Site.Data.idx.ihf_client_id }}?columns=3&amp;rows=1&amp;effect=fade&amp;auto=false"></script>
+    {{ else }}
+    <script type="text/javascript" src="https://{{ $.Site.Data.idx.complete_subdomain }}/site/listing/gallery/slider/{{ $.Site.Data.idx.ihf_client_id }}?columns=3&amp;rows=1&amp;effect=fade&amp;auto=false"></script>
+    
+    {{ end }}
+</div>
+</div>
+{{ end }}
+
+
+  {{ if eq "home-testimonial" .template }}
+    <div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                {{ if .heading }}<h1 class="title is-4 has-text-centered">{{ .heading }}</h1>{{ end }}
+                {{ if .body }}
+                <p class="has-text-centered">{{ .body | markdownify }}</p>
+                {{ end }}
+            </div>
+        </div>
+        <div class="testimonial-container">
+            {{ range where $.Site.Pages "Type" "testimonials" }}
+            <div class="responsive-slide">
+                {{ range .Params.testimonials }}
+                <div class="testimonial">
+                    <div class="card-content">
+                      <div class="content">
+                        <p>{{ .testimonial | truncate 170 }} <a href="/testimonial" class="link">Read more</a></p>
+                      </div>
+                      <div class="media">
+                        <div class="media-left">
+                            {{ if .image }}<img src="/assets/user.svg" alt="{{ .name }}">{{ end }}
+                        </div>
+                        <div class="media-content">
+                          <em>{{ .name }}</em>
+                          <em class="is-block">{{ .date }}</em>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        <div class="columns mt-6">
+          <div class="column has-text-centered">
+            <a href="/testimonials" class="btn-primary">View more</a>
+          </div>
+        </div>
+    </div>
+    </div>
+  {{ end }}
+
+  {{ if eq "home-agent" .template }}
+  {{ $agents := where $.Site.RegularPages "Type" "our-team" }}
+    <div class="section">
+      <div class="container">
+        <div class="columns mb-6">
+          <div class="column">
+            {{ if .heading }}
+            <h1 class="title is-4 has-text-centered">{{ .heading }}</h1>
+            {{ if .body }}
+            <p class="has-text-centered">{{ .body | markdownify }}</p>
+            {{ end }}
+            {{ end }}
+          </div>
+        </div>
+        <div class="agent-container">
+          <div class="team-slide">
+        {{ if gt $agents 0 }}
+          {{ range where $.Site.RegularPages "Type" "our-team" }}
+            <a href="{{ .Permalink }}">
+              <div class="card ml-2 mr-2 mb-4">
+                <div class="card-image">
+                  <figure class="image is-square">
+                    {{ if .Params.details.agent_photo }}
+                    <img src="{{ .Params.details.agent_photo }}" alt="{{ .Title }}" style="object-fit: cover;width:100%">
+                    {{ else }}
+                    <img src="/assets/user.jpg" alt="">
+                    {{ end }}
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content has-text-centered">
+                    <h1 class="title is-5 has-text-black has-text-black mb-2">{{ .Title }}</h1>
+                    <span class="is-block">{{ .Params.contact.cell }}</span>
+                    <span class="is-block">{{ .Params.contact.email }}</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          {{ end }}
+          {{ else }}
+            <h4 class="title is-6 has-text-centered">No Agents Found</h4>
+          {{ end }}
+        </div>
+      </div>
+      <div class="columns mt-6">
+        <div class="column has-text-centered">
+          <a href="/our-team" class="btn-primary">View more</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  {{ end }}
+
+  {{ if eq "home-blog" .template }}
+  {{ $blog := where $.Site.RegularPages "Type" "blog" }}
+
+    <div class="section">
+      <div class="container">
+        <div class="columns mb-6">
+          <div class="column">
+            {{ if .heading }}
+            <h1 class="title is-4 has-text-centered">{{ .heading }}</h1>
+            {{ end }}
+            {{ if .body }}
+            <p class="has-text-centered">{{ .body | markdownify }}</p>
+            {{ end }}
+          </div>
+        </div>
+        <div class="columns is-multiline">
+          {{ if gt $blog 0 }}
+
+          {{ range first 4 (where $.Site.RegularPages "Type" "blog") }}
+          <div class="column is-6 mb-4">
+            <div class="card">
+                <div class="columns is-vcentered is-variable is-3">
+                    <div class="column pb-0 pt-0">
+                      {{ if .Params.featured_image }}
+                        <img src="{{ .Params.featured_image }}" alt="" style="width:100%;height:250px;object-fit:cover">
+                      {{ else }}
+                      <img src="/assets/nophoto.jpg" alt="no photo" style="width:100%;height:250px;object-fit:cover">
+                      {{ end }}
+                    </div>
+                    <div class="column">
+                        <div class="content pr-4 pl-2">
+                            <h1 class="title is-6 mb-2">{{ .Title }}</h1>
+                            <div class="summary-card">
+                            <time class="is-size-7"> {{.Date.Format "Jan 2, 2006" }}</time>
+                              <p>{{ .Summary | truncate 100 }}</p>
+                                <a href="{{ .Permalink }}" class="link"><strong>Continue reading...</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          {{ end }}
+          {{ else }}
+            <div class="column">
+              <h4 class="title is-6 has-text-centered">No Blog Posts Found</h4>
+            </div>
+          {{ end }}
+          </div>
+          <div class="columns mt-6">
+            <div class="column has-text-centered">
+              <a href="/blog" class="btn-primary">View more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  {{ end }}
+
+  {{ if eq "text-and-image" .template }}
+  <div class="section">
+    <div class="container">
+      <div class="columns is-vcentered">
+        {{ if .image }}
+        <div class="column has-text-centered">
+          <img src="{{ .image }}" alt="{{ .image_alt_tag }}" width="{{ .image_width }}">
+        </div>
+        {{ end }}
+        <div class="column content{{ if .image }}{{ else }} has-text-centered is-half is-offset-one-quarter{{ end }}">
+          <div class="is-block">
+            <h2 class="title is-4{{ if .image }}{{ else }} has-text-centered{{ end }}">{{ .heading }}</h2>
+            <p>{{ .body | markdownify }}</p>
+          </div>
+          <div class="is-block mt-5">
+            <a href="{{ .button_link }}" class="btn-primary">{{ .button }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+  {{ if eq "featured-boxes" .template }}
+  <div class="section">
+    <div class="container">
+      <div class="columns mb-6">
+        <div class="column">
+          {{ if .heading }}
+          <h1 class="title is-4 has-text-centered">{{ .heading }}</h1>
+          {{ end }}
+          {{ if .body }}
+          <p class="has-text-centered">{{ .body | markdownify }}</p>
+          {{ end }}
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        {{ range .featured }}
+          <div class="column is-4">
+            <a href="{{ .link }}">
+              <div class="featured" style="background:linear-gradient(rgba(18,27,34,0.4),rgba(18,27,34,0.4)),url({{ .image }}) no-repeat center;background-size:cover;padding-top:100px;padding-bottom:100px;border-radius: 4px;">
+                  <h5 class="title is-5 has-text-centered has-text-white">{{ .heading }}</h5>
+              </div>
+            </a>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+  {{ if eq "text-and-contact-form" .template }}
+  <div class="text-and-contact pt-6 pb-6" style="background:{{ if .background_image }}linear-gradient(rgba(18,27,34,0.4),rgba(18,27,34,0.4)),url({{ .background_image }}) no-repeat center;background-size:cover{{ else }}{{ .background_color }}{{ end }}!important">
+    <div class="inner">
+      <div class="section" style="background:transparent">
+        <div class="container">
+          <div class="columns is-vcentered is-variable is-8">
+            <div class="column is-7">
+              <h2 class="title is-4 {{ if .enable_white_text }}has-text-white{{ end }}">{{ .heading }}</h2>
+              <p class="{{ if .enable_white_text }}has-text-white{{ end }}">{{ .body | markdownify }}</p>
+            </div>
+            <div class="column ml-5 mr-5 pl-0 pr-0">
+              <div class="text-form">
+                {{ if .form.heading }}
+                <h2 class="title is-4">{{ .form.heading }}</h2>
+                {{ end }}
+                {{ if .form.body }}
+                <div class="summary-card mb-4">
+                  <p>{{ .form.body | markdownify }}</p>
+                </div>
+                {{ end }}
+                {{ if $.Site.Data.idx.enable_idx }}
+                {{ if $.Site.Data.idx.incomplete_subdomain }}
+                <form id="ihf-contact-request-form" data-ihf-event="contact-form-submit" action="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/contact/{{ $.Site.Data.idx.ihf_client_id }}" method="POST" data-ihf-event-bound="true">
+                {{ else }}
+                <form id="ihf-contact-request-form" data-ihf-event="contact-form-submit" action="https://{{ $.Site.Data.idx.complete_subdomain }}/contact/{{ $.Site.Data.idx.ihf_client_id }}" method="POST" data-ihf-event-bound="true">
+                {{ end }}
+                  <div class="field is-horizontal">
+                    <div class="field-body">
+                      <div class="field">
+                        <p class="control is-expanded">
+                          <input class="input" type="text" placeholder="Name" name="contactName">
+                        </p>
+                      </div>
+                      <div class="field">
+                        <p class="control">
+                          <input class="input" type="text" placeholder="Email" name="email">
+                        </p>
+                      </div>
+                      <div class="field">
+                        <p class="control">
+                          <input class="input" type="text" placeholder="Phone" name="phone">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="control">
+                        <textarea id="message" placeholder="Message" name="message" class="textarea" style="height: 140px;" rows="3"> </textarea>
+                    </div>
+                  </div>
+                  <div class="control">
+                    <button class="button" style="{{ safeHTMLAttr (printf "background-color: %s" $.Site.Data.design.colors.button_background_colors) }}">Submit</button>
+                  </div>
+                </form>
+                {{ else }}
+                <form name="Home Widget Form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+                  <input name="bot-field" type="hidden"/>
+    
+                  <div class="field">
+                    <p class="control is-expanded">
+                      <input class="input" type="text" placeholder="First Name" name="first name">
+                    </p>
+                  </div>
+    
+                  <div class="field">
+                    <p class="control">
+                      <input class="input" type="text" placeholder="Last Name" name="last name">
+                    </p>
+                  </div>
+                  
+                  <div class="field">
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Phone" name="phone">
+                    </div>
+                  </div>
+        
+                  <div class="field">
+                    <div class="control">
+                      <input class="input" type="email" placeholder="Email" name="email address">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="control">
+                      <textarea class="textarea" placeholder="Your Message" name="message"></textarea>
+                    </div>
+                  </div>
+                  <div class="control">
+                    <button class="button" style="{{ safeHTMLAttr (printf "background-color: %s" $.Site.Data.design.colors.button_background_colors) }}">Submit</button>
+                  </div>
+                </form>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+  {{ if eq "tiles" .template }}
+  <div class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          {{ if .heading }}
+          <h1 class="title is-4 has-text-centered">{{ .heading }}</h1>
+          {{ end }}
+          {{ if .body }}
+          <p class="has-text-centered">{{ .body | markdownify }}</p>
+          {{ end }}
+        </div>
+      </div>
+      <div class="columns tiles">
+        <div class="column is-7">
+          <a href="{{ .tile_one.link }}">
+            <div style="background: linear-gradient(rgba(18,27,34,0.4),rgba(18,27,34,0.4)),url({{ if .tile_one.image }}{{ .tile_one.image }}{{ else }}/assets/background/featuredone.jpg{{ end }}) no-repeat center;background-size:cover;padding-top:90px;padding-bottom:90px;border-radius:6px">
+              <h4 class="title is-5 has-text-centered has-text-white">{{ .tile_one.heading }}</h4>
+            </div>
+          </a>
+        </div>
+        <div class="column">
+          <a href="{{ .tile_two.link }}">
+            <div style="background: linear-gradient(rgba(18,27,34,0.4),rgba(18,27,34,0.4)),url({{ if .tile_two.image }}{{ .tile_two.image }}{{ else }}/assets/background/office.jpg{{ end }}) no-repeat center;background-size:cover;padding-top:90px;padding-bottom:90px;border-radius:6px">
+              <h4 class="title is-5 has-text-centered has-text-white">{{ .tile_two.heading }}</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="columns tiles">
+        <div class="column is-5">
+          <a href="{{ .tile_three.link }}">
+            <div style="background: linear-gradient(rgba(18,27,34,0.4),rgba(18,27,34,0.4)),url({{ if .tile_three.image }}{{ .tile_three.image }}{{ else }}/assets/background/team.jpg{{ end }}) no-repeat center;background-size:cover;padding-top:90px;padding-bottom:90px;border-radius:6px">
+              <h4 class="title is-5 has-text-centered has-text-white">{{ .tile_three.heading }}</h4>
+            </div>
+          </a>
+        </div>
+        <div class="column">
+          <a href="{{ .tile_four.link }}">
+            <div style="background: linear-gradient(rgba(18,27,34,0.4),rgba(18,27,34,0.4)),url({{ if .tile_four.image }}{{ .tile_four.image }}{{ else }}/assets/background/home-value.jpg{{ end }}) no-repeat center;background-size:cover;padding-top:90px;padding-bottom:90px;border-radius:6px">
+              <h4 class="title is-5 has-text-centered has-text-white">{{ .tile_four.heading }}</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+  {{ if eq "active-listings" .template }}
+  {{ $active := $.Site.Taxonomies.status.active }}
+  <div class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+            {{ if .heading }}<h1 class="title is-4 has-text-centered">{{ .heading }}</h1>{{ end }}
+            {{ if .body }}
+            <p class="has-text-centered">{{ .body | markdownify }}</p>
+            {{ end }}
+        </div>
+    </div>
+    <div class="responsive-slide">
+      {{ if gt $active 0 }}
+        {{ range first 6 $active }}
+          <div class="mx-3">
+            {{ partial "templates/property-grid" . }}
+          </div>
+        {{ end }}
+      {{ else }}
+        <h4 class="title is-6 has-text-centered">No Active Listings Found</h4>
+      {{end}}
+    </div>
+    <div class="columns mt-6">
+      <div class="column has-text-centered">
+        <a href="/status/active" class="btn-primary">View all</a>
+      </div>
+    </div>
+    </div> <!-- End container -->
+  </div><!-- End Section -->
+  {{ end }} 
+
+  {{ if eq "sold-listings" .template }}
+  {{ $sold := $.Site.Taxonomies.status.sold }}
+  <div class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+            {{ if .heading }}<h1 class="title is-4 has-text-centered">{{ .heading }}</h1>{{ end }}
+            {{ if .body }}
+            <p class="has-text-centered">{{ .body | markdownify }}</p>
+            {{ end }}
+        </div>
+    </div>
+    <div class="responsive-slide">
+      {{ if gt $sold 0 }}
+        {{ range first 6 $sold }}
+          <div class="mx-3">
+            {{ partial "templates/property-grid" . }}
+          </div>
+        {{ end }}
+      {{ else }}
+        <h4 class="title is-6 has-text-centered">No Sold Listings Found</h4>
+      {{end}}
+    </div>
+    <div class="columns">
+      <div class="column has-text-centered">
+        <a href="/status/sold" class="btn-primary">View all</a>
+      </div>
+    </div>
+    </div> <!-- End container -->
+  </div><!-- End Section -->
+  {{ end }} 
+
+  {{ if eq "auction-listings" .template }}
+  {{ $auction := $.Site.Taxonomies.status.auction }}
+  <div class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+            {{ if .heading }}<h1 class="title is-4 has-text-centered">{{ .heading }}</h1>{{ end }}
+            {{ if .body }}
+            <p class="has-text-centered">{{ .body | markdownify }}</p>
+            {{ end }}
+        </div>
+    </div>
+    <div class="responsive-slide">
+      {{ if gt $auction 0 }}
+        {{ range first 6 $auction }}
+          <div class="mx-3">
+            {{ partial "templates/property-grid" . }}
+          </div>
+        {{ end }}
+      {{ else }}
+        <h4 class="title is-6 has-text-centered">No Auction Listings Found</h4>
+      {{end}}
+    </div>
+    <div class="columns mt-6">
+      <div class="column has-text-centered">
+        <a href="/status/auction" class="btn-primary">View all</a>
+      </div>
+    </div>
+    </div> <!-- End container -->
+  </div><!-- End Section -->
+  {{ end }} 
+
+
+
+  {{ if eq "rental-listings" .template }}
+  {{ $rental := $.Site.Taxonomies.status.rental }}
+  <div class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+            {{ if .heading }}<h1 class="title is-4 has-text-centered">{{ .heading }}</h1>{{ end }}
+            {{ if .body }}
+            <p class="has-text-centered">{{ .body | markdownify }}</p>
+            {{ end }}
+        </div>
+    </div>
+    <div class="responsive-slide">
+      {{ if gt $rental 0 }}
+        {{ range first 6 $rental }}
+          <div class="mx-3">
+            {{ partial "templates/property-grid" . }}
+          </div>
+        {{ end }}
+      {{ else }}
+        <h4 class="title is-6 has-text-centered">No Rental Listings Found</h4>
+      {{end}}
+    </div>
+    <div class="columns mt-6">
+      <div class="column has-text-centered">
+        <a href="/status/rental" class="btn-primary">View all</a>
+      </div>
+    </div>
+    </div> <!-- End container -->
+  </div><!-- End Section -->
+  {{ end }} 
+
+
+{{ end }}
+</div>
+{{ partial "global/footer" . }}

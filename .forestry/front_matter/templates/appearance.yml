@@ -1,0 +1,152 @@
+---
+label: Appearance
+hide_body: true
+fields:
+- name: branding
+  type: field_group
+  config: {}
+  fields:
+  - name: site_title
+    type: text
+    config:
+      required: false
+    label: Site Title
+    description: Displays when no logo is uploaded.
+  - name: logo
+    type: file
+    config:
+      maxSize: 2
+    label: Logo
+  - name: favicon
+    type: file
+    config:
+      maxSize: 1
+    label: Favicon
+  label: Branding
+- name: colors
+  type: field_group
+  config: {}
+  fields:
+  - name: button_background_color
+    type: color
+    label: Button Background Color
+    config:
+      required: false
+      color_format: Hex
+  - name: button_text_color
+    type: color
+    config:
+      required: false
+      color_format: Hex
+    label: Button Text Color
+  - name: links
+    type: color
+    label: Links
+    config:
+      required: false
+      color_format: Hex
+  - name: accent
+    type: color
+    label: Accent
+    config:
+      required: false
+      color_format: Hex
+  label: Colors
+- name: header
+  type: field_group
+  config: {}
+  fields:
+  - name: top_header_color
+    type: color
+    label: Top Header Color
+    config:
+      required: false
+      color_format: Hex
+  - name: header_background_color
+    type: color
+    label: Header Background Color
+    config:
+      required: false
+      color_format: Hex
+  - name: enable_white_text
+    type: boolean
+    label: Enable White Text
+    description: Change navigation links to white
+  - name: enable_white_text_top
+    type: boolean
+    label: Enable White Text
+    description: Enables white text on top header bar
+  label: Header
+- name: pages
+  type: field_group
+  config: {}
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 2
+    label: Image
+  label: Pages
+- name: footer
+  type: field_group
+  config: {}
+  fields:
+  - name: footer_background_color
+    type: color
+    label: Footer Background Color
+    config:
+      required: false
+      color_format: Hex
+  - name: background_image
+    type: file
+    config:
+      maxSize: 64
+    label: Background Image
+  - name: enable_black_text
+    type: boolean
+    label: Enable Black Text
+  - name: logo
+    type: file
+    config:
+      maxSize: 64
+    label: Logo
+  - name: footer_bio
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Footer Bio
+  - name: disclaimer
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Disclaimer
+  label: Footer
+- name: sidebar
+  type: field_group
+  config: {}
+  fields:
+  - name: sidebar
+    type: blocks
+    template_types:
+    - side-blog-category
+    - latest-posts
+    config:
+      min: 
+      max: 
+    label: Sidebar
+  - name: single_property_sidebar
+    type: boolean
+    label: Single Property Sidebar
+    default: true
+    hidden: true
+  label: Sidebar
+pages:
+- data/appearance.yml

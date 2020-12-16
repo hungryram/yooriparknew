@@ -1,0 +1,37 @@
+---
+label: IDX
+hide_body: true
+fields:
+- name: ihf_client_id
+  type: number
+  label: Ihomefinder Client ID
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: enable_idx
+  type: boolean
+  label: Enable IDX
+- name: incomplete_subdomain
+  type: text
+  config:
+    required: false
+  label: Incomplete Subdomain
+- name: complete_subdomain
+  type: text
+  config:
+    required: false
+  label: Complete Subdomain
+- name: enable_google_recaptcha
+  type: boolean
+  label: Enable Google Recaptcha
+- name: google_site_key
+  type: text
+  config:
+    required: false
+  label: Google Site Key
+pages:
+- data/idx.yaml

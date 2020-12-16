@@ -1,0 +1,160 @@
+{{ partial "global/head" . }}
+{{ partial "global/navbar" . }}
+<div style="padding-top:40px;padding-bottom:40px;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{ .Site.Data.appearance.pages.image }}) no-repeat center; background-size: cover;">
+    <div class="section">
+        <div class="container">
+            <div class="columns has-text-centered">
+                <div class="column has-text-white">
+                    <h2 class="title is-3 has-text-white mb-4 is-size-5-mobile">{{ replace .Name "-" " " | title }}</h2>
+                    {{ if .Params.body }}
+                        {{ .Params.body | markdownify }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        {idx_body}
+        <div style="clear:both"></div>
+    </div>
+</div>
+
+{{ $footer := .Site.Data.appearance.footer }}
+{{ $footerContact := .Site.Data.profile }}
+{{ $footerSocial := .Site.Data.profile.social_media }}
+<footer class="footer pb-0" style="background:{{ if $footer.background_image }}linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url({{ $footer.background_image }}) no-repeat center;{{ else }}background:{{ $footer.footer_background_color }}{{ end }}">
+    <div class="section">
+        <div class="container">
+            <div class="columns is-variable is-8">
+                <div class="column">
+                    {{ if $footer.logo }}
+                    <img src="{{ $footer.logo }}" alt="{{ .Site.Data.appearance.branding.site_title }}" width="150">
+                    {{ else }}
+                    <h1 class="title is-4 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ $footerContact.company_name }}</h1>
+                    {{ end }}
+                    <h3 class="title is-6 mb-2 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ $footerContact.contact_information.name }}</h3>
+                    <em class="has-text-weight-light {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ $footerContact.contact_information.license }}</em>
+                </div>
+                <div class="column">
+                    <h4 class="title is-6 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ $footerContact.company_name }}</h4>
+                    {{ if $footer.footer_bio }}
+                    <p class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} has-text-weight-light">{{ $footer.footer_bio }}</p>
+                    {{ end }}
+                </div>
+                <div class="column">
+                    <h4 class="title is-6 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Contact</h4>
+                    <ul>
+                        {{ if $footerContact.company_name }}<li class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} has-text-weight-light">{{ $footerContact.company_name }}</li>{{ end }}
+                        {{ if $footerContact.contact_information.cell }}<li><a href="tel:{{ $footerContact.contact_information.cell }}" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} has-text-weight-light">{{ $footerContact.contact_information.cell }}</a></li>{{ end }}
+                        {{ if $footerContact.contact_information.email }}<li><a href="mailto:{{ $footerContact.contact_information.email }}" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} has-text-weight-light">{{ $footerContact.contact_information.email }}</a></li>{{ end }}
+                        {{ if $footerContact.contact_information.address }}<li><a href="https://www.google.com/maps/place/{{ $footerContact.contact_information.address }} {{ $footerContact.contact_information.city }} {{ $footerContact.contact_information.state }} {{ $footerContact.contact_information.zip_code }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} has-text-weight-light">{{ $footerContact.contact_information.address }}, {{ $footerContact.contact_information.city }}, {{ $footerContact.contact_information.state }} {{ $footerContact.contact_information.zip_code }}</a></li>{{ end }}
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4 class="title is-6 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Quick Links</h4>
+                    <nav class="footer-nav">
+                        {{ $currentPage := . }}
+                        {{ range .Site.Menus.footer }}
+                        <a class="is-block has-text-weight-light {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} footer-nav-item{{if or ($currentPage.IsMenuCurrent "footer" .) ($currentPage.HasMenuCurrent "footer" .) }} active{{end}}" href="{{ .URL | absURL }}" title="{{ .Title }}">{{ .Name }}</a>
+                        {{ end }}
+                    </nav>
+                </div>
+            </div>
+            <hr style="height:1px;background-color: #212121">
+            <div class="columns">
+                <div class="column has-text-centered-mobile">
+                  <p class="is-size-7 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}  &middot; <a href="https://hungryram.com" target="_blank" class="is-size-7 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Website Developed by Hungry Ram</a></p><br>
+                </div>
+                <div class="column has-text-right-desktop has-text-centered-mobile">
+                  <ul>
+                    {{ if $footerSocial.facebook }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.facebook }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Facebook</a></li>{{ end }}
+                    {{ if $footerSocial.instagram }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.instagram }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Instagram</a></li>{{ end }}
+                    {{ if $footerSocial.twitter }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.twitter }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Twitter</a></li>{{ end }}
+                    {{ if $footerSocial.pinterest }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.pinterest }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Pinterest</a></li>{{ end }}
+                    {{ if $footerSocial.youtube }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.youtube }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Youtube</a></li>{{ end }}
+                    {{ if $footerSocial.linkedin }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.linkedin }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Linkedin</a></li>{{ end }}
+                    {{ if $footerSocial.yelp }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.yelp }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Yelp</a></li>{{ end }}
+                  </ul>
+                </div>
+              </div>
+              {{ if $footer.disclaimer }}
+              <div class="columns">
+                  <div class="column content has-text-centered">
+                      <p class="is-size-7 has-text-weight-light{{ if $footer.enable_black_text }} has-text-black{{ else }} has-text-white{{ end }}">{{ $footer.disclaimer }}</p>
+                  </div>
+              </div>
+              {{ end }}
+              <div class="columns">
+                  <div class="column has-text-centered">
+                      <ul>
+                          <li class="is-inline"><a href="{{ .Site.BaseURL }}legal" class="is-size-7 mx-2 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Legal Policies</a></li>
+                          <li class="is-inline"><a href="{{ .Site.BaseURL }}legal/accessibility" class="is-size-7 mx-2 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Accessibility</a></li>
+                          <li class="is-inline"><a href="{{ .Site.BaseURL }}legal/privacy-policy" class="is-size-7 mx-2 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Privacy Policy</a></li>
+                          <li class="is-inline"><a href="{{ .Site.BaseURL }}legal/terms-and-conditions" class="is-size-7 mx-2 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Terms and Conditions</a></li>
+                      </ul>
+                  </div>
+              </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lax.js" ></script><script src="{{.Site.BaseURL}}/js/main.js"></script>
+<script>
+    // COLORS
+    // LINK
+    document.querySelectorAll(".link").forEach(function(link) {
+    link.style.color = '{{ .Site.Data.appearance.colors.links }}';
+    });
+    document.querySelectorAll(".accent").forEach(function(accent) {
+    accent.style.backgroundColor = '{{ .Site.Data.appearance.colors.accent }}';
+    });
+    // PRIMARY BUTTON
+    document.querySelectorAll(".btn-primary").forEach(function(bg) {
+    bg.style.backgroundColor = '{{ .Site.Data.appearance.colors.button_background_color }}';
+    });
+
+    //PRIMARY BUTTON TEXT
+    document.querySelectorAll(".btn-primary").forEach(function(color) {
+    color.style.color = '{{ .Site.Data.appearance.colors.button_text_color }}';
+    });
+
+    //PRIMARY BUTTON TEXT
+    document.querySelectorAll("button.button").forEach(function(buttonColor) {
+    buttonColor.style.backgroundColor = '{{ .Site.Data.appearance.colors.button_background_color }}';
+    });
+
+    //PRIMARY BUTTON COLOR
+    document.querySelectorAll("button.button").forEach(function(buttonColor) {
+    buttonColor.style.backgroundColor = '{{ .Site.Data.appearance.colors.button_background_color }}';
+    });
+
+    //PRIMARY BUTTON TEXT COLOR
+    document.querySelectorAll("button.button").forEach(function(buttonText) {
+    buttonText.style.color = '{{ .Site.Data.appearance.colors.button_text_color }}';
+    });
+
+
+</script>
+<script>
+//FILTER
+function openNav() {
+ document.getElementById("filter-menu").style.width = "200px";
+}
+
+function closeNav() {
+ document.getElementById("filter-menu").style.width = "0";
+ document.body.style.marginLeft = "0px";
+}
+
+$('#filter-menu').click(function(event){
+ event.stopPropagation();
+});
+
+$( ".status:contains('Sold')" ).css( "background", "#d10000" );
+</script>
+</body>
+</html>

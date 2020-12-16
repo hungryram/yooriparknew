@@ -1,0 +1,106 @@
+{{ define "main" }}
+
+<div class="section">
+  <div class="container">
+      <div class="columns is-variable is-8">
+        {{ partial "templates/search" . }}
+
+          <div class="column is-8">
+              <main>
+                  {{ $listCount := len (where .Site.RegularPages "Section" "==" "listings")  }}
+                  {{ if gt $listCount 0 }}
+                  <div class="inner-container">
+
+                      <div class="columns is-multiline is-variable is-4" id="search-results">
+                                  <!-- APPEND RESULT TEMPLATE -->
+                      </div>
+                      
+                  </div>
+                  {{ else }}
+                  <div class="inner-container">
+                      <h2 class="title is-4">No listing has been added</h2>
+                  </div>
+                  {{ end }}
+                  
+              </main>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+<!-- this template is sucked in by search.js and appended to the search-results div above. So editing here will adjust style -->
+<script id="search-result-template" type="text/x-js-template">
+
+  <div class="column is-6">
+    <div class="card property-grid" id="summary-${key}">
+    <a href="${link}">
+    <div class="card-image">
+        <figure class="image is-3by2 darkoverlay">
+          <img src="${image}" alt="">
+        </figure>
+        <div class="level tag-wrapper is-mobile">
+          <div class="level-left">
+            <div class="level-item">
+              <div>
+                  <span class="status">${status}</span>
+                  {{ if "${featured}" }}<span class="featured">${featured}</span>{{ end }}
+              </div>
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              <div>
+                <span class="grid-price">${price}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="level property-title is-mobile">
+          <div class="level-left">
+            <div class="level-item">
+              <div>
+                <div class="is-block">
+                  <span class="short-title">${shorttitle}</span>
+                </div>
+                <div class="is-block">
+                  <span class="grid-address">${title}</span>
+                </div>
+                <div class="is-block" style="margin-top:-12px">
+                  <span class="grid-address">${city}, ${state} ${zip}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <footer class="card-footer">
+      <span class="card-footer-item">
+          <img src="/assets/bed.svg" alt="bed icon" width="20">
+          <span class="ml-2">${bed} Beds</span>
+      </span>
+      <span class="card-footer-item">
+        <img src="/assets/shower-line.svg" alt="bed icon" width="20">
+        <span class="ml-2">${bath} Baths</span>
+      </span>
+    </footer>
+    <footer class="card-footer">
+      <span class="card-footer-item">
+        <img src="/assets/tile.svg" alt="bed icon" width="20">
+        <span class="ml-2">${square} Sq. Ft.</span>
+      </span>
+      <span class="card-footer-item">
+        <img src="/assets/garage.svg" alt="bed icon" width="20">
+        <span class="ml-2">${garage} Garage</span>
+      </span>
+    </footer>
+    <footer class="card-footer">
+      <span class="card-footer-item">${property}</span>
+    </footer>
+    </a>
+    </div>
+  </div>
+</script>
+{{ end }}
+
+

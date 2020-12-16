@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div class="section">
+  <div class="container">
+      <div class="columns is-variable is-8">
+          <div class="column is-8">
+              <main>
+                <div class="inner-container">
+                  <div class="columns is-multiline">
+                    {{ if gt .Params.testimonials 0 }}
+                      {{ range .Params.testimonials }}
+                      <div class="column is-full pl-0 pr-0">
+                          <div class="testimonial box">
+                              <div class="card-content">
+                                <div class="content">
+                                  <p>{{ .testimonial }}</p>
+                                </div>
+                                <div class="media">
+                                  <div class="media-left">
+                                      {{ if .image }}<img src="/assets/user.svg" alt="{{ .name }}">{{ end }}
+                                  </div>
+                                  <div class="media-content">
+                                    <em>{{ .name }}</em>
+                                    <em class="is-block">{{ .date }}</em>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      </div>
+                      {{ end }}
+                      {{ else }}
+                      <h4 class="title is-6 has-text-centered">No testimonials have been added yet</h4>
+                      {{ end }}
+                  </div>
+              </div>
+              </main>
+          </div>
+              {{ partial "templates/sidebar" . }}
+      </div>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container">
+        <div class="columns is-variable is-8">
+            {{ partial "templates/search" . }}
+
+            <div class="column is-8">
+                {{ partial "templates/taxonomy-filter" . }}
+                <main>
+                    
+                    {{ $listCount := len (where .Site.RegularPages "Section" "==" "listings")  }}
+                    {{ if gt $listCount 0 }}
+                    <div class="inner-container">
+                        <div class="columns is-multiline is-variable is-4">
+                            {{ $paginator := .Paginate (where .Pages "Type" "listings") 10 }}
+                            {{ range $paginator.Pages }}
+                                <div class="column is-6">   
+                                    {{ partial "templates/property-grid" . }}         
+                                </div>   
+                            {{ end }}
+                        </div>
+                        {{ partial "templates/pagination" . }}
+                    </div>
+                    {{ else }}
+                    <div class="inner-container">
+                        <h2 class="title is-4">No listing has been added</h2>
+                    </div>
+                    {{ end }}
+                    
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+
+

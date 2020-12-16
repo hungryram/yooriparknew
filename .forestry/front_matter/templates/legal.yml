@@ -1,0 +1,19 @@
+---
+label: Legal
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: last_update
+  type: text
+  config:
+    required: false
+  label: Last Update
+- name: seo
+  type: include
+  config: {}
+  template: seo
+  label: SEO

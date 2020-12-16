@@ -1,0 +1,163 @@
+---
+label: Our Team
+hide_body: false
+fields:
+- name: weight
+  type: number
+  label: Order to Appear
+  default: 50
+  required: true
+  config:
+    min: 1
+    max: 
+    step: 
+  description: Arrange what team displays first. Enter 1 to be at the top of the list.
+- name: title
+  type: text
+  config:
+    required: false
+  label: Full Name
+- name: contact
+  type: field_group
+  config: {}
+  fields:
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+  - name: phone
+    type: text
+    config:
+      required: false
+    label: Phone
+  - name: cell
+    type: text
+    config:
+      required: false
+    label: Cell
+  - name: fax
+    type: text
+    config:
+      required: false
+    label: Fax
+  label: Contact
+- name: details
+  type: field_group
+  config: {}
+  fields:
+  - name: agent_photo
+    type: file
+    config:
+      maxSize: 5
+    label: Agent Photo
+  - name: license_type
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - DRE License
+      - BRE License
+      - License Number
+      - Licensed Real Estate Broker
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: License Type
+  - name: license_number
+    type: text
+    config:
+      required: false
+    label: License Number
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: The position of the team member
+  - name: website
+    type: text
+    config:
+      required: false
+    label: Website
+  - name: office
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: offices
+        file: 
+        path: 
+    label: Office
+  - name: specialty
+    type: tag_list
+    default: []
+    label: Specialty
+    description: List of specialties
+  - name: languages
+    type: tag_list
+    default: []
+    label: Languages
+  label: Details
+- name: social_media
+  type: field_group
+  config: {}
+  fields:
+  - name: instagram
+    type: text
+    config:
+      required: false
+    label: Instagram
+  - name: facebook
+    type: text
+    config:
+      required: false
+    label: Facebook
+  - name: twitter
+    type: text
+    config:
+      required: false
+    label: Twitter
+  - name: youtube
+    type: text
+    config:
+      required: false
+    label: Youtube
+  - name: linkedin
+    type: text
+    config:
+      required: false
+    label: Linkedin
+  - name: pinterest
+    type: text
+    config:
+      required: false
+    label: Pinterest
+  label: Social Media
+- name: search_engine_optimization
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Search Engine Optimization
+- name: url
+  type: include
+  config: {}
+  template: url
+  label: URL
+pages:
+- content/our-team/brittany-simon.md
+- content/our-team/connor-full.md
+- content/our-team/matt-deem.md
+- content/our-team/sammy-palm.md
+- content/our-team/sarah-conner.md

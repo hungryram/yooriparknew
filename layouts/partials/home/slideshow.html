@@ -1,0 +1,77 @@
+{{ $ihfID := .Site.Data.idx.ihf_client_id }}
+{{ partial "global/navbar.html" . }}
+<div class="home-slide">
+{{ range .Site.Data.homelayout.slideshow }}
+<section class="hero is-fullheight" style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)),url({{ if .image }}{{ .image }}{{ else }}/assets/background/slider2.jpg{{ end }});height:100vh;background-size:cover;background-position:center;display:flex;margin-top:-90px">
+  <!-- Hero head: will stick at the top -->
+
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body slide-content">
+    <div class="container has-text-centered">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter has-text-white">
+          <h1 class="title is-1 has-text-white is-size-4-mobile mb-0">{{ .heading }}</h1>
+          <p class="mt-4 is-size-6-mobile">{{ .body }}</p>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          {{ if eq $.Site.Data.idx.enable_idx false }}
+          <div class="center-qs">
+            <form action="{{ "search" | absURL }}">
+              <div class="field has-addons">
+                <div class="control">
+                  <input id="search-query" name="s" class="input" placeholder="Search by address, state, zip, city or MLS #" title="Search by address, state, zip, city or MLS #"/>
+                </div>
+                <div class="control">
+                  <button class="button primary-btn" type="submit">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </form>   
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Hero footer: will stick at the bottom -->
+{{ if $.Site.Data.idx.enable_idx }}
+<div class="section hero-foot">
+  <div class="container">
+    <div class="columns has-text-left has-text-white is-mobile is-vcentered" style="background:rgba(3,7,16,0.6);">
+      <div class="column quicksearch">
+        {{ if $.Site.Data.idx.incomplete_subdomain }}
+        <script type="text/javascript" src="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/site/listing/search/widget/{{ $ihfID }}?style=horizontal"></script>
+        {{ else }}
+        <script type="text/javascript" src="https://{{ $.Site.Data.idx.complete_subdomain }}/site/listing/search/widget/{{ $ihfID }}?style=horizontal"></script>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+</section>
+{{ end }}
+</div>
+
+{{ if $.Site.Data.idx.enable_idx }}
+<div class="section mobile-qs">
+  <div class="container">
+    <div class="columns has-text-left has-text-white is-mobile is-vcentered" style="background:rgba(213,213,213,0.6);padding:20px;">
+      <div class="column quicksearch">
+        {{ if $.Site.Data.idx.incomplete_subdomain }}
+        <script type="text/javascript" src="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/site/listing/search/widget/{{ $ihfID }}?style=horizontal"></script>
+        {{ else }}
+        <script type="text/javascript" src="https://{{ $.Site.Data.idx.complete_subdomain }}/site/listing/search/widget/{{ $ihfID }}?style=horizontal"></script>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

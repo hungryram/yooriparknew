@@ -1,0 +1,48 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container">
+        <div class="columns is-variable is-8">
+            <div class="column is-8">
+                <main>
+                    {{ $agentContact := .Params.contact }}
+                    <div class="inner-container">
+                        <div class="columns is-multiline">
+                            {{ $paginator := .Paginate (where .Pages "Type" "blog") 10 }}
+                            {{ range $paginator.Pages.ByWeight }}
+                            <div class="column is-full agent-container mb-4 pl-0 pr-0">
+                                <div class="card">
+                                    <div class="columns is-vcentered is-variable is-3">
+                                        <div class="column is-5 pb-0 pt-0">
+                                            {{ if .Params.featured_image }}
+                                            <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" style="width:100%;height:250px;object-fit:cover">
+                                            {{ else }}
+                                            <img src="/assets/nophoto.jpg" alt="no photo" style="width:100%;height:250px;object-fit:cover">
+                                            {{ end }}
+                                        </div>
+                                        <div class="column">
+                                            <div class="content pr-3 pl-3">
+                                                <h1 class="title is-4 mb-2 is-size-5-mobile">{{ .Title }}</h1>
+                                                <time class="is-size-7"> {{.Date.Format "Jan 2, 2006" }}</time>
+                                                <div class="content">
+                                                    <p>{{ .Summary }}</p>
+                                                </div>
+                                                <div class="is-block">
+                                                    <a href="{{ .Permalink }}" class="link">Read more...</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                        {{ partial "templates/pagination" . }}
+                    </div>
+                </main>
+            </div>
+                {{ partial "templates/sidebar" . }}
+        </div>
+    </div>
+</div>
+
+{{ end }}

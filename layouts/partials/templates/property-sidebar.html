@@ -1,0 +1,79 @@
+<div class="column">
+    {{ partial "templates/share-listing" . }}
+    {{ if .Params.listing_agent.listing_agent }}<p>
+        {{ with .Site.GetPage .Params.listing_agent.listing_agent }}
+        <div class="agent-sidebar box pb-0 pl-0 pr-0">
+            <div class="columns is-variable is-3">
+                <div class="column is-6 has-text-centered">
+                    <div>
+                        {{ if .Params.details.agent_photo }}
+                        <img src="{{ .Params.details.agent_photo }}" alt="{{ .Title }}" style="width:80px;height:80px;border-radius:50%;object-fit:cover">
+                        {{ else }}
+                        <img src="/assets/user.jpg" alt="use icon" width="100" style="border-radius:50%;">
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="column">
+                    <h4 class="title is-6 mb-0 has-text-centered-mobile">{{ .Title }}</h4>
+                    <h5 class="title is-6 has-text-centered-mobile">{{ .Params.details.title }}</h5>
+                    <h5 class="subtitle is-6 has-text-centered-mobile">{{ .Params.details.license_type }} {{ .Params.details.license_number }}</h5>
+                </div>
+            </div>
+            <footer class="card-footer">
+                {{ if .Params.contact.email }}<a href="mailto:{{ .Params.contact.email }}" class="card-footer-item">Email</a>{{ end }}
+                {{ if .Params.contact.cell }}<a href="tel:{{ .Params.contact.cell }}" class="card-footer-item">Call</a>{{ end }}
+                <a href="{{ .Permalink }}" class="card-footer-item">Profile</a>
+              </footer>
+        </div>
+        {{ end }}
+    {{ end }}
+
+    {{ if .Params.tools.open_house_date }}
+    <div class="box">
+        <div class="single-open-house">
+          <h2 class="title is-6">Open House</h2>
+          <p>{{ .Params.tools.open_house_date }}</p>
+          <p>{{ .Params.tools.open_house_details }}</p>
+        </div>
+    </div>
+    {{ end }}
+
+    {{ if .Params.tools.file_attachments }}
+    <div class="box">
+        <h2 class="title is-6">Attachments</h2>
+        {{ range .Params.tools.file_attachments }}
+          <p class="box"><a href="{{ . }}" target="_blank" class="align-center link"><img src="/assets/download.svg" width="20" class="mr-2">Download File</a></p>
+        {{else}}
+          <p>no files</p>
+        {{end}}
+    </div>
+    {{ end }}
+
+    <div class="pt-6 pb-6">
+        <h4 class="title is-6">Other Listings</h4>
+        {{ range ( where $.Site.RegularPages "Type" "listings") }}
+        <a href="{{ .Permalink }}">
+            <article class="media mb-5">
+                {{ if $.Params.photos.gallery }}
+                <div class="media-left">
+                  <figure class="image is-96x96">
+                      {{ if .Params.photos.gallery }}
+                    <img src="{{ index .Params.photos.gallery 0 }}" alt="{{ .Title }}">
+                    {{ else }}
+                    <img src="/assets/nohouse.jpg" alt="no house">
+                    {{ end }}
+                  </figure>
+                </div>
+                {{end}}
+                <div class="media-content">
+                  <div class="">
+                      <h1 class="title is-6" style="margin: 0;">{{ .Params.title }}</h1>
+                      {{ if $.Params.price }}<p class="has-text-black mx-0">{{ .Params.price }}</p>{{ end }}
+                      {{ if $.Params.properties }}<p class="has-text-black mx-0">{{ .Params.properties }}</p>{{ end }}
+                </div>
+            </article>
+        </a>
+        {{ end }}
+    </div>
+
+</div><!-- End Column -->

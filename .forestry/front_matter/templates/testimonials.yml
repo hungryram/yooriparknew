@@ -1,0 +1,62 @@
+---
+label: Testimonials
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body
+- name: seo
+  type: include
+  config: {}
+  template: seo
+  label: SEO
+- name: testimonials
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+  - name: testimonial
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Testimonial
+  - name: source
+    type: text
+    config:
+      required: false
+    label: Source
+  - name: source_label
+    type: text
+    config:
+      required: false
+    label: Source Label
+  - name: date
+    type: text
+    config:
+      required: false
+    label: Date
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Testimonials
+pages:
+- content/testimonials/_index.md
