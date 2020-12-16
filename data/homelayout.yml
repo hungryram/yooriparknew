@@ -1,13 +1,5 @@
 ---
 slideshow:
-- heading: Flexible Real Estate Theme
-  subtitle: Let our team of experts guide you to your next home
-  link_label: Read More
-  link: https://www.hungryram.com
-  image: https://res.cloudinary.com/hungryram19/image/upload/v1605404579/templates/realestate2/slider3_o30w9i_pujrai.jpg
-  body: Modern real estate website powered by new technology. This site does not rely
-    on any database which ensures optimal performance and the highest security
-  enable_white_text: true
 - image: https://res.cloudinary.com/hungryram19/image/upload/v1605404343/templates/realestate2/farmhousekitchen_z56hb7.jpg
   subtitle: my subtitle
   body: 'No need to bloat the website with drag and drop or page builders. '
@@ -16,66 +8,39 @@ slideshow:
   link_label: "/listings"
   heading: No Heavy Resources
 home_sections:
-- template: text-and-image
-  heading: Discover Our Finest Homes
-  body: Each section of the home page can be arranged and customized through your
-    phone or computer. Easily manage your website through our website editor customized
-    specifically for real estate professionals.
-  button: Read more
-  button_link: "/our-team"
-  image: https://res.cloudinary.com/hungryram19/image/upload/v1605402573/templates/realestate2/agent-4_ovchvb.jpg
-  image_alt_tag: John
-  image_width: '400'
-- template: active-listings
-  heading: Active Listings
-  body: View active listings in the office
 - template: featured-boxes
-  heading: Featured Communities
-  body: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro optio fugit
-    non delectus eos, quas, dolorem alias '
+  heading: ''
+  body: ''
   featured:
-  - image: https://res.cloudinary.com/hungryram19/image/upload/v1605402922/templates/realestate2/losangeles_z6wp8g.jpg
-    link: "/contact"
-    heading: Los Angeles
-  - heading: Whittier
-    image: https://res.cloudinary.com/hungryram19/image/upload/v1605402939/templates/realestate2/livingroom_az8tp4.jpg
-    link: "/contact"
-  - heading: Corona
-    image: https://res.cloudinary.com/hungryram19/image/upload/v1605402970/templates/realestate2/sidekix-media-l6u4GIKvxBs-unsplash_qipkhd.jpg
-    link: "/contact"
-- template: home-agent
-  heading: Our Team
-  body: Helpful agents that will guide you in the real estate market
-- template: text-and-contact-form
-  heading: We help you buy or sell your property quickly
-  body: Engage with our professional real estate agents to sell, buy or rent your
-    home. Get emails directly to your inbox and manage the lead as you wish.
-  background_image: https://res.cloudinary.com/hungryram19/image/upload/v1605403006/templates/realestate2/clean-living-room_b3bubn.jpg
-  form:
-    heading: Send a message
-    body: Engage with our professional real estate agents to sell, buy or rent your
-      home. Get emails directly to your inbox and manage the lead as you wish.
-  background_color: "#424242"
-  enable_white_text: true
-- template: tiles
-  heading: Featured Areas
-  body: View our best homes
-  tile_one:
-    heading: Feature One
-    image: ''
-    link: https://google.com
-  tile_two:
-    heading: Feature Two
-    image: ''
-    link: "/contact"
-  tile_three:
-    heading: Feature Three
-    image: ''
-    link: "/contact"
-  tile_four:
-    heading: Feature Four
-    image: ''
-    link: "/team"
+  - image: https://res.cloudinary.com/hungryram19/image/upload/v1608162810/yoori-park/yooripark/ahmet-yalcinkaya-aNrRsB2wLDk-unsplash_cfycjx.jpg
+    link: "/ready-to-sell"
+    heading: READY TO SELL
+  - heading: READY TO BUY OR INVEST
+    link: "/ready-to-buy-or-invest"
+    image: https://res.cloudinary.com/hungryram19/image/upload/v1608162867/yoori-park/yooripark/bev_bnr2r0.jpg
+  - heading: BLOG
+    image: https://res.cloudinary.com/hungryram19/image/upload/v1608162881/yoori-park/yooripark/sterling-davis-4iXagiKXn3Y-unsplash_cxcekz.jpg
+    link: "/blog"
+- template: text-and-image
+  heading: MEET YOORI PARK
+  body: 'Yoori firmly believes that if you focus on the client and the client’s aspirations,
+    everything else will fall into place. The client is #1 in Yoori’s book. Her desire
+    is to assist clients wanting to buy or sell their home from the very beginning
+    of the process to the very end with essentially an “open-door” policy that values
+    100% transparency and open communication. Yoori deeply values building rapport
+    with each and every one of her clients yet is strongly results-oriented and works
+    hard to deliver. Her confidence and prowess comes from 18 plus years of training
+    and experience in both sales and customer service. Top scores, ratings, and reviews
+    can all attest to her success, which she attributes to her own expertise and genuine
+    care.'
+  button: Read more
+  button_link: "/about-yoori"
+  image: https://res.cloudinary.com/hungryram19/image/upload/v1608162717/yoori-park/yooripark/yoori2_pazwvb.jpg
+  image_alt_tag: Yoori Park
+  image_width: 400
+- template: active-listings
+  heading: EXCLUSIVE LISTINGS
+  body: ''
 - template: home-blog
   heading: Our Blog
   body: Keep up with latest posts
