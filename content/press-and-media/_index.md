@@ -1,6 +1,6 @@
 +++
 body = ""
-heading = "Press & Media"
+title = "Press & Media"
 [menu.main]
 name = "Press & Media"
 weight = 5

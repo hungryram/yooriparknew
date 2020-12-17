@@ -250,6 +250,10 @@ div.hero-body {
 
 /* NAVBAR */
 
+.navbar-link, a.navbar-item {
+  font-size: 14px;
+}
+
 nav.navbar {
   background:transparent;
 }
@@ -260,7 +264,7 @@ nav.nav-wrap {
 }
 
 a.navbar-item img {
-  max-height: 3.75rem;
+  max-height: 4.75rem;
 }
 
 .navbar-dropdown {

@@ -9,16 +9,15 @@
                     {{ if $footer.logo }}
                     <img src="{{ $footer.logo }}" alt="{{ .Site.Data.appearance.branding.site_title }}" width="150">
                     {{ else }}
-                    <h1 class="title is-4 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ $footerContact.company_name }}</h1>
                     {{ end }}
-                    <h3 class="title is-6 mb-2 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ $footerContact.contact_information.name }}</h3>
-                    <em class="has-text-weight-light {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ $footerContact.contact_information.license }}</em>
                 </div>
                 <div class="column">
                     <h4 class="title is-6 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ $footerContact.company_name }}</h4>
                     {{ if $footer.footer_bio }}
                     <p class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} has-text-weight-light">{{ $footer.footer_bio }}</p>
                     {{ end }}
+                    <em class="has-text-weight-light {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ $footerContact.contact_information.license }}</em>
+
                 </div>
                 <div class="column">
                     <h4 class="title is-6 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Contact</h4>

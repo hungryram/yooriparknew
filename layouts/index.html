@@ -181,7 +181,7 @@
   {{ end }}
 
   {{ if eq "text-and-image" .template }}
-  <div class="section" style="background:black">
+  <div class="section" style="background:url(/assets/background/bg.jpg)no-repeat center;background-size:cover">
     <div class="container">
       <div class="columns is-vcentered">
         {{ if .image }}
@@ -232,7 +232,7 @@
   {{ end }}
 
   {{ if eq "banner" .template }}
-  <div class="section" style="background:#000">
+  <div class="section" style="background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(assets/background/bg2.jpg)no-repeat center;background-size:cover">
     <div class="container pt-6 pb-6">
       <div class="columns">
         <div class="column">
