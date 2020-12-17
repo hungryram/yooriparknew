@@ -1,0 +1,21 @@
+{{ partial "global/navbar" . }}
+<section class="hero is-fullheight">
+    <div class="video-container">
+        <video playsinline autoplay loop muted>
+            <source src="{{ .Site.Data.homelayout.video_background.video }}">
+                Your browser does not support the video tag
+        </video>
+    </div>
+    {{ range .Site.Data.homelayout.slideshow }}
+    <div class="hero-body slide-content">
+        <div class="container has-text-centered">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter has-text-white">
+                    <h1 class="title is-1 has-text-white is-size-4-mobile mb-0 has-text-weight-light is-uppercase">{{ .heading }}</h1>
+                    <p class="mt-4 is-size-6-mobile">{{ .body }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</section>

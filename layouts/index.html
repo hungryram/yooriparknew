@@ -1,5 +1,5 @@
 {{ partial "global/head" . }}
-{{ partial "home/slideshow" . }}
+{{ partial "home/video" . }}
 <div class="home-section">
 {{ range .Site.Data.homelayout.home_sections }}
 
@@ -181,7 +181,7 @@
   {{ end }}
 
   {{ if eq "text-and-image" .template }}
-  <div class="section">
+  <div class="section" style="background:black">
     <div class="container">
       <div class="columns is-vcentered">
         {{ if .image }}
@@ -191,11 +191,11 @@
         {{ end }}
         <div class="column content{{ if .image }}{{ else }} has-text-centered is-half is-offset-one-quarter{{ end }}">
           <div class="is-block">
-            <h2 class="title is-4{{ if .image }}{{ else }} has-text-centered{{ end }}">{{ .heading }}</h2>
-            <p>{{ .body | markdownify }}</p>
+            <h2 class="has-text-white has-text-weight-light title is-4{{ if .image }}{{ else }} has-text-centered{{ end }}">{{ .heading }}</h2>
+            <p class="has-text-white has-text-weight-light">{{ .body | markdownify }}</p>
           </div>
           <div class="is-block mt-5">
-            <a href="{{ .button_link }}" class="btn-primary">{{ .button }}</a>
+            <a href="{{ .button_link }}" class="btn-primary" style="border:1px solid white;">{{ .button }}</a>
           </div>
         </div>
       </div>
@@ -226,6 +226,23 @@
             </a>
           </div>
         {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+  {{ if eq "banner" .template }}
+  <div class="section">
+    <div class="container">
+      <div class="columns mb-6">
+        <div class="column">
+          {{ if .heading }}
+          <h1 class="title is-4 has-text-centered">{{ .heading }}</h1>
+          {{ end }}
+          {{ if .body }}
+          <p class="has-text-centered">{{ .body | markdownify }}</p>
+          {{ end }}
+        </div>
       </div>
     </div>
   </div>
