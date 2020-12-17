@@ -105,12 +105,15 @@ div.summary-card p {
 
 .btn-primary {
   transition: .3s;
+  border-radius: 0px;
 }
 
 button.button {
   width: 100%;
   transition: .3s;
   padding: 10px 20px;
+  border-radius: 0px;
+
 }
 
 a.btn-primary:hover,
