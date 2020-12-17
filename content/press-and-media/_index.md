@@ -1,4 +1,6 @@
 +++
+body = ""
+heading = "Press & Media"
 [[press]]
 body = "The Decision The designers renovate the final areas and a winner is chosen."
 heading = "Rock the Block"
