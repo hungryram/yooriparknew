@@ -25,6 +25,9 @@ pages:
   image: https://res.cloudinary.com/hungryram19/image/upload/v1605403412/templates/realestate2/backgroundlivingroom_fungj5.jpg
 sidebar:
   sidebar:
+  - template: sidebar-profile
+    image: https://res.cloudinary.com/hungryram19/image/upload/v1608179569/yoori-park/yooripark/yooripark_umrgao.jpg
+    heading: Yoori Park
   - template: side-blog-category
     blog_categories: ''
   - template: latest-posts
