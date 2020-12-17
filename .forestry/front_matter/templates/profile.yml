@@ -36,6 +36,11 @@ fields:
     config:
       required: false
     label: Yelp
+  - name: youtube
+    type: text
+    config:
+      required: false
+    label: Youtube
   label: Social Media
 - name: contact_information
   type: field_group
