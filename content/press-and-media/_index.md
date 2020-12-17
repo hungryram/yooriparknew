@@ -1,6 +1,9 @@
 +++
 body = ""
 heading = "Press & Media"
+[menu.main]
+name = "Press & Media"
+weight = 5
 [[press]]
 body = "The Decision The designers renovate the final areas and a winner is chosen."
 heading = "Rock the Block"
