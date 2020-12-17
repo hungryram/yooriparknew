@@ -9,14 +9,6 @@ weight = 1
 name = "Press & Media"
 weight = 5
 [[menu.main]]
-name = "Ready to Sell"
-parent = "Services"
-weight = 2
-[[menu.main]]
-name = "Ready to Buy or Invest"
-parent = "Services"
-weight = 1
-[[menu.main]]
 name = "Services"
 weight = 4
 [[menu.main]]
