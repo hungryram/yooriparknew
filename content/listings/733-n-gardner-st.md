@@ -1,0 +1,55 @@
++++
+cities = "West Hollywood"
+date = ""
+featured = ""
+price = "$1,807,000"
+properties = ""
+schema_price = "1.807.000"
+short_title = "Country English Home"
+states = "California"
+status = "Sold"
+title = "733 N Gardner St"
+url = ""
+zip-codes = "90046"
+[details]
+bathrooms = "2"
+bedrooms = "3"
+garage = ""
+hoa = ""
+lot_size = ""
+mls_number = ""
+square_footage = "1677"
+year_built = ""
+[listing_agent]
+listing_agent = []
+[photos]
+gallery = []
+[search_engine_optimization]
+meta_description = ""
+title_tag = ""
+[tools]
+file_attachments = []
+matterport_link = ""
+open_house_date = ""
+open_house_details = ""
+youtube_link = ""
+[utilities_and_features.community_features]
+additional_community_details = []
+community_features_choice = []
+show_community_details = false
+[utilities_and_features.exterior]
+additional_exterior_details = []
+exterior_details = []
+exterior_roof = []
+show_exterior_details = false
+[utilities_and_features.interior_details]
+additional_interior_details = []
+interior_appliances = []
+interior_flooring = []
+interior_rooms = []
+show_interior_details = false
+
++++
+This exceptional Country English home is a design tour de force! The dramatic eat-in kitchen by DeWitt Kitchens features Connecticut barn reclaimed wood beams & cabinetry, banquette, travertine countertops, copper farmhouse sink, Walker Zanger tile and Miele & GE Monogram Pro series appliances. The kitchen opens up to a large deck with pergola, perfect for alfresco dining, creating incredible indoor & outdoor flow. The spacious Master bedroom with ensuite bath opens to the outdoors as well, making it a fabulous staging point to entertain, play or relax. A large lot allows for future expansion or the addition of a pool.
+
+**(Team LA Homes and Architecture)**
