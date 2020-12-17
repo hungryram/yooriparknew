@@ -216,7 +216,7 @@
           {{ end }}
         </div>
       </div>
-      <div class="columns is-multiline">
+      <div class="columns is-multiline mb-6">
         {{ range .featured }}
           <div class="column is-4">
             <a href="{{ .link }}">
@@ -232,16 +232,19 @@
   {{ end }}
 
   {{ if eq "banner" .template }}
-  <div class="section">
-    <div class="container">
-      <div class="columns mb-6">
+  <div class="section" style="background:#000">
+    <div class="container pt-6 pb-6">
+      <div class="columns">
         <div class="column">
           {{ if .heading }}
-          <h1 class="title is-4 has-text-centered">{{ .heading }}</h1>
+          <h1 class="title is-4 has-text-centered has-text-white has-text-weight-light">{{ .heading }}</h1>
           {{ end }}
           {{ if .body }}
-          <p class="has-text-centered">{{ .body | markdownify }}</p>
+          <p class="has-text-centered has-text-white">{{ .body | markdownify }}</p>
           {{ end }}
+          <div class="is-block mt-5 has-text-centered">
+            <a href="/contact" class="btn-primary" style="border:1px solid white;">Contact</a>
+          </div>
         </div>
       </div>
     </div>

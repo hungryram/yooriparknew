@@ -139,6 +139,13 @@ div.box {
 
 /* VIDEO BACKGROUND */
 
+.black-overlay {
+  height: 91vh;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+}
+
 div.video-container {
   position: absolute;
   bottom: 0;
@@ -184,7 +191,14 @@ input#search-query::placeholder {
 
 /* HERO */
 
+section.hero.is-fullheight {
+  min-height: 90vh;
+}
 
+div.hero-body {
+  position: relative;
+  z-index: 100;
+}
 
 /** Hero Text Animation **/
   
