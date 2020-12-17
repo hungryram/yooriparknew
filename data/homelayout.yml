@@ -41,6 +41,9 @@ home_sections:
 - template: active-listings
   heading: EXCLUSIVE LISTINGS
   body: ''
+- template: banner
+  heading: SEARCHING FOR YOUR NEXT HOME?
+  body: Call now or send me an email!
 - template: home-blog
   heading: Our Blog
   body: Keep up with latest posts

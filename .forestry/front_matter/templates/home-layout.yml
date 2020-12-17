@@ -59,6 +59,7 @@ fields:
   - text-and-image
   - text-and-contact-form
   - tiles
+  - banner
   config:
     min: 
     max: 
