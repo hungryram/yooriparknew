@@ -104,6 +104,7 @@ div.summary-card p {
 }
 
 .btn-primary {
+  padding: 10px 20px;
   transition: .3s;
   border-radius: 0px;
 }
