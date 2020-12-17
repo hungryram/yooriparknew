@@ -1,11 +1,11 @@
 +++
-cities = ""
+cities = "Studio City"
 date = ""
 featured = ""
 price = "$2,669,000"
 properties = ""
 schema_price = "2.669.000"
-short_title = "Studio City"
+short_title = "Designer Home"
 states = "California"
 status = "Sold"
 title = "4122 Rhodes Ave."
