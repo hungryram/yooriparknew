@@ -138,6 +138,7 @@ fields:
     template_types:
     - side-blog-category
     - latest-posts
+    - sidebar-profile
     config:
       min: 
       max: 
