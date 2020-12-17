@@ -6,19 +6,21 @@ name = "Home"
 url = "/"
 weight = 1
 [[menu.main]]
+name = "Sold Properties"
+parent = "Properties"
+url = "/status/sold/"
+weight = 2
+[[menu.main]]
+name = "Exclusive Properties"
+parent = "Properties"
+url = "/featured/featured/"
+weight = 1
+[[menu.main]]
 name = "Press & Media"
 weight = 5
 [[menu.main]]
 name = "Services"
 weight = 4
-[[menu.main]]
-name = "Sold Properties"
-parent = "Properties"
-weight = 2
-[[menu.main]]
-name = "Exclusive Properties"
-parent = "Properties"
-weight = 1
 [[menu.main]]
 name = "Properties"
 weight = 3
