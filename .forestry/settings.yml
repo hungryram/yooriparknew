@@ -50,7 +50,6 @@ sections:
 - type: document
   path: content/press-and-media/_index.md
   label: Press and Media
-  match: "**/*"
 - type: directory
   path: content/offices
   label: Offices

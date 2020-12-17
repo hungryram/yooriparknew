@@ -39,3 +39,5 @@ fields:
     max: 
     labelField: 
   label: Press
+pages:
+- content/press-and-media/_index.md
