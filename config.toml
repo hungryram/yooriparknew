@@ -5,31 +5,6 @@ summaryLength = 20
 name = "Home"
 url = "/"
 weight = 1
-[[menu.main]]
-name = "Sold Listings"
-parent = "Properties"
-url = "/status/sold"
-weight = 2
-[[menu.main]]
-name = "Exclusive Listings"
-parent = "Properties"
-url = "/featured"
-weight = 1
-[[menu.main]]
-name = "Press & Media"
-url = "/press-media"
-weight = 5
-[[menu.main]]
-name = "Services"
-weight = 4
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-[[menu.main]]
-name = "Properties"
-url = "/listings"
-weight = 3
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 [params]
