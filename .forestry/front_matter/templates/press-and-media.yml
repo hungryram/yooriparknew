@@ -2,6 +2,20 @@
 label: Press and Media
 hide_body: true
 fields:
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body
 - name: press
   type: field_group_list
   fields:
