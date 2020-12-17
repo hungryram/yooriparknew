@@ -51,7 +51,7 @@
 
     <div class="pt-6 pb-6">
         <h4 class="title is-6">Other Listings</h4>
-        {{ range ( where $.Site.RegularPages "Type" "listings") }}
+        {{ range first 6 ( where $.Site.RegularPages "Type" "listings") }}
         <a href="{{ .Permalink }}">
             <article class="media mb-5">
                 {{ if $.Params.photos.gallery }}
