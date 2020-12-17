@@ -2,7 +2,7 @@
 label: Press and Media
 hide_body: true
 fields:
-- name: heading
+- name: title
   type: text
   config:
     required: false
