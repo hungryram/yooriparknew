@@ -204,6 +204,17 @@ div.hero-body {
   z-index: 100;
 }
 
+@media screen and (max-width: 768px){
+  section.hero.is-fullheight {
+    background: url("/assets/background/belair.jpg") no-repeat center;
+    background-size:cover;
+  }
+
+  section.hero.is-fullheight .video-container {
+    display: none;
+  }
+}
+
 /** Hero Text Animation **/
   
   @-webkit-keyframes fadeInUpSD {
@@ -256,6 +267,7 @@ div.hero-body {
 
 nav.navbar {
   background:transparent;
+  box-shadow: -1px 3px 16px 0px #353535;
 }
 
 nav.nav-wrap {
