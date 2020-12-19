@@ -23,7 +23,7 @@ year_built = ""
 [listing_agent]
 listing_agent = []
 [photos]
-gallery = []
+gallery = ["https://res.cloudinary.com/hungryram19/image/upload/v1608337288/yoori-park/yooripark/ScreenShot2019-09-09at7.58.11PM_q6filt.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337288/yoori-park/yooripark/ScreenShot2019-09-09at7.57.27PM_eafshe.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337288/yoori-park/yooripark/ScreenShot2019-09-09at7.56.19PM_is7t4u.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337288/yoori-park/yooripark/FRONTPHOTO_lsxo05.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337288/yoori-park/yooripark/ScreenShot2019-09-09at7.58.24PM_oolxre.png"]
 [search_engine_optimization]
 meta_description = ""
 title_tag = ""
