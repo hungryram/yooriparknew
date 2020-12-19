@@ -1,6 +1,6 @@
 baseURL = "https://www.yooripark.com/"
 languageCode = "en-us"
-summaryLength = 20
+summaryLength = "20"
 [[menu.footer]]
 name = "Home"
 url = "/"
