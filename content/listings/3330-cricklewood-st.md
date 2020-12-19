@@ -23,7 +23,7 @@ year_built = ""
 [listing_agent]
 listing_agent = []
 [photos]
-gallery = []
+gallery = ["https://res.cloudinary.com/hungryram19/image/upload/v1608337090/yoori-park/yooripark/ScreenShot2019-09-10at12.08.07PM_tltiny.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337090/yoori-park/yooripark/ScreenShot2019-09-10at12.09.08PM_x5e3qo.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337090/yoori-park/yooripark/ScreenShot2019-09-10at12.08.56PM_qa52ri.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337090/yoori-park/yooripark/ScreenShot2019-09-10at12.08.34PM_une840.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337090/yoori-park/yooripark/ScreenShot2019-09-10at12.07.47PM_k0dkyt.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337090/yoori-park/yooripark/ScreenShot2019-09-10at12.07.33PM_htxnww.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337090/yoori-park/yooripark/ScreenShot2019-09-10at12.07.23PM_kx5wez.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337090/yoori-park/yooripark/ScreenMAINPHOTOCricklewood_f5b9ji.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608337089/yoori-park/yooripark/ScreenShot2019-09-10at12.09.27PM-0a6ecebe_adhthy.png"]
 [search_engine_optimization]
 meta_description = ""
 title_tag = ""
