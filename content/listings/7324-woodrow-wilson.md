@@ -23,7 +23,7 @@ year_built = ""
 [listing_agent]
 listing_agent = []
 [photos]
-gallery = []
+gallery = ["https://res.cloudinary.com/hungryram19/image/upload/v1608337397/yoori-park/yooripark/7324_Woodrow_BIG-3_gohi9c.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608337399/yoori-park/yooripark/7324_Woodrow_BIG-16_aposmc.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608337399/yoori-park/yooripark/7324_Woodrow_BIG-19_mv1rk3.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608337399/yoori-park/yooripark/7324_Woodrow_BIG-9_laentp.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608337399/yoori-park/yooripark/7324_Woodrow_BIG-6_e9oyew.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608337398/yoori-park/yooripark/7324_Woodrow_BIG-5_ebun6f.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608337396/yoori-park/yooripark/7324_Woodrow_Painting_BIG-1_sm1eor.jpg"]
 [search_engine_optimization]
 meta_description = ""
 title_tag = ""
