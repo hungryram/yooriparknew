@@ -12,13 +12,13 @@ title = "736 N Sierra Bonita Ave"
 url = ""
 zip-codes = "90046"
 [details]
-bathrooms = ""
-bedrooms = ""
+bathrooms = "2"
+bedrooms = "3"
 garage = ""
 hoa = ""
 lot_size = ""
 mls_number = ""
-square_footage = ""
+square_footage = "1,814"
 year_built = ""
 [listing_agent]
 listing_agent = []
