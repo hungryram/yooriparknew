@@ -23,7 +23,7 @@ year_built = ""
 [listing_agent]
 listing_agent = []
 [photos]
-gallery = []
+gallery = ["https://res.cloudinary.com/hungryram19/image/upload/v1608336735/yoori-park/yooripark/MainPhotoSierraBonita_kflxsx.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608336730/yoori-park/yooripark/ScreenShot2019-09-10at12.28.18PM_rzumqu.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608336735/yoori-park/yooripark/JD2_1953-HDR_brlvr9.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608336734/yoori-park/yooripark/JD2_1938-HDR_xwdynp.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608336734/yoori-park/yooripark/JD2_1932-HDRB_r7tamk.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608336734/yoori-park/yooripark/JD2_1926-HDRB_neeqxw.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608336735/yoori-park/yooripark/JD2_1925_owtcnw.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608336734/yoori-park/yooripark/JD2_1916_ubpkcv.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1608336729/yoori-park/yooripark/ScreenShot2019-09-10at12.36.12PM_y5nec0.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608336729/yoori-park/yooripark/ScreenShot2019-09-10at12.30.33PM_ek8d6i.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608336729/yoori-park/yooripark/ScreenShot2019-09-10at12.29.48PM_vziur4.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608336729/yoori-park/yooripark/ScreenShot2019-09-10at12.29.13PM_geygvn.png", "https://res.cloudinary.com/hungryram19/image/upload/v1608336729/yoori-park/yooripark/ScreenShot2019-09-10at12.28.48PM_oklnjx.png"]
 [search_engine_optimization]
 meta_description = ""
 title_tag = ""
