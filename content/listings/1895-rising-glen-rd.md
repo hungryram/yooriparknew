@@ -1,6 +1,7 @@
 +++
 cities = "West Hollywood"
 date = ""
+draft = true
 featured = "Featured"
 price = "$13,900,000"
 properties = ""
