@@ -2,6 +2,7 @@
 author = []
 categories = ["Buying"]
 date = 2020-01-09T08:00:00Z
+draft = true
 featured_image = "https://res.cloudinary.com/hungryram19/image/upload/v1608173372/yoori-park/yooripark/front-house_bhk9rs.jpg"
 image_alt_tag = "One story home"
 tags = []
