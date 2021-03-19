@@ -1,6 +1,7 @@
 +++
 cities = "Sherman Oaks"
 date = ""
+draft = true
 featured = ""
 price = "$1,459,630"
 properties = ""
