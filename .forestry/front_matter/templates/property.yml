@@ -506,6 +506,7 @@ fields:
   template: url
   label: URL
 pages:
+- content/listings/1407-chautauqua-blvd.md
 - content/listings/1530-n-curson-ave.md
 - content/listings/1895-rising-glen-rd.md
 - content/listings/2008-whitley-ave.md
