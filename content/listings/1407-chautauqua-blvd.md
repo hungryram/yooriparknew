@@ -2,7 +2,7 @@
 cities = "Pacific Palisades"
 date = ""
 featured = ""
-price = "14,000,000"
+price = "$14,000,000"
 properties = "Single Family"
 schema_price = "14.000.000"
 short_title = "Private Paradise"
