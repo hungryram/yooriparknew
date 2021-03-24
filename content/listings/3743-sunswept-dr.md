@@ -1,6 +1,7 @@
 +++
 cities = "Studio City"
 date = ""
+draft = true
 featured = ""
 price = "$2,125,000"
 properties = ""
