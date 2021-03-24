@@ -32,7 +32,7 @@ file_attachments = []
 matterport_link = ""
 open_house_date = ""
 open_house_details = ""
-youtube_link = ""
+youtube_link = "Wv7Db2qgxUQ"
 [utilities_and_features.community_features]
 additional_community_details = []
 community_features_choice = []
