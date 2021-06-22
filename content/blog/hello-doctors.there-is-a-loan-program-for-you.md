@@ -2,6 +2,7 @@
 author = []
 categories = ["Loans"]
 date = 2019-10-17T07:00:00Z
+draft = true
 featured_image = "https://res.cloudinary.com/hungryram19/image/upload/v1608173172/yoori-park/yooripark/featured3_nuwp8q.jpg"
 image_alt_tag = "Business meeting"
 tags = []
