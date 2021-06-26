@@ -2,7 +2,7 @@
 slideshow:
 - image: https://res.cloudinary.com/hungryram19/image/upload/v1605404343/templates/realestate2/farmhousekitchen_z56hb7.jpg
   subtitle: my subtitle
-  body: 'Integrity, Transparency, and Due Diligence Guaranteed'
+  body: Integrity, Transparency, and Due Diligence Guaranteed
   enable_white_text: true
   link: View Properties
   link_label: "/listings"
@@ -38,6 +38,9 @@ home_sections:
   image: https://res.cloudinary.com/hungryram19/image/upload/v1608162717/yoori-park/yooripark/yoori2_pazwvb.jpg
   image_alt_tag: Yoori Park
   image_width: 400
+- template: sold-listings
+  heading: Sold Listings
+  body: View sold listings in the office
 - template: active-listings
   heading: EXCLUSIVE LISTINGS
   body: ''
