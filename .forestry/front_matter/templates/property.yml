@@ -99,6 +99,9 @@ fields:
   description: The listing price but use only decimal. This is for SEO purposes on
     Schema.
   label: Schema Price
+- name: all_sold
+  type: boolean
+  label: All Sold
 - name: status
   type: select
   default: ''
