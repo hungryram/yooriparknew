@@ -114,6 +114,7 @@ fields:
     - Coming Soon
     - Auction
     - Rental
+    - All Properties Sold
     source:
       type: simple
       section: 
