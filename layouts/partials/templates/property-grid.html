@@ -13,6 +13,7 @@
         <div class="level-item">
           <div>
             {{ if .Params.status }}<span class="status">{{ .Params.status }}</span>{{ end }}
+            {{ if .Params.all_sold }}<span class="status">All Properties Sold</span>{{ end }}
             {{ if .Params.featured }}<span class="featured">{{ .Params.featured }}</span>{{ end }}
           </div>
         </div>
