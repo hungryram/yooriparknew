@@ -1,4 +1,5 @@
 +++
+all_sold = true
 cities = "Los Angeles"
 date = ""
 featured = ""
