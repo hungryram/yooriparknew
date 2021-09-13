@@ -18,7 +18,8 @@ div.home-section div.section:nth-child(odd){
   color: inherit;
 }
 
-.search-filter ul li a {
+.search-filter ul li a,
+#filter-menu ul li a {
   text-transform: capitalize;
 }
 
