@@ -18,6 +18,10 @@ div.home-section div.section:nth-child(odd){
   color: inherit;
 }
 
+.search-filter ul li a {
+  text-transform: capitalize;
+}
+
 body h1.subtitle,
 body h2.subtitle,
 body h3.subtitle,

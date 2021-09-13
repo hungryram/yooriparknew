@@ -446,7 +446,7 @@
     </div>
     <div class="responsive-slide">
       {{ if gt $sold 0 }}
-        {{ range first 6 $sold }}
+        {{ range $sold }}
           <div class="mx-3">
             {{ partial "templates/property-grid" . }}
           </div>
