@@ -7,8 +7,8 @@ name = "Home"
 url = "/"
 weight = 1
 [[menu.main]]
-name = "About"
-weight = 4
+name = "Buyers & Sellers"
+weight = 3
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 [taxonomies]
