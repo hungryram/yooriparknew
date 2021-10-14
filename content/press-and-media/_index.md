@@ -2,7 +2,7 @@
 body = ""
 title = "Press & Media"
 [menu.main]
-weight = 4
+weight = 5
 [[press]]
 body = "The Decision The designers renovate the final areas and a winner is chosen."
 extra = "HGTV"
