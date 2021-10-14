@@ -4,7 +4,7 @@ title = "Ready to Buy or Invest"
 title_tag = ""
 [menu.main]
 parent = "Buyers & Sellers"
-weight = 2
+weight = 5
 
 +++
 Purchase your first home can be daunting and overwhelming but it doesn’t have to be. With the right resources, care, and direction, it can be an exciting and memorable experience. Yoori is known not only for her attention-to-detail but for her attentiveness to clients. She listens carefully for what the client’s needs and wishes are, tailors an action plan that makes the most sense, and is not afraid to go the extra mile to make things happen.
