@@ -10,7 +10,7 @@ weight = 1
 name = "Properties"
 weight = 3
 [[menu.main]]
-name = "Exclusive Listings"
+name = "Exclusive"
 parent = "Properties"
 url = "/featured/featured/"
 weight = 1

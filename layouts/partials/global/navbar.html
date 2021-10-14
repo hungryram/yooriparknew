@@ -4,84 +4,87 @@
 {{ $headerSocial := .Site.Data.profile.social_media }}
 {{ $social := .Site.Data.profile.social_media }}
 
-    <div class="uk-visible@s{{ if $.IsHome }} uk-animation-slide-top-small{{ end }}" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: top: 100" style="background: white;">
-        <nav class="main-nav">
-            <div class="uk-container uk-container-large">
-                <div uk-navbar>
-                    <div class="uk-navbar-left">
-                        <a href="{{ .Site.BaseURL }}">
-                            <img src="{{ .Site.Data.appearance.branding.dark_logo }}" alt="{{ .Site.Data.profile.company_name }}" width="100" class="dark-logo">
-                        </a>
-                    </div>
-                    <div class="uk-navbar-right">
-                        <ul class="uk-navbar-nav" style="padding-left: 20px;">
-                            {{ $currentPage := . }}
-                            {{ range .Site.Menus.main }}
-                            {{ if .HasChildren }}
-                            <li>
-                                <a href="#">{{ .Name }}<span class="uk-margin-small-left" uk-icon="triangle-down"></span></a>
-                                <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                                        {{ range .Children }}
-                                        <li class="uk-active"><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
-                                        {{ end }}
-                                    </ul>
-                                </div>
-                            </li>
-                            {{ else }}
-                            <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
-                            {{ end }}
-                            {{ end }}
-                        </ul>
-                    </div>
-    
+<div class="uk-visible@s{{ if $.IsHome }} uk-animation-slide-top-small{{ end }}"
+    uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: top: 100"
+    style="background: white;">
+    <nav class="main-nav">
+        <div class="uk-container uk-container-large">
+            <div uk-navbar>
+                <div class="uk-navbar-left">
+                    <a href="{{ .Site.BaseURL }}">
+                        <img src="{{ .Site.Data.appearance.branding.dark_logo }}"
+                            alt="{{ .Site.Data.profile.company_name }}" width="100" class="dark-logo">
+                    </a>
                 </div>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav" style="padding-left: 20px;">
+                        {{ $currentPage := . }}
+                        {{ range .Site.Menus.main }}
+                        {{ if .HasChildren }}
+                        <li>
+                            <a href="#">{{ .Name }}<span class="uk-margin-small-left"
+                                    uk-icon="triangle-down"></span></a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    {{ range .Children }}
+                                    <li class="uk-active"><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                        </li>
+                        {{ else }}
+                        <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+                        {{ end }}
+                        {{ end }}
+                    </ul>
+                </div>
+
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
+</div>
 
 
 <!-- mobile -->
-<div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: top: 100" style="background: white;">
-    <nav class="uk-navbar uk-navbar-container uk-hidden@s uk-box-shadow-small" style="padding: 0 15px;">
+<div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 200" style="background:white">
+    <nav class="uk-navbar uk-navbar-container uk-hidden@s uk-padding-small uk-box-shadow-small">
         <div class="uk-navbar-left">
             <a href="{{ .Site.BaseURL }}">
-                <img src="{{ .Site.Data.appearance.branding.dark_logo }}" alt="{{ .Site.Data.profile.company_name }}" width="100" class="dark-logo">
+                <img src="{{ .Site.Data.appearance.branding.dark_logo }}"
+                alt="{{ .Site.Data.profile.company_name }}" width="100" class="dark-logo">      
             </a>
         </div>
         <div class="uk-navbar-right">
-            <a class="uk-navbar-toggle" href="#modal-full" uk-toggle>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="56px" height="26px" viewBox="0 0 56 26" enable-background="new 0 0 56 26" xml:space="preserve">
-                    <rect x="3.319" y="6.552" fill="#000" width="30" height="1" shape-rendering="crispEdges"></rect>
-                    <rect x="3.319" y="12.552" fill="#000" width="30" height="1" shape-rendering="crispEdges"></rect>
-                    <rect x="3.319" y="18.552" fill="#000" width="30" height="1" shape-rendering="crispEdges"></rect>
-                    </svg>
-            </a>
+            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#mobile-menu-slide" uk-toggle style="{{ if $navColor.enable_white_text }}color: #fff{{ else }}color: #000;{{ end }}"></a>
         </div>
     </nav>
-    </div>
-
-
-
-<div id="modal-full" class="uk-modal-full uk-modal mobile__wrapper" uk-modal>
-    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport style="background-image:url(https://res.cloudinary.com/hungryram19/image/upload/v1608173336/yoori-park/yooripark/26j6ar3w9xbq6absx-10350wyton310_ojybou.jpg)">
-        <button class="uk-modal-close-full" type="button" uk-close></button>
-        <ul class="uk-nav-default uk-nav-parent-icon uk-margin-auto-vertical uk-text-center" uk-nav uk-scrollspy="cls: uk-animation-fade; target: .animate; delay: 300; repeat: true">
-            {{ $currentPage := . }}
-            {{ range .Site.Menus.main }}
-            {{ if .HasChildren }}
-            <li class="uk-parent">
-                <a href="#" class="uk-text-light">{{ .Name }}</a>
-                <ul class="uk-nav-sub">
-                    {{ range .Children }}
-                    <li><a href="{{ .URL | absURL }}" class="uk-text-light">{{ .Name }}</a></li>
-                    {{ end }}
-                </ul>
-            </li>
-            {{ else }}
-            <li><a href="{{ .URL | absURL }}" class="uk-text-light">{{ .Name }}</a></li>
-            {{ end }}
-            {{ end }}
-        </ul>
-    </div>
 </div>
+    <div id="mobile-menu-slide" uk-offcanvas>
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+            <ul class="uk-nav-default uk-nav-parent-icon uk-margin-auto-vertical" uk-nav>
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                {{ if .HasChildren }}
+                <li class="uk-parent">
+                    <a href="#" class="uk-text-light">{{ .Name }}</a>
+                    <ul class="uk-nav-sub">
+                        {{ range .Children }}
+                        <li><a href="{{ .URL | absURL }}" class="uk-text-light">{{ .Name }}</a></li>
+                        {{ end }}
+                    </ul>
+                </li>
+                {{ else }}
+                <li><a href="{{ .URL | absURL }}" class="uk-text-light">{{ .Name }}</a></li>
+                {{ end }}
+                {{ end }}
+                <li class="uk-nav-header"></li>
+                <li class="uk-nav-divider"></li>
+                <li class="uk-nav-header"></li>
+                {{ if $navContact.email }}<li><a href="mailto:{{ $navContact.email }}" class="uk-link-text"><strong>Email: </strong>{{ $navContact.email }}</a></li>{{ end }}
+                {{ if $navContact.phone }}<li><a href="tel:{{ $navContact.phone }}" class="uk-link-text"><strong>Office: </strong>{{ $navContact.phone }}</a></li>{{ end }}
+                {{ if $navContact.cell }}<li><a href="tel:{{ $navContact.cell }}" class="uk-link-text"><strong>Direct: </strong>{{ $navContact.cell }}</a></li>{{ end }}
+                {{ if $navContact.address }}<li><a href="{{ if $navContact.google_page_link }}{{ $navContact.google_page_link }}{{ else }}https://www.google.com/maps/place/{{ $navContact.address }},+{{ $navContact.city }},+{{ $navContact.state }}{{ end }}"><span class="uk-margin-small-right" uk-icon="location"></span>{{ $navContact.address }}, {{ $navContact.city }}, {{ $navContact.state }} {{ $navContact.zip_code }}</a></li>{{ end }}
+
+            </ul>
+        </div>
+    </div>
