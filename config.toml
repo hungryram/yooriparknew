@@ -8,7 +8,10 @@ url = "/"
 weight = 1
 [[menu.main]]
 name = "Properties"
-weight = 3
+weight = 2
+[[menu.main]]
+name = "Buyers & Sellers"
+weight = 4
 [[menu.main]]
 name = "Exclusive"
 parent = "Properties"
@@ -19,9 +22,6 @@ name = "Sold Listings"
 parent = "Properties"
 url = "/status/sold/"
 weight = 2
-[[menu.main]]
-name = "Buyers & Sellers"
-weight = 4
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 [taxonomies]
