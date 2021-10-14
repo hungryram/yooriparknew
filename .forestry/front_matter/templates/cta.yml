@@ -1,0 +1,146 @@
+---
+label: Call to Action
+hide_body: true
+fields:
+- name: call_to_action_one
+  type: field_group
+  config: {}
+  fields:
+  - name: icon_one_cta
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: documents
+        section: icons
+        file: data/icons.json
+        path: 
+    label: Icons
+    description: Removing the icon will activate the image section if an image is
+      uploaded.<br>Icons are from <a href="https://fontawesome.com/icons" title=""
+      target="_blank">FontAwesome</a>
+  - name: image_one_cta
+    type: file
+    config:
+      maxSize: 5
+    label: Image
+    description: 'Use an image instead of an icon '
+  - name: title_one_cta
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: body_text_one_cta
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body Text
+  - name: cta_one_add_a_link
+    type: text
+    config:
+      required: false
+    label: Add a Link
+    description: Add the full link if external linking.<br><em>i.e. https://thedomain.com</em>
+  - name: cta_two_new_tab
+    type: boolean
+    label: New Tab
+    description: Opens the link in a new tab if enabled
+  label: Call to Action One
+- name: call_to_action_two
+  type: field_group
+  config: {}
+  fields:
+  - name: icon_two_cta
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: documents
+        section: icons
+        file: data/icons.json
+        path: 
+    label: Icons
+  - name: image_two_cta
+    type: file
+    config:
+      maxSize: 5
+    label: Image
+    description: Use an image instead of an icon
+  - name: title_two_cta
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: body_text_two_cta
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body Text
+  - name: cta_two_add_a_link
+    type: text
+    config:
+      required: false
+    label: Add a Link
+    description: Add the full link if external linking.<br><em>i.e. https://thedomain.com</em>
+  - name: cta_two_new_tab
+    type: boolean
+    label: New Tab
+    description: Opens the link in a new tab if enabled
+  label: Call to Action Two
+- name: call_to_action_three
+  type: field_group
+  config: {}
+  fields:
+  - name: icons_three_cta
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: documents
+        section: icons
+        file: data/icons.json
+        path: 
+    label: Icons
+  - name: image_three_cta
+    type: file
+    config:
+      maxSize: 5
+    label: Image
+  - name: title_three_cta
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: body_text_three_cta
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body Text
+  - name: cta_three_add_a_link
+    type: text
+    config:
+      required: false
+    label: Add a Link
+  - name: cta_three_new_tab
+    type: boolean
+    label: New Tab
+    description: Opens the link in a new tab if enabled
+  label: Call to Action Three

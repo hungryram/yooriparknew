@@ -1,0 +1,24 @@
+---
+label: IDX Search Bar
+hide_body: true
+fields:
+- name: idx_title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
+- name: idx_background_color
+  type: color
+  label: Background Color
+  config:
+    required: false
+    color_format: Hex
+- name: idx_enable_white_text_color
+  type: boolean
+  description: Enable this to make text readable on dark backgrounds.
+  label: Enable White Text Color

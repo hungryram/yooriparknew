@@ -1,0 +1,138 @@
+---
+label: Offices
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Office Name
+- name: url
+  type: include
+  config: {}
+  template: url
+  label: URL
+- name: contact
+  type: field_group
+  config: {}
+  fields:
+  - name: office_phone
+    type: text
+    config:
+      required: false
+    label: Office Phone
+  - name: fax_number
+    type: text
+    config:
+      required: false
+    label: Fax Number
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+  - name: address
+    type: text
+    config:
+      required: false
+    label: Address
+  - name: city
+    type: text
+    config:
+      required: false
+    label: City
+  - name: state
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Alabama
+      - Alaska
+      - Arizona
+      - Arkansas
+      - California
+      - Colorado
+      - Connecticut
+      - Delaware
+      - Florida
+      - Georgia
+      - Hawaii
+      - Idaho
+      - Illinois
+      - Indiana
+      - Iowa
+      - Kansas
+      - Kentucky
+      - Louisiana
+      - Maine
+      - Maryland
+      - Massachusetts
+      - Michigan
+      - Minnesota
+      - Mississippi
+      - Missouri
+      - Montana
+      - Nebraska
+      - Nevada
+      - New Hampshire
+      - New Jersey
+      - New Mexico
+      - New York
+      - North Carolina
+      - North Dakota
+      - Ohio
+      - Oklahoma
+      - Oregon
+      - Pennsylvania
+      - Rhode Island
+      - South Carolina
+      - South Dakota
+      - Tennessee
+      - Texas
+      - Utah
+      - Vermont
+      - Virginia
+      - Washington
+      - West Virginia
+      - Wisconsin
+      - Wyoming
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: State
+  - name: zip_code
+    type: number
+    description: ''
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 99999
+      step: 
+    label: Zip Code
+  label: Contact
+- name: photos
+  type: field_group
+  config: {}
+  fields:
+  - name: main_photo
+    type: file
+    config:
+      maxSize: 5
+    label: Main Photo
+  label: Photo
+- name: search_engine_optimization
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Search Engine Optimization
+pages:
+- content/offices/corona-office.md

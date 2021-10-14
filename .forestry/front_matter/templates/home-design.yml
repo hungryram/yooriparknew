@@ -1,0 +1,233 @@
+---
+label: Design
+hide_body: true
+fields:
+- name: logo_or_title
+  type: field_group
+  config: {}
+  fields:
+  - name: upload_logo
+    type: file
+    config:
+      maxSize: 5
+    label: Upload Logo
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: Display text instead of a logo
+  - name: favicon
+    type: file
+    config:
+      maxSize: 64
+    label: Favicon
+    description: A favicon is a small <strong>16x16</strong> icon that appears on
+      the tab.
+  label: Logo or Title
+- name: colors
+  type: field_group
+  config: {}
+  fields:
+  - name: text_link_colors
+    type: color
+    config:
+      required: false
+      color_format: RGB
+    label: Text Link Colors
+    description: Links like <em>Read More</em> and <em>More Info</em>...
+  - name: button_background_colors
+    type: color
+    config:
+      required: false
+      color_format: Hex
+    label: Button Background Colors
+  - name: header_background_color
+    type: color
+    label: Header Background Color
+    config:
+      required: false
+      color_format: Hex
+  - name: enable_black_menu_items
+    type: boolean
+    label: Enable Black Menu Items
+  label: Colors
+- name: main_image
+  type: field_group
+  config: {}
+  fields:
+  - name: hero_title
+    type: text
+    config:
+      required: false
+    label: Hero Title
+    description: The main title overlaying the main image or video
+  - name: hero_subtitle
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Hero Subtitle
+  - name: align_hero_text
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - has-text-centered
+      - has-text-right
+      - has-text-left
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Align Hero Text
+  - name: add_a_button
+    type: field_group
+    config: {}
+    fields:
+    - name: hero_button_text
+      type: text
+      config:
+        required: false
+      label: Button Text
+    - name: hero_button_link
+      type: text
+      config:
+        required: false
+      label: Button Link
+    - name: open_in_new_tab
+      type: boolean
+      label: Open in New Tab
+    - name: hero_button_bg_color
+      type: color
+      label: Button Background Color
+      config:
+        required: false
+        color_format: Hex
+    - name: hero_button_text_color
+      type: color
+      config:
+        required: false
+        color_format: Hex
+      label: Button Text Color
+    label: Add a Button
+  - name: home_background_image
+    type: file
+    config:
+      maxSize: 5
+    label: Home Background Image
+    description: Recommended size of 2000 x 1075.
+  - name: add_youtube_background_video
+    type: boolean
+    label: Add Youtube Background Video
+    showOnly:
+      value: true
+    description: iOs and Android no longer supports auto play videos on phones. A
+      background image will be used to display on mobile.<br>Disable mp4 if using
+      Youtube.
+  - name: add_url_to_youtube_video
+    type: text
+    config:
+      required: false
+    label: Add URL to Youtube Video
+    description: 'Add the Youtube ID only: https://www.youtube.com/watch?v=<strong>xxxxxxxxxxxx</strong><br>Please
+      make sure you get permission from the owner of the video.'
+    showOnly:
+      field: add_youtube_background_video
+      value: true
+  - name: video_background
+    type: boolean
+    label: Mp4 Background
+    description: Toggle to enable mp4 background video instead of an image
+  - name: add_mp4_link
+    type: text
+    config:
+      required: false
+    label: Add mp4 Link
+    description: Add a link to an mp4 video. Need a professional video? Let's <a href="https://hungryram.com/contact"
+      title="" target="_blank">connect</a>.
+    showOnly:
+      field: video_background
+      value: true
+  label: Main Image
+- name: sub_pages
+  type: field_group
+  config: {}
+  fields:
+  - name: sub_page_image
+    type: file
+    config:
+      maxSize: 5
+    label: Sub Page Image
+    description: The image to display globally on the site
+  label: Sub Pages
+- name: footer
+  type: field_group
+  config: {}
+  fields:
+  - name: footer_logo
+    type: file
+    config:
+      maxSize: 5
+    label: Footer Logo
+  - name: footer_background
+    type: color
+    label: Background Color
+    config:
+      required: false
+      color_format: Hex
+  - name: enable_black_text
+    type: boolean
+    label: Enable Black Text
+    description: Enable if you're using a whiter background to make text easier to
+      see.
+  - name: footer_bio
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Footer Bio
+  - name: disable_background_color
+    type: boolean
+    label: Disable Background Color
+    description: Disable background color to use background image.
+  - name: footer_background_image
+    type: file
+    config:
+      maxSize: 64
+    label: Background Image
+    showOnly:
+      field: disable_background_color
+      value: true
+  label: Footer
+- name: home_sections
+  type: blocks
+  label: Home Sections
+  template_types:
+  - sold-listings
+  - intro
+  - agent-slider
+  - featured-listings
+  - featured-blog
+  - featured-tiles
+  - rental-listings
+  - cta
+  - showcase-featured-properties
+  - testimonial-slider
+  - idx-search-bar
+  config:
+    min: 
+    max: 
+  description: Arrange home sections by drag and drop. Click through each section
+    to customize.<br>Make sure to add listings before activating any listing sections.
+    Listing sections will not display if no listings are found.
+pages:
+- data/design.yaml

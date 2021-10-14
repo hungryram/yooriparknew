@@ -1,0 +1,44 @@
+---
+label: Sold Listings
+hide_body: true
+fields:
+- name: sold_listing_title
+  type: text
+  config:
+    required: false
+  label: Sold Listing Title
+  description: Listings set to sold will display
+- name: sold_listing_subtitle
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Sold Listing Subtitle
+- name: sold_background_color
+  type: color
+  label: Background Color
+  config:
+    required: false
+    color_format: Hex
+- name: sold_enable_white_text_color
+  type: boolean
+  label: Enable White Text Color
+  description: Enable this to make text readable on dark backgrounds.
+- name: sold_align_title_text
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - has-text-centered
+    - has-text-right
+    - has-text-left
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Align Title Text

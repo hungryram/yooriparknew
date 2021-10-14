@@ -6,5 +6,5 @@ fields:
   type: text
   config:
     required: false
-  label: Url
-  description: This is automatically generated after saving. Only change when needed.
+  label: Change URL
+  description: 'Warning: changing URL can cause broken links.'

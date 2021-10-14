@@ -2,11 +2,11 @@
 label: SEO
 hide_body: true
 fields:
-- name: title_tag
+- name: meta_title
   type: text
   config:
     required: false
-  label: Title Tag
+  label: Meta Title
 - name: meta_description
   type: textarea
   default: ''

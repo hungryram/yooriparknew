@@ -1,26 +1,12 @@
 ---
-label: Contact
-hide_body: true
+label: Custom Pages
+hide_body: false
 fields:
 - name: title
   type: text
   config:
     required: false
   label: Title
-- name: heading
-  type: text
-  config:
-    required: false
-  label: Heading
-- name: body
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Body
 - name: search_engine_optimization
   type: field_group
   config: {}
@@ -31,5 +17,12 @@ fields:
     template: seo
     label: SEO
   label: Search Engine Optimization
+- name: url
+  type: include
+  config: {}
+  template: url
+  label: URL
 pages:
-- content/contact/_index.md
+- content/about-yoori.md
+- content/ready-to-buy-or-invest.md
+- content/ready-to-sell.md

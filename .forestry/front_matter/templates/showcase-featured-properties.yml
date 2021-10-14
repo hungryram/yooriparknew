@@ -1,0 +1,39 @@
+---
+label: Showcase Featured Properties
+hide_body: false
+fields:
+- name: featured_title
+  type: text
+  config:
+    required: false
+  label: Featured Title
+- name: featured_subtitle
+  type: text
+  config:
+    required: false
+  label: Featured Subtitle
+- name: featured_background
+  type: color
+  config:
+    required: false
+    color_format: Hex
+  label: Background
+- name: featured_align_title_text
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - has-text-left
+    - has-text-centered
+    - has-text-right
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Align Title Text
+- name: showcase_enable_white_text_color
+  type: boolean
+  label: Enable White Text Color
+  description: Enable this to make text readable on dark backgrounds.
