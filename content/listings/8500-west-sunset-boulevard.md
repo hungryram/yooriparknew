@@ -1,5 +1,5 @@
 +++
-cities = " Los Angeles"
+cities = "Los Angeles"
 date = ""
 featured = ""
 price = "$10,050"

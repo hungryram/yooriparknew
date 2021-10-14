@@ -1,37 +1,34 @@
 {{ define "main" }}
-<div class="section">
-    <div class="container">
-        <div class="columns is-variable is-8">
-            {{ partial "templates/search" . }}
+<div class="uk-section">
+    <div class="uk-container uk-container-xlarge" uk-scrollspy="cls: uk-animation-slide-bottom-small; target: .uk-card;">
+        <div uk-filter="target: .js-filter;animation: uk-animation-fade">
+                <div class="uk-container uk-container-medium uk-text-center" style="margin-top:-150px;background: white;position:relative;margin-bottom:20px;">
+                    {{ partial "templates/top-search" . }}
+                </div>
+            <ul class="js-filter uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center uk-margin-large-top" uk-grid>
 
-            <div class="column is-8">
-                {{ partial "templates/taxonomy-filter" . }}
-                <main>
-                    
-                    {{ $listCount := len (where .Site.RegularPages "Section" "==" "listings")  }}
-                    {{ if gt $listCount 0 }}
-                    <div class="inner-container">
-                        <div class="columns is-multiline is-variable is-4">
-                            {{ $paginator := .Paginate (where .Pages "Type" "listings") 10 }}
-                            {{ range $paginator.Pages }}
-                                <div class="column is-6">   
-                                    {{ partial "templates/property-grid" . }}         
-                                </div>   
-                            {{ end }}
-                        </div>
-                        {{ partial "templates/pagination" . }}
-                    </div>
-                    {{ else }}
-                    <div class="inner-container">
-                        <h2 class="title is-4">No listing has been added</h2>
-                    </div>
-                    {{ end }}
-                    
-                </main>
-            </div>
+                {{ $listCount := len (where .Site.RegularPages "Section" "==" "listings")  }}
+                {{ if gt $listCount 0 }}
+                        {{ range .Pages }}
+                        <li class="listing-result"
+                            data-city="{{ .Params.cities }}"
+                            data-states="{{ .Params.states }}"
+                            data-properties="{{ .Params.properties }}"
+                            data-price="{{ .Params.price }}"
+                            data-featured="{{ .Params.featured }}">
+                            <a href="{{ .Permalink }}" class="uk-link-text uk-white">
+                                    {{ partial "templates/property-card" . }}
+                                </a>         
+                            </li>
+                        {{ end }}
+                {{ else }}
+                <div class="inner-container">
+                    <h2>No listing has been added</h2>
+                </div>
+                {{ end }}
+            </ul>
+        
         </div>
     </div>
 </div>
 {{ end }}
-
-

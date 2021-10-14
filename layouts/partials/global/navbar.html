@@ -1,71 +1,88 @@
 {{ $navbar := .Site.Data.appearance.branding }}
 {{ $navColor := .Site.Data.appearance.header }}
 {{ $navContact := .Site.Data.profile.contact_information }}
-<!-- Hero head: will stick at the top -->
-<nav class="nav-wrap">
-<!-- <div class="nav-topbar pt-1 pb-1" style="background:{{ if $navColor.top_header_color }}{{ $navColor.top_header_color }}{{ else }}transparent{{ end }}">
-  <div class="section pt-0 pb-0">
-    <div class="container">
-      <div class="has-text-right">
-        <p><a href="mailto:{{ $navContact.email }}" class="{{ if $navColor.enable_white_text_top }}has-text-white{{ else }}has-text-black{{ end }} is-size-6" style="display:flex;align-items:center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 icon-tabler icon-tabler-mail" width="20" height="20" viewBox="0 0 24 24" stroke-width="1" stroke="{{ if $navColor.enable_white_text_top }}#fff{{else}}#000{{ end }}" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <rect x="3" y="5" width="18" height="14" rx="2" />
-            <polyline points="3 7 12 13 21 7" />
-          </svg>{{ $navContact.email }}</a></p>
-      </div>
-    </div>
-  </div>
-</div> -->
- <div class="hero-head" style="background:{{ if $navColor.header_background_color }}{{ $navColor.header_background_color }}{{ else }}transparent{{ end }}">
-    <nav class="navbar is-transparent">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="{{ .Site.BaseURL }}">
-            {{ if .Site.Data.appearance.branding.logo }}
-              <img src="{{ $navbar.logo }}" alt="{{ $navbar.site_title }}">
-            {{ else }}
-            <h1 class="title is-5{{ if $navColor.enable_white_text }} has-text-white{{ end }}">{{ $navbar.site_title }}</h1>
-            {{ end }}
-          </a>
-          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-        <div id="navbarMenuHeroA" class="navbar-menu">
-          <div class="navbar-end">
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-        {{ if .HasChildren }}
-            <div class="navbar-item has-dropdown is-hoverable main-drop">
-                <a class="pr-0 navbar-link{{ if $navColor.enable_white_text }} has-text-white{{ end }}" href="javascript:;">
-                    {{ .Name }}
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 icon-tabler icon-tabler-chevron-down" width="18" height="18" viewBox="0 0 24 24" stroke-width="1.5" stroke="{{ if $navColor.enable_white_text }}#FFFFFF{{else}}#000000{{ end }}" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                </a>
-                <!-- First Level Dropdown -->
-                    <div class="navbar-dropdown">
-                        {{ range .Children }}
-                            
-                            <a class="navbar-item {{ if .HasChildren }}navbar-link first-drop is-hoverable{{ end }}" href="{{ if .HasChildren }}javascript:;{{ else }}{{ .URL | absURL }}{{ end }}{{ if $navColor.enable_white_text }} has-text-white{{ end }}">
-                            {{ .Name }}
-                            </a>
-                        
-                        {{ end }}
-                  </div>
-                  <!-- End first level Dropdown -->
+{{ $headerSocial := .Site.Data.profile.social_media }}
+{{ $social := .Site.Data.profile.social_media }}
+
+    <div class="uk-visible@s{{ if $.IsHome }} uk-animation-slide-top-small{{ end }}" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: top: 100" style="background: white;">
+        <nav class="main-nav">
+            <div class="uk-container uk-container-large">
+                <div uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a href="{{ .Site.BaseURL }}">
+                            <img src="{{ .Site.Data.appearance.branding.dark_logo }}" alt="{{ .Site.Data.profile.company_name }}" width="100" class="dark-logo">
+                        </a>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav" style="padding-left: 20px;">
+                            {{ $currentPage := . }}
+                            {{ range .Site.Menus.main }}
+                            {{ if .HasChildren }}
+                            <li>
+                                <a href="#">{{ .Name }}<span class="uk-margin-small-left" uk-icon="triangle-down"></span></a>
+                                <div class="uk-navbar-dropdown">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        {{ range .Children }}
+                                        <li class="uk-active"><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+                                        {{ end }}
+                                    </ul>
+                                </div>
+                            </li>
+                            {{ else }}
+                            <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+                            {{ end }}
+                            {{ end }}
+                            </ul>
+                    </div>
+    
+                </div>
             </div>
-            {{ else }} <!-- Else No Drop Down-->
-            <a href="{{ .URL |absURL }}" class="navbar-item{{ if $navColor.enable_white_text }} has-text-white{{ end }}">{{ .Name }}</a>
-        {{ end }}
-        {{ end }} <!-- End range menu -->
-      </div>
+        </nav>
     </div>
-      </div>
+
+
+<!-- mobile -->
+<div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: top: 100" style="background: white;">
+    <nav class="uk-navbar uk-navbar-container uk-hidden@s uk-box-shadow-small" style="padding: 0 15px;">
+        <div class="uk-navbar-left">
+            <a href="{{ .Site.BaseURL }}">
+                <img src="{{ .Site.Data.appearance.branding.dark_logo }}" alt="{{ .Site.Data.profile.company_name }}" width="100" class="dark-logo">
+            </a>
+        </div>
+        <div class="uk-navbar-right">
+            <a class="uk-navbar-toggle" href="#modal-full" uk-toggle>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="56px" height="26px" viewBox="0 0 56 26" enable-background="new 0 0 56 26" xml:space="preserve">
+                    <rect x="3.319" y="6.552" fill="#000" width="30" height="1" shape-rendering="crispEdges"></rect>
+                    <rect x="3.319" y="12.552" fill="#000" width="30" height="1" shape-rendering="crispEdges"></rect>
+                    <rect x="3.319" y="18.552" fill="#000" width="30" height="1" shape-rendering="crispEdges"></rect>
+                    </svg>
+            </a>
+        </div>
     </nav>
-  </div>
-  </nav>
+    </div>
+
+
+
+<div id="modal-full" class="uk-modal-full uk-modal mobile__wrapper" uk-modal>
+    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport style="background-image:url(https://res.cloudinary.com/hungryram19/image/upload/v1608173336/yoori-park/yooripark/26j6ar3w9xbq6absx-10350wyton310_ojybou.jpg)">
+        <button class="uk-modal-close-full" type="button" uk-close></button>
+
+        <ul class="uk-nav-default uk-nav-parent-icon uk-margin-auto-vertical uk-text-center" uk-nav uk-scrollspy="cls: uk-animation-fade; target: .animate; delay: 300; repeat: true">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+            <li class="uk-parent animate">
+                <a href="#" class="uk-text-light">{{ .Name }}</a>
+                <ul class="uk-nav-sub">
+                    {{ range .Children }}
+                    <li><a href="{{ .URL | absURL }}" class="uk-text-light">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </li>
+            {{ else }}
+            <li class="animate"><a href="{{ .URL | absURL }}" class="uk-text-light">{{ .Name }}</a></li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+</div>

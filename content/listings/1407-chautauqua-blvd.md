@@ -9,9 +9,10 @@ schema_price = "14.000.000"
 short_title = "Private Paradise"
 states = "California"
 status = "Sold"
-title = "Chautauqua Blvd"
+title = "1407 Chautauqua Blvd"
 url = ""
 zip-codes = "90272"
+transparent = true
 [details]
 bathrooms = "8"
 bedrooms = "6"

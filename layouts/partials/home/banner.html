@@ -1,0 +1,144 @@
+<style>
+    ul.uk-subnav-pill>.uk-active>a {
+        background-color: transparent;
+        color: #000;
+        border-bottom: 1px solid #000;
+        font-weight: 500;
+    }
+
+    ul.uk-subnav>*>:first-child {
+        font-size: 17px;
+    }
+</style>
+<div style="background:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url(https://res.cloudinary.com/hungryram19/image/upload/v1634176933/yoori-park/yooripark/geo-lines.jpg) no-repeat">
+    <div class="uk-section">
+        <div class="uk-container uk-container-large">
+            <h2 class="uk-h1 title-font">{{ .Site.Data.home.banner.heading }}</h2>
+            <p>View exclusive listings that have been sold or on the market.</p>
+        </div>
+        <div class="uk-container uk-container-large" style="overflow:hidden">
+            <div class="uk-section uk-section-small">
+                <div>
+                    <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-fade">
+                        <li><a href="#">Sold Listings</a></li>
+                        <li><a href="#">Exclusive Listings</a></li>
+                    </ul>
+                    
+                    <ul class="uk-switcher uk-margin">
+                        <li>
+                            <div class="uk-position-relative uk-visible-toggle uk-light" style="overflow:visible" tabindex="-1" uk-slider>
+                                <ul class="uk-slider-items uk-grid">
+                                    {{ range where $.Site.RegularPages "Type" "listings" }}
+                                    {{ if in .Params.status "Sold" }}
+                                    <li class="uk-width-2-5@s">
+                                        <a href="{{ .Permalink }}">
+                                            <div class="uk-card uk-card-default property-card">
+                                                <div class="uk-card-media-top">
+                                                    <div class="uk-cover-container">
+                                                        <canvas height="400"></canvas>
+                                                        {{ if .Params.photos.gallery }}
+                                                        <img src="{{ index .Params.photos.gallery 0 }}" alt="{{ if index .Params.photos.gallery 0 }}{{ .Title }}{{ end }}" uk-cover>
+                                                        {{ else }}
+                                                        <img src="/assets/nohouse.jpg" alt="no house icon" style="object-fit: cover;" uk-cover>
+                                                        {{ end }}
+                                                        <div class="property-card-overlay uk-position-cover"></div>
+                                                        <div class="uk-position-absolute property-card-details">
+                                                            <div class="uk-text-center uk-light" uk-grid>
+                                                                <div class="uk-width-1-2">
+                                                                    <div class="uk-card uk-text-left">
+                                                                        {{ if .Params.status }}<span class="status uk-badge" {{ if in .Params.status "Sold" }}style="background: #d10000"{{ else }}style="background:#000;color:#fff"{{ end }}>{{ .Params.status }}</span>{{ end }}
+                                                                        {{ if .Params.featured }}<span class="featured uk-badge">{{ .Params.featured }}</span>{{ end }}
+                                                                    </div>
+                                                                </div>
+                                                                <div class="uk-width-1-2">
+                                                                    <div class="uk-card uk-text-right">
+                                                                        <span class="price-badge">
+                                                                            {{ .Params.price }}
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="uk-position-absolute property-card-address uk-text-left">
+                                                            <div class="uk-white">
+                                                                <h3 class="uk-white uk-h4 uk-text-normal">{{ .Params.short_title }}</h3>
+                                                                <span class="grid-address uk-display-block">{{ .Title }}</span>
+                                                                <span class="grid-address uk-display-block">{{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    {{ end }}
+                                    {{ end }}
+                                </ul>
+                                <div class="uk-slidenav-container">
+                                    <a class="uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" style="background:#000;padding:20px;"></a>
+                                    <a class="uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" style="background:#000;padding:20px;"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+                                <ul class="uk-slider-items uk-grid">
+                                    {{ range where $.Site.RegularPages "Type" "listings" }}
+                                    {{ if in .Params.status "Active" }}
+                                    <li class="uk-width-2-5@s">
+                                        <a href="{{ .Permalink }}">
+                                            <div class="uk-card uk-card-default property-card">
+                                                <div class="uk-card-media-top">
+                                                    <div class="uk-cover-container">
+                                                        <canvas height="400"></canvas>
+                                                        {{ if .Params.photos.gallery }}
+                                                        <img src="{{ index .Params.photos.gallery 0 }}" alt="{{ if index .Params.photos.gallery 0 }}{{ .Title }}{{ end }}" uk-cover>
+                                                        {{ else }}
+                                                        <img src="/assets/nohouse.jpg" alt="no house icon" style="object-fit: cover;" uk-cover>
+                                                        {{ end }}
+                                                        <div class="property-card-overlay uk-position-cover"></div>
+                                                        <div class="uk-position-absolute property-card-details">
+                                                            <div class="uk-text-center uk-light" uk-grid>
+                                                                <div class="uk-width-1-2">
+                                                                    <div class="uk-card uk-text-left">
+                                                                        {{ if .Params.status }}<span class="status uk-badge" {{ if in .Params.status "Sold" }}style="background: #d10000"{{ else }}style="background:#000;color:#fff"{{ end }}>{{ .Params.status }}</span>{{ end }}
+                                                                        {{ if .Params.featured }}<span class="featured uk-badge">{{ .Params.featured }}</span>{{ end }}
+                                                                    </div>
+                                                                </div>
+                                                                <div class="uk-width-1-2">
+                                                                    <div class="uk-card uk-text-right">
+                                                                        <span class="price-badge">
+                                                                            {{ .Params.price }}
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="uk-position-absolute property-card-address uk-text-left">
+                                                            <div class="uk-white">
+                                                                <h3 class="uk-white uk-h4 uk-text-normal">{{ .Params.short_title }}</h3>
+                                                                <span class="grid-address uk-display-block">{{ .Title }}</span>
+                                                                <span class="grid-address uk-display-block">{{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    {{ end }}
+                                    {{ end }}
+                                </ul>
+                                <div class="uk-slidenav-container">
+                                    <a class="uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" style="background:#000;padding:20px;"></a>
+                                    <a class="uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" style="background:#000;padding:20px;"></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

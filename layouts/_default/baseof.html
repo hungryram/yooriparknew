@@ -2,24 +2,40 @@
 {{ partial "global/navbar" . }}
 
 {{ if .Params.photos.gallery }}
-<div style="padding-top:40px;padding-bottom:40px;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{ index .Params.photos.gallery 0 }}) no-repeat center; background-size: cover;">
-{{ else }}
-<div style="padding-top:40px;padding-bottom:40px;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{ .Site.Data.appearance.pages.image }}) no-repeat center; background-size: cover;">
-{{ end }}
-    <div class="section">
-        <div class="container">
-            <div class="columns has-text-centered">
-                <div class="column has-text-white">
-                    <h2 class="title is-3 has-text-white mb-4 is-size-5-mobile">{{ replace .Name "-" " " | title }}</h2>
-                    {{ if .Params.body }}
-                        {{ .Params.body | markdownify }}
-                    {{ end }}
-                </div>
-            </div>
+<div class="baseof__slider" uk-slideshow>
+    <div class="uk-position-relative">
+        <div class="uk-slider-container uk-light">
+            <ul class="uk-slideshow-items" uk-height-viewport="min-height: 200" uk-lightbox="animation:fade">
+                {{ range .Params.photos.gallery }}
+                <li>
+                    <a href="{{ . }}">
+                        <img src="{{ . }}" alt="" uk-cover>
+                    </a>
+                </li>
+                {{ end }}
+
+            </ul>
+            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
         </div>
     </div>
 </div>
+{{ else }}
+<div class="uk-background-cover uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle page-banner" style="background: url(https://res.cloudinary.com/hungryram19/image/upload/v1608173336/yoori-park/yooripark/26j6ar3w9xbq6absx-10350wyton310_ojybou.jpg)no-repeat center;background-size:cover">
+    <div class="uk-overlay-primary uk-position-cover"></div>
+        <div class="uk-padding uk-text-center uk-container uk-card">
+            <h1 class="uk-text-uppercase uk-white uk-text-center uk-h1">{{ .Title }}</h1>
+            {{ if .Params.body }}
+            <p class="uk-white uk-position-relative uk-text-default">{{ .Params.body }}</p>
+            {{ end }}
+        </div>
+</div>
+{{ end }}
+
+<main>
 {{ block "main" . }}
 
 {{ end }}
-{{ partial "global/footer.html" . }}
+</main>
+
+{{ partial "global/footer" . }}

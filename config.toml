@@ -1,6 +1,7 @@
-baseURL = "https://www.yooripark.com/"
+baseURL = "https://yoori2021.netlify.app/"
+enableRobotsTXT = "true"
 languageCode = "en-us"
-summaryLength = "20"
+summaryLength = 25
 [[menu.footer]]
 name = "Home"
 url = "/"
@@ -27,14 +28,11 @@ url = "/"
 weight = 1
 [outputs]
 home = ["HTML", "RSS", "JSON"]
-[params]
-cloudinary_url = "https://res.cloudinary.com/realestate2/image/upload/"
 [taxonomies]
 category = "categories"
-city = "cities"
+cities = "cities"
 featured = "featured"
-property = "properties"
-state = "states"
+properties = "properties"
+states = "states"
 status = "status"
 tag = "tags"
-zip = "zip-codes"

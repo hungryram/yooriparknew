@@ -1,0 +1,39 @@
+<a href="{{ .Permalink }}">
+    <div class="uk-card uk-card-default property-card">
+        <div class="uk-card-media-top">
+            <div class="uk-cover-container">
+                <canvas height="300"></canvas>
+                {{ if .Params.photos.gallery }}
+                <img src="{{ index .Params.photos.gallery 0 }}" alt="{{ if index .Params.photos.gallery 0 }}{{ .Title }}{{ end }}" uk-cover>
+                {{ else }}
+                <img src="/assets/nohouse.jpg" alt="no house icon" style="object-fit: cover;" uk-cover>
+                {{ end }}
+                <div class="property-card-overlay uk-position-cover"></div>
+                <div class="uk-position-absolute property-card-details">
+                    <div class="uk-text-center uk-light" uk-grid>
+                        <div class="uk-width-1-2">
+                            <div class="uk-card uk-text-left">
+                                {{ if .Params.status }}<span class="status uk-badge" {{ if in .Params.status "Sold" }}style="background: #d10000"{{ else }}style="background:#000;color:#fff"{{ end }}>{{ .Params.status }}</span>{{ end }}
+                                {{ if .Params.featured }}<span class="featured uk-badge">{{ .Params.featured }}</span>{{ end }}
+                            </div>
+                        </div>
+                        <div class="uk-width-1-2">
+                            <div class="uk-card uk-text-right">
+                                <span class="price-badge">
+                                    {{ .Params.price }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-position-absolute property-card-address uk-text-left">
+                    <div class="uk-white">
+                        <h3 class="uk-white uk-h4 uk-text-normal">{{ .Params.short_title }}</h3>
+                        <span class="grid-address uk-display-block">{{ .Title }}</span>
+                        <span class="grid-address uk-display-block">{{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>

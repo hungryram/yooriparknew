@@ -1,12 +1,11 @@
 ---
-title: "Search Listings"
+title: Search Listings
 sitemap:
-  priority : 0.1
-layout: "search"
+  priority: 0.1
+layout: search
 hidden: true
+
 ---
-
-
 This file exists solely to respond to /search URL with the related `search` layout template.
 
 No content shown here is rendered, all content is based in the template layouts/page/search.html

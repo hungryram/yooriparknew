@@ -1,10 +1,11 @@
 +++
-body = "Send us an email and our team will get back to you as soon as we can!"
-heading = "Send an Email"
-meta_description = "Send us an email and our team will get back to you as soon as we can!"
+heading = "Get in touch"
+meta_description = "Work with Randy Nong at RN Insurance. Please don’t hesitate to call or come in and see me with any insurance related problems."
 title = "Contact"
-title_tag = "Contact the Team"
 [menu.main]
-weight = 6
+weight = 8
+[search_engine_optimization]
+meta_description = "We're here to help! Contact RN Insurance through a secure form, phone, or visit our office located in Lowell, MA."
+title_tag = "Contact Yoori Park"
 
 +++

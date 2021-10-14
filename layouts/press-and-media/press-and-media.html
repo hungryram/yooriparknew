@@ -1,36 +1,19 @@
 {{ define "main" }}
-<div class="section">
-    <div class="container">
-        <div class="columns is-variable is-8">
-            <div class="column is-8">
-                <main>
-                    <div class="inner-container">
-                        <div class="columns is-multiline box">
-                            {{ range .Params.press }}
-                            <div class="column is-full">
-                                <div class="columns">
-                                    <div class="column">
-                                        <img src="{{ .image }}" alt="Yoori Park Press and Media" style="width:100%;height:200px;object-fit:cover">
-                                    </div>
-                                    <div class="column">
-                                        <h1 class="title is-4">{{ .heading }}</h1>
-                                        {{ if .body }}
-                                        <p>{{ .body | markdownify }}</p>
-                                        {{ end }}
-                                        <div class="is-block mt-5">
-                                            <a href="{{ .link }}" class="btn-primary" style="border:1px solid white;" target="_blank">{{ .link_label }}</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{ end }}
-                        </div>
-                    </div>
-                </main>
+<div class="uk-section uk-section-large">
+    <div class="uk-container uk-container-small">
+        {{ range .Params.press }}
+        <div class="uk-cover-container">
+            <img src="{{ .image }}" alt="{{ .heading }}" uk-cover>
+            <canvas height="400"></canvas>
+            <div class="uk-overlay-primary uk-position-cover"></div>
+            <div class="uk-overlay uk-position-center uk-light uk-text-center">
+                <h2 class="uk-margin-remove">{{ .heading }}</h2>
+                <p class="uk-text-bold uk-margin-small uk-h3">{{ .extra }}</p>
+                <p class="uk-white uk-margin-small">{{ .body }}</p>
+                <a href="{{ .link }}" class="uk-button uk-button-secondary">Watch</a>
             </div>
-                {{ partial "templates/sidebar" . }}
         </div>
+        {{ end }}
     </div>
 </div>
-
 {{ end }}

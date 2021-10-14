@@ -1,0 +1,38 @@
+---
+label: FAQ
+hide_body: true
+fields:
+- name: faq
+  type: field_group_list
+  fields:
+  - name: question
+    type: text
+    config:
+      required: false
+    label: question
+  - name: answer
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: answer
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: FAQ
+- name: search_engine_optimization
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Search Engine Optimization
+pages:
+- content/faq/_index.md

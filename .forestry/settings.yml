@@ -8,18 +8,11 @@ sections:
   path: data/profile.yml
   label: Profile
 - type: document
+  path: data/home.yml
+  label: Home Page
+- type: document
   path: data/appearance.yml
   label: Appearance
-- type: document
-  path: data/homelayout.yml
-  label: Home Layout
-- type: document
-  path: content/idx-admin/_index.md
-  label: IDX Admin
-  read_only: true
-- type: document
-  path: data/idx.yaml
-  label: IDX Set Up
 - type: directory
   path: content
   label: Pages
@@ -40,46 +33,25 @@ sections:
 - type: heading
   label: Default Pages
 - type: directory
-  path: content/listings
-  label: Listings
+  path: content/insurance
+  label: Insurance
   create: documents
   match: "**/*"
   templates:
-  - heading-and-body
-  - property
-- type: document
-  path: content/press-and-media/_index.md
-  label: Press and Media
-- type: directory
-  path: content/offices
-  label: Offices
-  create: documents
-  match: "**/*"
-  templates:
-  - heading-and-body
-  - offices
-- type: directory
-  path: content/our-team
-  label: My Team
-  create: documents
-  match: "**/*"
-  templates:
-  - heading-and-body
-  - our-team
-- type: directory
-  path: content/partners
-  label: Partners
-  create: documents
-  match: "**/*"
-  templates:
-  - partners
+  - services
   - heading-and-body
 - type: document
-  path: content/testimonials/_index.md
-  label: Testimonials
+  path: content/about/_index.md
+  label: About
 - type: document
   path: content/contact/_index.md
   label: Contact
+- type: document
+  path: content/faq/_index.md
+  label: FAQ
+- type: document
+  path: content/testimonials/_index.md
+  label: Testimonials
 - type: heading
   label: Legal
 - type: directory
@@ -94,7 +66,7 @@ sections:
 - type: document
   path: config.toml
   label: Configuration
-upload_dir: yoori-park/yooripark
+upload_dir: randy-nong/rn-insurance
 public_path: https://res.cloudinary.com/hungryram19/image/upload
 front_matter_path: ''
 use_front_matter_path: 

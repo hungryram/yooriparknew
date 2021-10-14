@@ -1,40 +1,32 @@
 ---
-footer:
-  additional_links:
-    pages: search.md
-    quick_links: []
-  footer_background_color: "#232733"
-  background_image: https://res.cloudinary.com/hungryram19/image/upload/v1608162370/yoori-park/yooripark/26j6ar3w9xbq6absx-10350wyton310_ilshnd.jpg
-  logo: https://res.cloudinary.com/hungryram19/image/upload/v1608162411/yoori-park/yooripark/revelbg2_iom7bo.jpg
-  footer_bio: ''
-  enable_black_text: false
-  disclaimer: |-
-    The data and information contained within this website are for informational purposes. We try our best to keep all information up-to-date but encourage visitors to do their own research to determine the accuracy of material available on this website.
-
-    While we strive to keep information accurate, we do not warrant the accuracy or completeness of the information, text, graphics, links or other items contained within these materials. Plead visit our full disclaimer for more information.
+header:
+  top_header_color: ''
+  header_background_color: ''
+  transparent_background: false
+  enable_white_text: false
+  enable_white_text_top: false
 branding:
   site_title: Yoori Park
-  logo: https://res.cloudinary.com/hungryram19/image/upload/v1608162298/yoori-park/yooripark/Yooriparklogomain-1024x866_ui3wqr.png
+  white_logo: https://res.cloudinary.com/hungryram19/image/upload/v1632376724/yoori-park/yooripark/yoori-park-logo.png
+  dark_logo: https://res.cloudinary.com/hungryram19/image/upload/v1608162298/yoori-park/yooripark/Yooriparklogomain-1024x866_ui3wqr.png
   favicon: https://res.cloudinary.com/hungryram19/image/upload/v1608162298/yoori-park/yooripark/Yooriparklogomain-1024x866_ui3wqr.png
-header:
-  top_header_color: "#181f24"
-  header_background_color: "#FFFFFF"
-  enable_white_text: false
-  enable_white_text_top: true
-pages:
-  image: https://res.cloudinary.com/hungryram19/image/upload/v1605403412/templates/realestate2/backgroundlivingroom_fungj5.jpg
-sidebar:
-  sidebar:
-  - template: sidebar-profile
-    image: https://res.cloudinary.com/hungryram19/image/upload/v1608179569/yoori-park/yooripark/yooripark_umrgao.jpg
-    heading: Yoori Park
-  - template: side-blog-category
-    blog_categories: ''
-  - template: latest-posts
-    latest_posts: ''
-  single_property_sidebar: false
+  logo_width: 
 colors:
-  button_background_color: "#000000"
-  button_text_color: "#FFFFFF"
-  links: "#EBBA7C"
-  accent: "#000000"
+  button_background_color: ''
+  button_text_color: ''
+  links: ''
+  accent: ''
+pages:
+  image: ''
+footer:
+  footer_background_color: ''
+  background_image: ''
+  enable_black_text: false
+  footer_bio: 
+  disclaimer: The data and information contained within this website are for informational purposes. We try our best to keep all information up-to-date but encourage visitors to do their own research to determine the accuracy of material available on this website. While we strive to keep information accurate, we do not warrant the accuracy or completeness of the information, text, graphics, links or other items contained within these materials. Plead visit our full disclaimer for more information.
+  search_field:
+  disable_search: false
+  search_by_state: false
+  search_by_cities: true
+  search_by_properties: true
+  filter_animation: slide

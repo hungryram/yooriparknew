@@ -1,48 +1,18 @@
 {{ define "main" }}
-<div class="section">
-    <div class="container">
-        <div class="columns is-variable is-8">
-            <div class="column is-8">
-                <main>
-                    {{ $agentContact := .Params.contact }}
-                    <div class="inner-container">
-                        <div class="columns is-multiline">
-                            {{ $paginator := .Paginate (where .Pages "Type" "blog") 10 }}
-                            {{ range $paginator.Pages.ByWeight }}
-                            <div class="column is-full agent-container mb-4 pl-0 pr-0">
-                                <div class="card">
-                                    <div class="columns is-vcentered is-variable is-3">
-                                        <div class="column is-5 pb-0 pt-0">
-                                            {{ if .Params.featured_image }}
-                                            <img src="{{ .Params.featured_image }}" alt="{{ .Params.image_alt_tag }}" style="width:100%;height:250px;object-fit:cover">
-                                            {{ else }}
-                                            <img src="/assets/nophoto.jpg" alt="no photo" style="width:100%;height:250px;object-fit:cover">
-                                            {{ end }}
-                                        </div>
-                                        <div class="column">
-                                            <div class="content pr-3 pl-3">
-                                                <h1 class="title is-4 mb-2">{{ .Title }}</h1>
-                                                <time class="is-size-7"> {{.Date.Format "Jan 2, 2006" }}</time>
-                                                <div class="content">
-                                                    <p>{{ .Summary }}</p>
-                                                </div>
-                                                <div class="is-block">
-                                                    <a href="{{ .Permalink }}" class="link">Read more...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{ end }}
-                        </div>
-                        {{ partial "templates/pagination" . }}
-                    </div>
-                </main>
+<div class="uk-section uk-section-large">
+    <div class="uk-container">
+        <h1 class="uk-light">My blog</h1>
+        <div class="uk-child-width-1-1@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 400;">
+            {{ range .Pages }}
+            <div>
+                <div class="uk-card uk-card-body">
+                        <h2 class="uk-white">&#8212; {{ .Title }}</h2>
+                        <p>{{ .Summary }} ...</p>
+                        <a href="{{ .Permalink }}" class="accent"><span uk-icon="icon:arrow-right"></span>  Read more</a>
+                </div>
             </div>
-                {{ partial "templates/sidebar" . }}
+            {{ end }}
         </div>
     </div>
 </div>
-
 {{ end }}

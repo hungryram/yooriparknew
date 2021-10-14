@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="uk-section faq__page">
+    <div class="uk-container">
+        <div class="uk-flex uk-flex-center main__content">
+            <div class="uk-width-2xlarge uk-text-center">
+                <h2 class="uk-text-center">Find the answer you're looking for</h2>
+                <p>These are general questions that are most asked. We hope you find the answer you're looking for. If not, please contact our office or <a href="/contact">send an email</a> to get all your questions answered.</p>
+            </div>
+        </div>
+        <div class="uk-child-width-1-2@s uk-grid-match uk-margin-medium-top uk-grid-column-small uk-grid-row-small" uk-grid>
+            {{ range .Params.faq }}
+            <div>
+                <div class="uk-card uk-card-secondary uk-card-hover uk-card-body">
+                    <h3 style="color: #222;">{{ .question }}</h3>
+                    <p style="color: #7f7f7f">{{ .answer }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    <div class="uk-section">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-center">
+                <div class="uk-width-2xlarge uk-text-center">
+                    <h2 class="uk-text-center">Questions about specific policies</h2>
+                </div>
+            </div>
+            <div class="uk-grid uk-margin-medium-top">
+                <div class="uk-width-expand uk-margin-medium-bottom">
+                    <div class="uk-card main__content">
+                        <h3>Can't find an answer?</h3>
+                        <img src="https://res.cloudinary.com/hungryram19/image/upload/v1630830529/randy-nong/rn-insurance/bruce-mars-xj8qrWvuOEs-unsplash_xsawm0.jpg" alt="man looks confused on laptop" style="box-shadow:-60px 0px 0 -20px #aa0817">
+                        <p>We understand you might have a lot of questions about insurance and choosing the right coverage. RN Insurance wants to answer any questions you might. We can be reached at our office <a href="tel:978-455-6349">978-455-6349</a> or email <a href="mailto:randy@rninsurance.com">randy@rninsurance.com</a>.</p>
+                        <a href="/contact" class="uk-button uk-button-primary slide_right">Contact</a>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@s">
+                    <h3>Insurance Policies</h3>
+                    <ul class="uk-list uk-list-striped service__list__faq">
+                        {{ range where .Site.RegularPages "Type" "insurance" }}
+                        {{ if .Params.faq }}
+                        <li><a href="{{ .Permalink }}" class="uk-link-text uk-margin-small-right">{{ .Title }}</a><span uk-icon="icon: chevron-double-right"></span></li>
+                        {{ end }}
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

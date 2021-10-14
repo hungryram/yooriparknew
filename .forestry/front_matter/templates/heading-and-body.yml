@@ -16,11 +16,15 @@ fields:
     schema:
       format: markdown
   label: Body
-- name: seo
-  type: include
+- name: search_engine_optimization
+  type: field_group
   config: {}
-  template: seo
-  label: SEO
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Search Engine Optimization
 pages:
-- content/contact/_index.md
-- content/partners/_index.md
+- content/insurance/_index.md

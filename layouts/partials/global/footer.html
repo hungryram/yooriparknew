@@ -1,148 +1,77 @@
-{{ $footer := .Site.Data.appearance.footer }}
-{{ $footerContact := .Site.Data.profile }}
 {{ $footerSocial := .Site.Data.profile.social_media }}
-<footer class="footer pb-0" style="background:{{ if $footer.background_image }}linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url({{ $footer.background_image }}) no-repeat center;{{ else }}background:{{ $footer.footer_background_color }}{{ end }}">
-    <div class="section">
-        <div class="container">
-            <div class="columns is-variable is-8">
-                <div class="column">
-                    {{ if $footer.logo }}
-                    <img src="{{ $footer.logo }}" alt="{{ .Site.Data.appearance.branding.site_title }}" width="150">
-                    {{ else }}
-                    {{ end }}
+{{ $contact := .Site.Data.profile.contact_information }}
+<footer class="footer">
+    <div class="uk-section">
+        <div class="uk-container uk-container-large">
+            <div class="uk-margin">
+            </div>
+            <div class="uk-grid-match uk-grid-large uk-text-left" uk-grid>
+                <div class="footer-text uk-width-1-4@s">
+                    <div class="accent">
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Follow me</h3>
+                        {{ if $footerSocial.facebook }}<a href="{{ $footerSocial.facebook }}" class="uk-display-block">Facebook</a>{{ end }}
+                        {{ if $footerSocial.instagram }}<a href="{{ $footerSocial.instagram }}" class="uk-display-block">Instagram</a>{{ end }}
+                        {{ if $footerSocial.linkedin }}<a href="{{ $footerSocial.linkedin }}" class="uk-display-block">Linkedin</a>{{ end }}
+                        {{ if $footerSocial.pinterest }}<a href="{{ $footerSocial.pinterest }}" class="uk-display-block">Pinterest</a>{{ end }}
+                        {{ if $footerSocial.twitter }}<a href="{{ $footerSocial.twitter }}" class="uk-display-block">Twitter</a>{{ end }}
+                        {{ if $footerSocial.youtube }}<a href="{{ $footerSocial.youtube }}" class="uk-display-block">Youtube</a>{{ end }}
+                        {{ if $footerSocial.yelp }}<a href="{{ $footerSocial.yelp }}" class="uk-display-block">Yelp</a>{{ end }}
+                    </div>
                 </div>
-                <div class="column">
-                    <h4 class="title is-6 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ $footerContact.company_name }}</h4>
-                    {{ if $footer.footer_bio }}
-                    <p class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} has-text-weight-light">{{ $footer.footer_bio }}</p>
-                    {{ end }}
-                    <em class="has-text-weight-light {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ $footerContact.contact_information.license }}</em>
-
+                <div class="uk-width-1-4@s">
+                    <div>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Contact Information</h3>
+                        <ul class="uk-list">
+                            <li><a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a></li>
+                            <li><a href="tel:{{ $contact.cell }}"><strong>Cell: </strong>{{ $contact.cell }}</a></li>
+                        </ul>           
+                    </div>
                 </div>
-                <div class="column">
-                    <h4 class="title is-6 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Contact</h4>
-                    <ul>
-                        {{ if $footerContact.company_name }}<li class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} has-text-weight-light">{{ $footerContact.company_name }}</li>{{ end }}
-                        {{ if $footerContact.contact_information.cell }}<li><a href="tel:{{ $footerContact.contact_information.cell }}" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} has-text-weight-light">{{ $footerContact.contact_information.cell }}</a></li>{{ end }}
-                        {{ if $footerContact.contact_information.email }}<li><a href="mailto:{{ $footerContact.contact_information.email }}" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} has-text-weight-light">{{ $footerContact.contact_information.email }}</a></li>{{ end }}
-                        {{ if $footerContact.contact_information.address }}<li><a href="https://www.google.com/maps/place/{{ $footerContact.contact_information.address }} {{ $footerContact.contact_information.city }} {{ $footerContact.contact_information.state }} {{ $footerContact.contact_information.zip_code }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} has-text-weight-light">{{ $footerContact.contact_information.address }}, {{ $footerContact.contact_information.city }}, {{ $footerContact.contact_information.state }} {{ $footerContact.contact_information.zip_code }}</a></li>{{ end }}
-                    </ul>
+                <div class="uk-width-1-4@s">
+                    <div>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Quick Links</h3>
+                        <ul class="uk-list uk-white">
+                            <li><a href="/about">About Yoori Park</a></li>
+                            <li><a href="/listings">View all Listings</a></li>
+                            <li><a href="/press-and-media">Press and Media</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>           
+                    </div>
                 </div>
-                <div class="column">
-                    <h4 class="title is-6 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Quick Links</h4>
-                    <nav class="footer-nav">
-                        {{ $currentPage := . }}
-                        {{ range .Site.Menus.footer }}
-                        <a class="is-block has-text-weight-light {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }} footer-nav-item{{if or ($currentPage.IsMenuCurrent "footer" .) ($currentPage.HasMenuCurrent "footer" .) }} active{{end}}" href="{{ .URL | absURL }}" title="{{ .Title }}">{{ .Name }}</a>
-                        {{ end }}
-                    </nav>
+                <div class="uk-width-1-4@s">
+                    <div>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Yoori Park</h3>
+                        <p class="uk-white">The client is #1 in Yoori’s book. Her desire is to assist clients wanting to buy or sell their home</p>
+                    </div>
                 </div>
             </div>
-            <hr style="height:1px;background-color: #212121">
-            <div class="columns">
-                <div class="column has-text-centered-mobile">
-                  <p class="is-size-7 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}  &middot; <a href="https://hungryram.com" rel="nofollow" target="_blank" class="is-size-7 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Website Developed by Hungry Ram</a></p><br>
-                </div>
-                <div class="column has-text-right-desktop has-text-centered-mobile">
-                  <ul>
-                    {{ if $footerSocial.facebook }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.facebook }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Facebook</a></li>{{ end }}
-                    {{ if $footerSocial.instagram }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.instagram }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Instagram</a></li>{{ end }}
-                    {{ if $footerSocial.twitter }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.twitter }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Twitter</a></li>{{ end }}
-                    {{ if $footerSocial.pinterest }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.pinterest }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Pinterest</a></li>{{ end }}
-                    {{ if $footerSocial.youtube }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.youtube }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Youtube</a></li>{{ end }}
-                    {{ if $footerSocial.linkedin }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.linkedin }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Linkedin</a></li>{{ end }}
-                    {{ if $footerSocial.yelp }}<li class="is-inline mr-4 is-size-7"><a href="{{ $footerSocial.yelp }}" target="_blank" class="{{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">Yelp</a></li>{{ end }}
-                  </ul>
-                </div>
-              </div>
-              {{ if $footer.disclaimer }}
-              <div class="columns">
-                  <div class="column content has-text-centered">
-                      <p class="is-size-7 has-text-weight-light{{ if $footer.enable_black_text }} has-text-black{{ else }} has-text-white{{ end }}">{{ $footer.disclaimer }}</p>
-                  </div>
-              </div>
-              {{ end }}
-              <div class="columns">
-                  <div class="column has-text-centered">
-                      <ul>
-                        {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
-                        <li class="is-inline"><a href="{{ .Permalink }}" class="is-size-7 mx-2 {{ if $footer.enable_black_text }}has-text-black{{ else }}has-text-white{{ end }}">{{ .Title }}</a></li>
-                        {{ end }}
-                      </ul>
-                  </div>
-              </div>
+            <div class="uk-margin-medium" style="border-top: 1px solid rgb(255 255 255 / 15%)"></div>
+            <div class="disclaimer uk-text-center">
+                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1608162411/yoori-park/yooripark/revelbg2_iom7bo.jpg" alt="Revel Real Estate logo" width="200">
+
+                <p class="uk-white">{{ .Site.Data.appearance.footer.disclaimer }}</p>
+            </div>
+        </div>
+    </div>
+    <div style="border-top: 1px solid rgb(255 255 255 /15%)"></div>
+
+    <div class="uk-container uk-padding-small footer-credit">
+        <div class="uk-grid">
+            <div class="uk-width-1-2@m">
+                <ul class="uk-padding-remove">
+                    <li><span class="uk-text-small" style="color:#fff;">&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }} &middot;</span>   <a href="https://hungryram.com" target="_blank" rel="nofollow">Website Developed by Hungry Ram</a></li>
+                </ul>
+                
+            </div>
+            <div class="uk-width-1-2@s">
+                <ul class="hr-legals">
+                    {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
+                    <li class="uk-light uk-text-small uk-display-inline uk-margin-medium-left" onclick="navbaractive()"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
         </div>
     </div>
 </footer>
-{{ if and $.Site.Data.idx.enable_idx $.IsHome }}
-{{ else }}
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-{{ end }}
-
-
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
-<script src="{{.Site.BaseURL}}/js/main.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
-<script src="{{ "js/search.js" | absURL }}"></script>
-
-<script>
-    // COLORS
-    // LINK
-    document.querySelectorAll(".link").forEach(function(link) {
-    link.style.color = '{{ .Site.Data.appearance.colors.links }}';
-    });
-    document.querySelectorAll("div.content a").forEach(function(contentLink) {
-    contentLink.style.color = '{{ .Site.Data.appearance.colors.links }}';
-    });
-    document.querySelectorAll(".accent").forEach(function(accent) {
-    accent.style.backgroundColor = '{{ .Site.Data.appearance.colors.accent }}';
-    });
-    // PRIMARY BUTTON
-    document.querySelectorAll(".btn-primary").forEach(function(bg) {
-    bg.style.backgroundColor = '{{ .Site.Data.appearance.colors.button_background_color }}';
-    });
-
-    //PRIMARY BUTTON TEXT
-    document.querySelectorAll(".btn-primary").forEach(function(color) {
-    color.style.color = '{{ .Site.Data.appearance.colors.button_text_color }}';
-    });
-
-    //PRIMARY BUTTON TEXT
-    document.querySelectorAll("button.button").forEach(function(buttonColor) {
-    buttonColor.style.backgroundColor = '{{ .Site.Data.appearance.colors.button_background_color }}';
-    });
-
-    //PRIMARY BUTTON COLOR
-    document.querySelectorAll("button.button").forEach(function(buttonColor) {
-    buttonColor.style.backgroundColor = '{{ .Site.Data.appearance.colors.button_background_color }}';
-    });
-
-    //PRIMARY BUTTON TEXT COLOR
-    document.querySelectorAll("button.button").forEach(function(buttonText) {
-    buttonText.style.color = '{{ .Site.Data.appearance.colors.button_text_color }}';
-    });
-
-    $( ".status:contains('Sold')" ).css( "background", "#d10000" );
-
-</script>
-<script>
-//FILTER
-function openNav() {
- document.getElementById("filter-menu").style.width = "200px";
-}
-
-function closeNav() {
- document.getElementById("filter-menu").style.width = "0";
- document.body.style.marginLeft = "0px";
-}
-
-$('#filter-menu').click(function(event){
- event.stopPropagation();
-});
-
-</script>
 </body>
 </html>

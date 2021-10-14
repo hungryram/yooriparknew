@@ -1,0 +1,31 @@
+<div class="uk-section">
+    <div class="uk-container">
+        <div class="uk-flex uk-flex-center">
+            <div class="uk-width-xlarge">
+                <h2 class="uk-text-center uk-h1 uk-margin-large-bottom">Request more<br>information</h2>
+                <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="uk-grid-small" uk-grid action="/thank-you">
+                    <input name="bot-field" type="hidden" />
+                    <input type="hidden" name="Subject" value="Website Contact Form">
+                    <div class="uk-width-1-2@s">
+                        <input class="uk-input" type="text" placeholder="Name*" name="Name" required>
+                    </div>
+                    <div class="uk-width-1-2@s">
+                        <input class="uk-input" type="text" placeholder="Phone*" name="Phone" required>
+                    </div>
+                    <div class="uk-width-1-1">
+                        <input class="uk-input" type="text" placeholder="Email*" name="Email" required>
+                    </div>
+                    <div class="uk-width-1-1">
+                        <textarea class="uk-textarea" rows="5" placeholder="Your Message" name="Message"></textarea>
+                    </div>
+                    <div class="uk-width-1-1">
+                        <button class="uk-button uk-button-secondary" style="width:100%;padding: 8px;">Submit</button>
+                    </div>
+                    <div class="uk-width-1-1">
+                            <p>By submitting the form with your information above you are agreeing to our <a style="color:#19202A" href="/legal/terms-and-conditions">Terms and Conditions</a> and <a style="color:#19202A" href="/legal/privacy-policy">Privacy Policy</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

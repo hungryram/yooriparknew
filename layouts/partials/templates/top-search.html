@@ -1,0 +1,152 @@
+<div id="top-search">
+<div class="uk-inline">
+    <form action="{{ "search" | absURL }}">
+            <div uk-form-custom>
+                <input class="uk-input uk-form-width-large" required id="search-query" name="s" class="input" placeholder="Search by address, state, zip, city or MLS #" title="Search by address, state, zip, city or MLS #" />
+                <button class="uk-button uk-button-secondary max-button" type="submit" tabindex="-1">Search</button>
+            </div>
+    </form>
+</div>
+
+<div class="uk-inline desktop-view uk-margin-small-top">
+    <div>
+        <div class="uk-inline">
+            <a class="uk-button uk-button-default reset-filter uk-dark" href="/listings">All Listings</a>
+        </div>
+        <div class="uk-inline">
+            <a class="uk-button uk-button-default reset-filter uk-dark" uk-filter-control onClick="reset();">Reset</a>
+        </div>
+    
+        <div class="uk-inline">
+            <button class="uk-button uk-button-default max-button" type="button">Cities</button>
+            <div uk-dropdown="mode: click">
+                <ul class="uk-list">
+                    {{ $city := slice }}
+                    {{ range $.Pages }}
+                      {{ $city = $city | append .Params.cities }}
+                    {{ end }}
+                    {{ range ($city | uniq) }}
+                    <li uk-filter-control="filter: [data-city='{{ . }}']; group: data-cities" onclick="document.getElementById('search-cities').innerHTML='{{ . }}'; showSelected();getLength();">{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+
+        <div class="uk-inline">
+            <button class="uk-button uk-button-default max-button" type="button">Properties</button>
+            <div uk-dropdown="mode: click">
+                <ul class="uk-list">
+                    {{ $prop := slice }}
+                    {{ range $.Pages }}
+                      {{ $prop = $prop | append .Params.properties }}
+                    {{ end }}
+                    {{ range ($prop | uniq) }}
+                    <li uk-filter-control="filter: [data-properties='{{ . }}']; group: data-properties" onclick="document.getElementById('search-properties').innerHTML='{{ . }}'; showSelected();">{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+        <div class="uk-inline">
+            <button class="uk-button uk-button-default" type="button">Price</button>
+            <div uk-drop="mode: click">
+                <div class="uk-card uk-card-body uk-card-default">
+                    <div uk-filter-control="sort: data-price; order: desc"><a href="#" class="uk-link-text">Low to high</a></div>
+                    <div uk-filter-control="sort: data-price"><a href="#" class="uk-link-text">High to low</a></div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+
+
+
+<div class="uk-grid uk-grid-small mobile-view">
+    <div class="uk-inline uk-width-1-1">
+        <a class="uk-button uk-button-default reset-filter uk-dark max-button" href="/listings" style="background:#fff">All Listings</a>
+    </div>
+
+<div class="uk-width-1-2@s">
+    <div class="uk-inline uk-width-1-1">
+        <button class="uk-button uk-button-default max-button" type="button">Cities</button>
+        <div uk-dropdown="mode: click">
+            <ul class="uk-list">
+                {{ $city := slice }}
+                {{ range $.Pages }}
+                  {{ $city = $city | append .Params.cities }}
+                {{ end }}
+                {{ range ($city | uniq) }}
+                <li uk-filter-control="filter: [data-city='{{ . }}']; group: data-cities" onclick="document.getElementById('search-cities').innerHTML='{{ . }}'; showSelected();">{{ . }}</li>
+    
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="uk-width-1-2@s">
+    <div class="uk-inline uk-width-1-1">
+        <button class="uk-button uk-button-default max-button" type="button">Properties</button>
+        <div uk-dropdown="mode: click">
+            <ul class="uk-list">
+                {{ $prop := slice }}
+                {{ range $.Pages }}
+                  {{ $prop = $prop | append .Params.properties }}
+                {{ end }}
+                {{ range ($prop | uniq) }}
+                <li uk-filter-control="filter: [data-properties='{{ . }}']; group: data-properties" onclick="document.getElementById('search-properties').innerHTML='{{ . }}'; showSelected();">{{ . }}</li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="uk-width-1-2@s">
+    <div class="uk-inline uk-width-1-1">
+        <button class="uk-button uk-button-default max-button" type="button">Price</button>
+        <div uk-drop="mode: click">
+            <div class="uk-card uk-card-body uk-card-default">
+                <div uk-filter-control="sort: data-price; order: desc"><a href="#" class="uk-link-text">High to low</a></div>
+                <div uk-filter-control="sort: data-price"><a href="#" class="uk-link-text">Low to high</a></div>
+            </div>
+        </div>    
+    </div>
+</div>
+
+<div class="uk-inline uk-margin-small-top">
+        <a class="reset-filter uk-dark" uk-filter-control onClick="reset()">Reset</a>
+</div>
+
+</div>
+</div>
+<div class="uk-margin" id="filter-badge">
+    
+<span class="search-filter" id="search-properties"></span>
+<span class="search-filter" id="search-cities"></span>
+<span class="search-filter" id="search-states"></span>
+
+</div>
+
+<script>
+    function reset() {
+        document.getElementById("filter-badge").classList.add("hidden");
+        document.getElementById("filter-badge").classList.remove("show");
+        document.getElementById("search-cities").innerHTML = ("");
+        document.getElementById("search-properties").innerHTML = ("");
+        document.getElementById("search-states").innerHTML = ("");
+    }
+
+    function showSelected() {
+        document.getElementById("filter-badge").classList.add("show");
+        document.getElementById("filter-badge").classList.remove("hidden");
+
+    }
+
+    /* function getLength() {
+        var length = document.querySelectorAll(".listing-result").length;
+        var hidden = document.querySelectorAll(".listing-result");
+        if (hidden) {
+            document.getElementById("output").textContent = length;
+        }
+    } */
+
+
+    </script>

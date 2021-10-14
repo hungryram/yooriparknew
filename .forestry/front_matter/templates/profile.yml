@@ -36,6 +36,16 @@ fields:
     config:
       required: false
     label: Yelp
+  - name: linkedin
+    type: text
+    config:
+      required: false
+    label: Linkedin
+  - name: tiktok
+    type: text
+    config:
+      required: false
+    label: TikTok
   - name: youtube
     type: text
     config:

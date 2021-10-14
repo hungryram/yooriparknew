@@ -1,59 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-{{- if in .Permalink "admin" -}}
-<meta name="robots" content="noindex, nofollow">
-{{ else }}
-<meta name="robots" content="index, follow">
-{{- end -}}
-<link rel="canonical" href="{{ .Permalink }}"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{.Site.BaseURL}}/css/styles.css">
+    {{ partial "global/seo" . }}
 
+    {{ if .IsHome }}
+    {{ partial "global/schema" . }}
+    {{ end }}
 
-{{- if $.IsHome -}}
-<!-- SCHEMA -->
-{{ partial "global/schema" . }}
-{{- end -}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-<!-- START SEO -->
-{{ partial "global/seo" . }}
-<!-- SOCIAL SEO -->
-{{ partial "global/social" . }}
-
-<!-- FONTS -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-
-<!-- STYLESHEETS AND RESOURCES-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.8/slick-lightbox.css"/>
-<link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/slick-theme.css"/>
-<link rel="stylesheet" href="{{.Site.BaseURL}}css/styles.css">
-{{ if and $.IsHome $.Site.Data.idx.enable_idx }}
-    <link rel="stylesheet" href="{{.Site.BaseURL}}/css/ihf_style.css">
-{{ end }}
-
-<!-- FAVICON -->
-<link rel="shortcut icon" href="{{ .Site.Data.appearance.branding.favicon }}" />
-
-{{ if $.Site.Data.idx.enable_google_recaptcha }}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-{{ end }}
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154460538-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-154460538-1');
-</script>
-
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.8/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.8/dist/js/uikit-icons.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154460538-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-154460538-1');
+    </script>
     <meta name="google-site-verification" content="eLVIqhSwkuGwrYI3MZynIiKARXcfjv7r1EhJGjEbspk" />
 </head>
-<body>
+<body id="body">
