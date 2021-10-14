@@ -1,0 +1,10 @@
+---
+label: Latest Posts
+hide_body: true
+fields:
+- name: latest_posts
+  type: text
+  config:
+    required: false
+  label: Latest Posts
+  hidden: true

@@ -1,5 +1,5 @@
 ---
-label: Rental Listings
+label: Banner
 hide_body: true
 fields:
 - name: heading
@@ -7,10 +7,9 @@ fields:
   config:
     required: false
   label: Heading
-  default: Rental Listings
 - name: body
   type: textarea
-  default: View rental listings in the office
+  default: ''
   config:
     required: false
     wysiwyg: true

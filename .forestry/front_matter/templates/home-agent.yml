@@ -1,5 +1,5 @@
 ---
-label: Rental Listings
+label: Agent Showcase
 hide_body: true
 fields:
 - name: heading
@@ -7,10 +7,10 @@ fields:
   config:
     required: false
   label: Heading
-  default: Rental Listings
+  default: Our Team
 - name: body
   type: textarea
-  default: View rental listings in the office
+  default: Let our team of professionals help you.
   config:
     required: false
     wysiwyg: true

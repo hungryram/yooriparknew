@@ -1,8 +1,8 @@
 ---
-label: Press and Media
+label: Featured Boxes
 hide_body: true
 fields:
-- name: title
+- name: heading
   type: text
   config:
     required: false
@@ -16,7 +16,7 @@ fields:
     schema:
       format: markdown
   label: Body
-- name: press
+- name: featured
   type: field_group_list
   fields:
   - name: heading
@@ -24,34 +24,18 @@ fields:
     config:
       required: false
     label: Heading
-  - name: body
-    type: textarea
-    default: ''
+  - name: image
+    type: file
     config:
-      required: false
-      wysiwyg: true
-      schema:
-        format: markdown
-    label: Body
+      maxSize: 64
+    label: Image
   - name: link
     type: text
     config:
       required: false
     label: Link
-  - name: link_label
-    type: text
-    config:
-      required: false
-    label: Link Label
-  - name: image
-    type: file
-    config:
-      maxSize: 2
-    label: Image
   config:
     min: 
     max: 
     labelField: 
-  label: Press
-pages:
-- content/press-and-media/_index.md
+  label: Featured

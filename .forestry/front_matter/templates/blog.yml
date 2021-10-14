@@ -12,6 +12,11 @@ fields:
   config:
     maxSize: 5
   label: Featured Image
+- name: image_alt_tag
+  type: text
+  config:
+    required: false
+  label: Image Alt Tag
 - name: author
   type: select
   default: []
@@ -20,7 +25,7 @@ fields:
     options: []
     source:
       type: pages
-      section: teams
+      section: my-team
       file: 
       path: 
   label: Author
@@ -61,4 +66,3 @@ pages:
 - content/blog/hello-doctors.there-is-a-loan-program-for-you.md
 - content/blog/here-are-information-to-prepare-you-before-you-own-your-first-home.md
 - content/blog/what-is-a-fha-loan.md
-- content/blog/who-is-yoori-park.md

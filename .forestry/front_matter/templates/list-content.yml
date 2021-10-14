@@ -1,5 +1,5 @@
 ---
-label: Contact Page
+label: List Content
 hide_body: true
 fields:
 - name: title
@@ -7,7 +7,7 @@ fields:
   config:
     required: false
   label: Title
-- name: contact_content
+- name: body
   type: textarea
   default: ''
   config:
@@ -15,11 +15,4 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-  label: Contact Content
-- name: url
-  type: include
-  config: {}
-  template: url
-  label: URL
-pages:
-- content/contact/_index.md
+  label: Body

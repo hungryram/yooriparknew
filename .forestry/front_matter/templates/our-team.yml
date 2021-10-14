@@ -1,5 +1,5 @@
 ---
-label: Team
+label: Our Team
 hide_body: false
 fields:
 - name: weight
@@ -139,31 +139,6 @@ fields:
     config:
       required: false
     label: Pinterest
-  - name: zillow
-    type: text
-    config:
-      required: false
-    label: Zillow
-  - name: redfin
-    type: text
-    config:
-      required: false
-    label: Redfin
-  - name: realtor
-    type: text
-    config:
-      required: false
-    label: Realtor
-  - name: trulia
-    type: text
-    config:
-      required: false
-    label: Trulia
-  - name: reddit
-    type: text
-    config:
-      required: false
-    label: Reddit
   label: Social Media
 - name: search_engine_optimization
   type: field_group

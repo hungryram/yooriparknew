@@ -118,11 +118,11 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: main_photo
+  - name: photo
     type: file
     config:
       maxSize: 5
-    label: Main Photo
+    label: Photo
   label: Photo
 - name: search_engine_optimization
   type: field_group
@@ -134,5 +134,3 @@ fields:
     template: seo
     label: SEO
   label: Search Engine Optimization
-pages:
-- content/offices/corona-office.md

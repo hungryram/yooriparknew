@@ -1,9 +1,0 @@
----
-label: Slide Show
-hide_body: true
-fields:
-- name: upload_image
-  type: file
-  config:
-    maxSize: 64
-  label: Upload Image

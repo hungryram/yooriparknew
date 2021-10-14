@@ -6,15 +6,102 @@ fields:
   type: text
   config:
     required: true
-  label: Property Title
+  label: Address
   description: Enter the address as the title
-- name: short_description
+- name: cities
   type: text
   config:
-    required: true
+    required: false
+  label: City
+- name: states
+  type: select
+  default: ''
+  config:
+    required: false
+    options:
+    - Alabama
+    - Alaska
+    - Arizona
+    - Arkansas
+    - California
+    - Colorado
+    - Connecticut
+    - Delaware
+    - Florida
+    - Georgia
+    - Hawaii
+    - Idaho
+    - Illinois
+    - Indiana
+    - Iowa
+    - Kansas
+    - Kentucky
+    - Louisiana
+    - Maine
+    - Maryland
+    - Massachusetts
+    - Michigan
+    - Minnesota
+    - Mississippi
+    - Missouri
+    - Montana
+    - Nebraska
+    - Nevada
+    - New Hampshire
+    - New Jersey
+    - New Mexico
+    - New York
+    - North Carolina
+    - North Dakota
+    - Ohio
+    - Oklahoma
+    - Oregon
+    - Pennsylvania
+    - Rhode Island
+    - South Carolina
+    - South Dakota
+    - Tennessee
+    - Texas
+    - Utah
+    - Vermont
+    - Virginia
+    - Washington
+    - West Virginia
+    - Wisconsin
+    - Wyoming
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: State
+- name: zip-codes
+  type: text
+  config:
+    required: false
+  label: Zip Code
+- name: short_title
+  type: text
+  config:
+    required: false
     max: 30
-  label: Short Description
+  label: Short Title
   description: 'Example: Luxury Listing'
+- name: price
+  type: text
+  config:
+    required: false
+  label: Price
+- name: schema_price
+  type: text
+  config:
+    required: false
+  description: The listing price but use only decimal. This is for SEO purposes on
+    Schema.
+  label: Schema Price
+- name: all_sold
+  type: boolean
+  label: All Sold
 - name: status
   type: select
   default: ''
@@ -30,116 +117,64 @@ fields:
     - Coming Soon
     - Auction
     - Rental
+    - All Properties Sold
     source:
       type: simple
       section: 
       file: 
       path: 
   label: Property Status
-- name: featured_listing
-  type: boolean
-  label: Featured Listing
-  description: Toggle to feature this listing
-- name: weight
-  type: number
-  label: Price
-  description: ''
-  default: 0
-  required: true
+- name: featured
+  type: select
+  default: []
   config:
-    min: 0
-    max: 
-    step: 
-    required: true
-- name: address
-  type: field_group
-  config: {}
-  fields:
-  - name: address
-    type: text
-    config:
-      required: true
-    label: Address
-    description: Include Apt/Unit if any.
-  - name: city
-    type: text
-    config:
-      required: true
-    label: City
-  - name: state
-    type: select
-    default: []
-    config:
-      required: true
-      options:
-      - Alabama
-      - Alaska
-      - Arizona
-      - Arkansas
-      - California
-      - Colorado
-      - Connecticut
-      - Delaware
-      - Florida
-      - Georgia
-      - Hawaii
-      - Idaho
-      - Illinois
-      - Indiana
-      - Iowa
-      - Kansas
-      - Kentucky
-      - Louisiana
-      - Maine
-      - Maryland
-      - Massachusetts
-      - Michigan
-      - Minnesota
-      - Mississippi
-      - Missouri
-      - Montana
-      - Nebraska
-      - Nevada
-      - New Hampshire
-      - New Jersey
-      - New Mexico
-      - New York
-      - North Carolina
-      - North Dakota
-      - Ohio
-      - Oklahoma
-      - Oregon
-      - Pennsylvania
-      - Rhode Island
-      - South Carolina
-      - South Dakota
-      - Tennessee
-      - Texas
-      - Utah
-      - Vermont
-      - Virginia
-      - Washington
-      - West Virginia
-      - Wisconsin
-      - Wyoming
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
-    label: State
-  - name: zip_code
-    type: number
-    label: Zip Code
-    description: ''
-    default: 0
-    required: true
-    config:
-      min: 
-      max: 99999
-      step: 
-      required: true
-  label: Listing Address
+    required: false
+    options:
+    - Featured
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Featured
+- name: properties
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Acreage and Land
+    - Commercial
+    - Condo
+    - Townhome
+    - Co-op
+    - Duplex
+    - Farmland
+    - Farmranch
+    - Cabin
+    - Mobile Home
+    - Multi-Family
+    - New Construction
+    - Rental
+    - Single Family
+    - Time Share
+    - Vacation Home
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Property Type
+- name: date
+  type: datetime
+  label: Date
+  config:
+    required: false
+    date_format: MM/DD/YYYY
+    time_format: 
+    display_utc: false
+    export_format: MM/DD/YYYY
+  description: Date of published listing or last modified.
 - name: listing_agent
   type: field_group
   config: {}
@@ -152,7 +187,7 @@ fields:
       options: []
       source:
         type: pages
-        section: teams
+        section: my-team
         file: 
         path: 
     label: Listing Agent
@@ -163,35 +198,6 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: property_type
-    type: select
-    default: Not Specified
-    config:
-      required: true
-      options:
-      - Acreage/Land
-      - Commercial
-      - Condo
-      - Townhome
-      - Co-op
-      - Duplex
-      - Farmland
-      - Farmranch
-      - Cabin
-      - Mobile Home
-      - Multi-family
-      - New Construction
-      - Rental
-      - Single Family
-      - Time Share
-      - Vacation Home
-      - Not Specified
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
-    label: Property Type
   - name: mls_number
     type: text
     config:
@@ -199,79 +205,28 @@ fields:
       min: 0
     label: MLS Number
   - name: square_footage
-    type: number
+    type: text
     description: ''
     default: 0
-    required: true
-    config:
-      min: 0
-      max: 
-      step: 
     label: Square Footage
   - name: lot_size
-    type: number
+    type: text
     label: Lot Size
-    description: ''
-    default: 0
-    required: true
-    config:
-      min: 0
-      max: 
-      step: 
   - name: year_built
-    type: number
+    type: text
     label: Year Built
-    description: ''
-    default: 0
-    required: true
-    config:
-      min: 0
-      max: 
-      step: 
   - name: bedrooms
-    type: number
+    type: text
     label: Bedrooms
-    description: ''
-    default: 0
-    required: true
-    config:
-      min: 0
-      max: 
-      step: 
-      required: true
   - name: bathrooms
-    type: number
+    type: text
     label: Bathrooms
-    description: ''
-    default: 0
-    required: true
-    config:
-      min: 0
-      max: 
-      step: 
-      required: true
   - name: hoa
-    type: number
+    type: text
     label: HOA
-    description: Enter 0 if none.
-    default: 0
-    required: true
-    config:
-      min: 0
-      max: 
-      step: 
-      required: false
   - name: garage
-    type: number
+    type: text
     label: Garage
-    description: Enter 0 if none
-    default: 0
-    required: true
-    config:
-      min: 0
-      max: 
-      step: 
-      required: false
   label: Details
 - name: utilities_and_features
   type: field_group
@@ -281,9 +236,9 @@ fields:
     type: field_group
     config: {}
     fields:
-    - name: hide_property_interior
+    - name: show_interior_details
       type: boolean
-      label: Hide Property Interior
+      label: Show Interior Details
     - name: interior_rooms
       type: list
       config:
@@ -360,9 +315,9 @@ fields:
     type: field_group
     config: {}
     fields:
-    - name: hide_property_exterior
+    - name: show_exterior_details
       type: boolean
-      label: Hide Property Exterior
+      label: Show Exterior Details
     - name: exterior_details
       type: list
       config:
@@ -436,9 +391,9 @@ fields:
     type: field_group
     config: {}
     fields:
-    - name: hide_community_details
+    - name: show_community_details
       type: boolean
-      label: Hide Community Details
+      label: Show Community Details
     - name: community_features_choice
       type: list
       config:
@@ -487,14 +442,6 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: main_photo
-    type: file
-    config:
-      maxSize: 5
-    label: Main Photo
-    default: "/uploads/main-house-photo.jpg"
-    description: Photos that are larger in size will take time to upload. We recommend
-      using optimized photos.
   - name: gallery
     type: image_gallery
     config: {}
@@ -530,7 +477,7 @@ fields:
     config:
       required: false
     label: Open House Date
-    default: No Open House Available
+    default: ''
   - name: open_house_details
     type: textarea
     default: ''
@@ -563,21 +510,24 @@ fields:
   template: url
   label: URL
 pages:
+- content/listings/1407-chautauqua-blvd.md
 - content/listings/1530-n-curson-ave.md
 - content/listings/1895-rising-glen-rd.md
 - content/listings/2008-whitley-ave.md
 - content/listings/2112-e.4th-st.md
 - content/listings/2538-carman-crest-dr.md
-- content/listings/3330-cricklewood-st-torrance.md
+- content/listings/3330-cricklewood-st.md
 - content/listings/3743-sunswept-dr.md
 - content/listings/4008-weslin-ave.md
 - content/listings/4122-rhodes-ave.md
 - content/listings/4211-w-6th-st.md
 - content/listings/5542-radford-ave.md
 - content/listings/623-rosemont-ave.md
+- content/listings/6576-3rd-ave.md
 - content/listings/7012-la-presa-dr.md
 - content/listings/7324-woodrow-wilson.md
 - content/listings/733-n-gardner-st.md
 - content/listings/736-n-sierra-bonita-ave.md
 - content/listings/8500-west-sunset-boulevard.md
 - content/listings/853-859-hyperion-ave.md
+- content/listings/957-figueroa-ter.md
