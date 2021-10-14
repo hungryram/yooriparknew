@@ -32,7 +32,7 @@
                             <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
                             {{ end }}
                             {{ end }}
-                            </ul>
+                        </ul>
                     </div>
     
                 </div>
@@ -66,12 +66,11 @@
 <div id="modal-full" class="uk-modal-full uk-modal mobile__wrapper" uk-modal>
     <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport style="background-image:url(https://res.cloudinary.com/hungryram19/image/upload/v1608173336/yoori-park/yooripark/26j6ar3w9xbq6absx-10350wyton310_ojybou.jpg)">
         <button class="uk-modal-close-full" type="button" uk-close></button>
-
         <ul class="uk-nav-default uk-nav-parent-icon uk-margin-auto-vertical uk-text-center" uk-nav uk-scrollspy="cls: uk-animation-fade; target: .animate; delay: 300; repeat: true">
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
             {{ if .HasChildren }}
-            <li class="uk-parent animate">
+            <li class="uk-parent">
                 <a href="#" class="uk-text-light">{{ .Name }}</a>
                 <ul class="uk-nav-sub">
                     {{ range .Children }}
@@ -80,7 +79,7 @@
                 </ul>
             </li>
             {{ else }}
-            <li class="animate"><a href="{{ .URL | absURL }}" class="uk-text-light">{{ .Name }}</a></li>
+            <li><a href="{{ .URL | absURL }}" class="uk-text-light">{{ .Name }}</a></li>
             {{ end }}
             {{ end }}
         </ul>

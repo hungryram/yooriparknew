@@ -2,26 +2,6 @@ baseURL = "https://www.yooripark.com/"
 enableRobotsTXT = "true"
 languageCode = "en-us"
 summaryLength = 25
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-[[menu.main]]
-name = "Buyers & Sellers"
-weight = 4
-[[menu.main]]
-name = "Properties"
-weight = 3
-[[menu.main]]
-name = "Exclusive Listings"
-parent = "Properties"
-url = "/featured/featured/"
-weight = 1
-[[menu.main]]
-name = "Sold Listings"
-parent = "Properties"
-url = "/status/sold/"
-weight = 2
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 [taxonomies]

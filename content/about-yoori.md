@@ -2,10 +2,6 @@
 meta_description = ""
 title = "About Yoori"
 title_tag = ""
-[menu.main]
-name = "About Yoori Park"
-weight = 2
-
 +++
 Yoori graduated from the University of Washington with a Bachelor’s in Communications. With over 18 years of training and experience in both sales and customer service, she is not only results-oriented but also deeply values building rapport with each and every one of her clients.
 
