@@ -12,6 +12,7 @@ status = "Sold"
 title = "2640 Granada St"
 url = ""
 zip-codes = "90065"
+off_market = true
 [details]
 bathrooms = ""
 bedrooms = ""
