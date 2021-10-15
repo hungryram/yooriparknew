@@ -3,7 +3,7 @@ all_sold = false
 cities = "Los Angeles"
 date = ""
 featured = ""
-price = "1,165,346"
+price = "1,160,000"
 properties = "Multi-Family"
 schema_price = ""
 short_title = "Two Unit Property"
@@ -51,4 +51,6 @@ interior_rooms = []
 show_interior_details = false
 
 +++
-This two-unit property is centrally located in Cypress Park alongside Mount Washington. Easy access to some of **_LA's_** major freeways 5, 110, and the 2 freeways.
+This two-unit property is centrally located in Cypress Park alongside Mount Washington. Providing easy access to some of Los Angeles major freeways the 5, 110, and the 2 freeway. The property is within walking distance to Rio De Los Angeles State Park, minutes from the Dodger Stadium, Downtown LA, China Town, and more!
+
+A total of 3 bedrooms and 2 bathrooms, this property sits on a 5,400 Sq. Ft. lot. The front unit has 2 bedrooms, 1 bathroom, living room, laundry room, and an amazing size kitchen.
