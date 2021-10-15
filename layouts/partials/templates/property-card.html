@@ -14,6 +14,7 @@
                         <div class="uk-width-1-2">
                             <div class="uk-card uk-text-left">
                                 {{ if .Params.status }}<span class="status uk-badge" {{ if in .Params.status "Sold" }}style="background: #d10000"{{ else }}style="background:#000;color:#fff"{{ end }}>{{ .Params.status }}</span>{{ end }}
+                                {{ if .Params.all_sold }}<span class="uk-badge status" style="background: #d10000">All Properties Sold</span>{{ end }}
                                 {{ if .Params.featured }}<span class="featured uk-badge">{{ .Params.featured }}</span>{{ end }}
                             </div>
                         </div>
