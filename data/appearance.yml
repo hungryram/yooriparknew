@@ -1,14 +1,14 @@
 ---
 header:
   top_header_color: ''
-  header_background_color: '#000000'
+  header_background_color: ''
   transparent_background: false
-  enable_white_text: true
+  enable_white_text: false
   enable_white_text_top: false
 branding:
   site_title: Yoori Park
-  white_logo: https://res.cloudinary.com/hungryram19/image/upload/v1634678260/erica-jackson/complexlivingrealestate/Logo-1.png
-  dark_logo: https://res.cloudinary.com/hungryram19/image/upload/v1634678260/erica-jackson/complexlivingrealestate/Logo-1.png
+  white_logo: https://res.cloudinary.com/hungryram19/image/upload/v1632376724/yoori-park/yooripark/yoori-park-logo.png
+  dark_logo: https://res.cloudinary.com/hungryram19/image/upload/v1608162298/yoori-park/yooripark/Yooriparklogomain-1024x866_ui3wqr.png
   favicon: https://res.cloudinary.com/hungryram19/image/upload/v1608162298/yoori-park/yooripark/Yooriparklogomain-1024x866_ui3wqr.png
   logo_width: 
 colors:

@@ -4,18 +4,13 @@
 {{ $headerSocial := .Site.Data.profile.social_media }}
 {{ $social := .Site.Data.profile.social_media }}
 
-    <div class="uk-visible@s{{ if $.IsHome }} uk-animation-slide-top-small{{ end }}" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: top: 100" {{ if $navColor.transparent_background }}{{ else }}style="background: {{ $navColor.header_background_color }};"{{ end }}>
+    <div class="uk-visible@s{{ if $.IsHome }} uk-animation-slide-top-small{{ end }}" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: top: 100" style="background: white;">
         <nav class="main-nav">
             <div class="uk-container uk-container-large">
                 <div uk-navbar>
                     <div class="uk-navbar-left">
                         <a href="{{ .Site.BaseURL }}">
-                            {{ if $navColor.transparent_background }}
-                            <img src="{{ .Site.Data.appearance.branding.white_logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="{{ .Site.Data.appearance.branding.logo_width }}" class="white-logo">
-                            <img src="{{ .Site.Data.appearance.branding.dark_logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="{{ .Site.Data.appearance.branding.logo_width }}" class="dark-logo">
-                            {{ else }}
-                            <img src="{{ .Site.Data.appearance.branding.white_logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="{{ .Site.Data.appearance.branding.logo_width }}" class="white-logo">
-                            {{ end }}
+                            <img src="{{ .Site.Data.appearance.branding.dark_logo }}" alt="{{ .Site.Data.profile.company_name }}" width="100" class="dark-logo">
                         </a>
                     </div>
                     <div class="uk-navbar-right">
@@ -24,7 +19,7 @@
                             {{ range .Site.Menus.main }}
                             {{ if .HasChildren }}
                             <li>
-                                <a href="#" style="{{ if $navColor.enable_white_text }}color: #fff{{ else }}color: #000;{{ end }}">{{ .Name }}<span class="uk-margin-small-left" uk-icon="triangle-down"></span></a>
+                                <a href="#">{{ .Name }}<span class="uk-margin-small-left" uk-icon="triangle-down"></span></a>
                                 <div class="uk-navbar-dropdown">
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
                                         {{ range .Children }}
@@ -34,7 +29,7 @@
                                 </div>
                             </li>
                             {{ else }}
-                            <li><a href="{{ .URL | absURL }}" style="{{ if $navColor.enable_white_text }}color: #fff{{ else }}color: #000;{{ end }}">{{ .Name }}</a></li>
+                            <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
                             {{ end }}
                             {{ end }}
                         </ul>
