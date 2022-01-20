@@ -120,6 +120,10 @@ div.uk-overlay-primary {
     background: rgba(17,17,17,.4);
 }
 
+div.uk-overlay-press {
+    background: rgba(17,17,17,.6);
+}
+
 h1.h1-title {
     color:#fff;
 }
