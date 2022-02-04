@@ -11,6 +11,7 @@ branding:
   dark_logo: https://res.cloudinary.com/hungryram19/image/upload/v1608162298/yoori-park/yooripark/Yooriparklogomain-1024x866_ui3wqr.png
   favicon: https://res.cloudinary.com/hungryram19/image/upload/v1608162298/yoori-park/yooripark/Yooriparklogomain-1024x866_ui3wqr.png
   logo_width: 
+  logo: ''
 colors:
   button_background_color: ''
   button_text_color: ''
@@ -22,11 +23,20 @@ footer:
   footer_background_color: ''
   background_image: ''
   enable_black_text: false
-  footer_bio: 
-  disclaimer: The data and information contained within this website are for informational purposes. We try our best to keep all information up-to-date but encourage visitors to do their own research to determine the accuracy of material available on this website. While we strive to keep information accurate, we do not warrant the accuracy or completeness of the information, text, graphics, links or other items contained within these materials. Plead visit our full disclaimer for more information.
-  search_field:
+  footer_bio: ''
+  disclaimer: The data and information contained within this website are for informational
+    purposes. We try our best to keep all information up-to-date but encourage visitors
+    to do their own research to determine the accuracy of material available on this
+    website. While we strive to keep the information accurate, we do not warrant the
+    accuracy or completeness of the information, text, graphics, links, or other items
+    contained within these materials. Please visit our full disclaimer for more information.
+  search_field: 
   disable_search: false
   search_by_state: false
   search_by_cities: true
   search_by_properties: true
   filter_animation: slide
+  logo: ''
+sidebar:
+  sidebar: []
+  single_property_sidebar: false
