@@ -13,14 +13,14 @@ title = "720 Cota Ave"
 url = ""
 zip-codes = "90501"
 [details]
-bathrooms = ""
-bedrooms = ""
+bathrooms = "1"
+bedrooms = "2"
 garage = ""
 hoa = ""
-lot_size = ""
-mls_number = ""
-square_footage = ""
-year_built = ""
+lot_size = "1,798"
+mls_number = "OC21256894"
+square_footage = "680"
+year_built = "1918"
 [listing_agent]
 listing_agent = []
 [photos]
