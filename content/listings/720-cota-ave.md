@@ -51,4 +51,3 @@ interior_rooms = []
 show_interior_details = false
 
 +++
-NEW! NEW! NEW! Remodel just completed. The following items are new: (kitchen cabinets, quartz countertops, vinyl flooring, dishwasher, range, kitchen faucet, light fixtures, new paint inside and out, etc. etc. Remodeled bathroom. Shows like a model.
