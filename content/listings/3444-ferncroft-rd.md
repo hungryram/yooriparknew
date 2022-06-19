@@ -11,6 +11,7 @@ states = "California"
 status = "Sold"
 title = "3444 Ferncroft Rd."
 url = ""
+weight = 11
 zip-codes = "90039"
 [details]
 bathrooms = "3"

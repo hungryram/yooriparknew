@@ -11,6 +11,7 @@ states = "California"
 status = "Sold"
 title = "4008 Weslin Ave"
 url = ""
+weight = 13
 zip-codes = "91423"
 [details]
 bathrooms = "3"

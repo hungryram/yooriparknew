@@ -11,6 +11,7 @@ status = "Sold"
 title = "1530 N Curson Ave"
 url = ""
 zip-codes = "90046"
+weight = 2
 [details]
 bathrooms = "2"
 bedrooms = "3"

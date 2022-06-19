@@ -11,6 +11,7 @@ states = "California"
 status = "Sold"
 title = "4122 Rhodes Ave."
 url = ""
+weight = 14
 zip-codes = "91604"
 [details]
 bathrooms = "3.5"

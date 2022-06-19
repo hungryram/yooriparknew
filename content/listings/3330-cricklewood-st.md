@@ -11,6 +11,7 @@ status = "Sold"
 title = "3330 Cricklewood St"
 url = ""
 zip-codes = "90505"
+weight = 10
 [details]
 bathrooms = "1"
 bedrooms = "3"

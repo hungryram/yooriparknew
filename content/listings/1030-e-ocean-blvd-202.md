@@ -12,6 +12,7 @@ status = "Sold"
 title = "1030 E Ocean Blvd #202"
 url = ""
 zip-codes = "90802"
+weight = 10
 [details]
 bathrooms = "1"
 bedrooms = ""

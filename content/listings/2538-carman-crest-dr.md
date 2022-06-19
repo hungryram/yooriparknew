@@ -12,6 +12,7 @@ title = "2538 Carman Crest Dr."
 url = ""
 zip-codes = "90068"
 revel_re = true
+weight = 7
 [details]
 bathrooms = "4"
 bedrooms = "3"

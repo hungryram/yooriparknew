@@ -12,6 +12,7 @@ status = "Active"
 title = "1895 Rising Glen Rd"
 url = ""
 zip-codes = "90069"
+weight = 4
 [details]
 bathrooms = "9"
 bedrooms = "5"

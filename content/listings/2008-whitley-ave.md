@@ -12,6 +12,7 @@ status = "Sold"
 title = "2008 Whitley Ave"
 url = ""
 zip-codes = "90068"
+weight = 5
 [details]
 bathrooms = "4"
 bedrooms = "4"
