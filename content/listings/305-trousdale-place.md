@@ -2,7 +2,7 @@
 all_sold = false
 cities = "BEVERLY HILLS"
 date = ""
-featured = ""
+featured = "Featured"
 price = "$45,000,000"
 properties = ""
 schema_price = ""
