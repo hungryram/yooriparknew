@@ -2,14 +2,14 @@
 all_sold = false
 cities = "LOS ANGELES"
 date = ""
-featured = ""
+featured = "Featured"
 price = "$78,000,000"
 properties = ""
 schema_price = ""
 short_title = "10697 SOMMA WAY"
 states = "California"
 status = "Active"
-title = " PREV NEXT  10697 SOMMA WAY"
+title = "10697 SOMMA WAY"
 url = ""
 zip-codes = "90077"
 [details]
