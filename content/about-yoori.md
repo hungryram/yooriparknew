@@ -7,7 +7,7 @@ name = "About"
 weight = 3
 
 +++
-Yoori graduated from the University of Washington with a Bachelor’s in Communications. With nearly two decades worth of experience in both sales and customer service, she is not only results-oriented but also deeply values building rapport with each and every one of her clients.
+Yoori graduated from the University of Washington with a Bachelor’s degree. She is strongly results-oriented and deeply values rapport with each and every one of her clients, successfully building on two decades of experience in both sales and customer service with multiple accolades.
 
 Throughout her career, she has been consistently recognized for various awards. At a national bank, she quickly became the top teller in the district and second in the region. Her clients appreciated her no-nonsense approach as she tailored her recommendations unique to the individual and/or entity. Many years and career fields later, Yoori tried the luxury auto industry and once again was among the top three salespersons just within the first year and continued to remain among the top five. Her top scores, ratings, and reviews can all attest to her success, which she attributes to her own expertise and genuine care.
 
