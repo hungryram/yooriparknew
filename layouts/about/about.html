@@ -5,16 +5,11 @@
 <div class="uk-section" uk-scrollspy="cls: uk-animation-fade; delay: 300;">
     <div class="uk-container main__content">
         <h2 class="uk-text-center uk-margin-large uk-h1">Why work with Yoori Park</h2>
-        <div class="uk-grid uk-grid-large">
-            <div class="uk-width-expand@s uk-text-center">
-                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1608179569/yoori-park/yooripark/yooripark_umrgao.jpg" alt="Yoori Park" width="300">
-            </div>
-            <div class="uk-width-3-5@s">
-                {{ .Content }}
-                <div class="uk-margin-large-top">
-                    <a href="mailto:{{ .Site.Data.profile.contact_information.email }}" class="uk-link-text uk-text-bold"><svg width="50" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="arrow-right"><line fill="none" stroke="#000" x1="4" y1="9.5" x2="80" y2="9.5"></line></svg> Email</a>
-                    <a href="tel:{{ .Site.Data.profile.contact_information.cell }}" class="uk-link-text uk-text-bold"><svg width="50" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="arrow-right"><line fill="none" stroke="#000" x1="4" y1="9.5" x2="80" y2="9.5"></line></svg> Call</a>
-                </div>
+        <div class="uk-width-expand">
+            {{ .Content }}
+            <div class="uk-margin-large-top">
+                <a href="mailto:{{ .Site.Data.profile.contact_information.email }}" class="uk-link-text uk-text-bold"><svg width="50" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="arrow-right"><line fill="none" stroke="#000" x1="4" y1="9.5" x2="80" y2="9.5"></line></svg> Email</a>
+                <a href="tel:{{ .Site.Data.profile.contact_information.cell }}" class="uk-link-text uk-text-bold"><svg width="50" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="arrow-right"><line fill="none" stroke="#000" x1="4" y1="9.5" x2="80" y2="9.5"></line></svg> Call</a>
             </div>
         </div>
     </div>
