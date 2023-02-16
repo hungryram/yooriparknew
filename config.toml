@@ -3,25 +3,29 @@ enableRobotsTXT = "true"
 languageCode = "en-us"
 summaryLength = 25
 [[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
+name = "About"
+url = "/about"
+weight = 3
 [[menu.main]]
-name = "Properties"
+name = "Sold Listings"
+parent = "Properties"
+url = "/status/sold/"
 weight = 2
-[[menu.main]]
-name = "Buyers & Sellers"
-weight = 4
 [[menu.main]]
 name = "Exclusive Listings"
 parent = "Properties"
 url = "/featured/featured/"
 weight = 1
 [[menu.main]]
-name = "Sold Listings"
-parent = "Properties"
-url = "/status/sold/"
+name = "Buyers & Sellers"
+weight = 4
+[[menu.main]]
+name = "Properties"
 weight = 2
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 [taxonomies]
