@@ -20,7 +20,7 @@ bathrooms = "8"
 bedrooms = "8"
 garage = ""
 lot_size = ""
-mls_number = "22-126849"
+mls_number = "23-278529"
 square_footage = "16,000"
 year_built = "1923"
 
@@ -29,22 +29,11 @@ listing_agent = [ ]
 
 [photos]
 gallery = [
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_1_eezev9.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_15_0_gbbg6t.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_14_0_zy9x38.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_13_0_rwxd2w.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_12_0_mt0udh.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_11_0_yqizsz.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_10_0_gqt05e.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602916/yoori-park/yooripark/22-126849_9_0_glqbg6.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_8_0_cwwyt8.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_7_0_tkdfov.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_6_0_h4ygeb.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_5_0_g3wxts.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_4_0_i9qo1p.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_3_1_wfy2wp.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602916/yoori-park/yooripark/22-126849_2_1_cuumdu.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_1_1_wl5cnd.jpg"
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034611/yoori-park/yooripark/702-N-Crescent-Dr/cb50dbcddefbf6910cd8f8a1eabc315f-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034497/yoori-park/yooripark/702-N-Crescent-Dr/ad9916bd26c5fc897f6d4f68dcc9b044-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034495/yoori-park/yooripark/702-N-Crescent-Dr/f39ff8dfb7ea36b770009104920ef88a-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034492/yoori-park/yooripark/702-N-Crescent-Dr/6686804eeedd4fbe09c47eebbeb33816-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034489/yoori-park/yooripark/702-N-Crescent-Dr/30fe03a264374e42ce034a37acc4a034-uncropped_scaled_within_1536_1152.webp"
 ]
 
 [search_engine_optimization]
