@@ -2,6 +2,7 @@
 all_sold = false
 cities = "Somis"
 date = ""
+draft = true
 featured = "Featured"
 price = "$4,950,000"
 properties = ""
