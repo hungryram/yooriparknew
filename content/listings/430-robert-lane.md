@@ -2,6 +2,7 @@
 all_sold = false
 cities = "BEVERLY HILLS"
 date = ""
+draft = true
 featured = "Featured"
 price = "$22,000,000"
 properties = ""
