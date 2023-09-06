@@ -2,6 +2,7 @@
 all_sold = false
 cities = "LOS ANGELES"
 date = ""
+draft = true
 featured = "Featured"
 price = "$78,000,000"
 properties = ""
