@@ -2,6 +2,7 @@
 all_sold = false
 cities = "Pacific Palisades"
 date = ""
+draft = true
 featured = ""
 price = "$14,000,000"
 properties = "Single Family"
