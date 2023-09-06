@@ -20,7 +20,7 @@ bathrooms = "15"
 bedrooms = "18"
 garage = ""
 lot_size = ""
-mls_number = "22-126849"
+mls_number = "23-280757"
 square_footage = "11,022"
 year_built = "2022"
 
@@ -29,22 +29,18 @@ listing_agent = [ ]
 
 [photos]
 gallery = [
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_1_eezev9.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_15_0_gbbg6t.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_14_0_zy9x38.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_13_0_rwxd2w.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_12_0_mt0udh.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_11_0_yqizsz.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_10_0_gqt05e.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602916/yoori-park/yooripark/22-126849_9_0_glqbg6.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_8_0_cwwyt8.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_7_0_tkdfov.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_6_0_h4ygeb.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_5_0_g3wxts.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_4_0_i9qo1p.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_3_1_wfy2wp.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602916/yoori-park/yooripark/22-126849_2_1_cuumdu.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_1_1_wl5cnd.jpg"
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034294/yoori-park/yooripark/1408%20pointsettia%20pl/f7506e9a39a4f4e70a1d8b8b9adeb28a-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034291/yoori-park/yooripark/1408%20pointsettia%20pl/2f59845b898762fa26a0a1a1f32ba319-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034289/yoori-park/yooripark/1408%20pointsettia%20pl/25b827f885b0d3242c62bc750b70259d-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034286/yoori-park/yooripark/1408%20pointsettia%20pl/45bd3e48dfa96389de62d498090014f2-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034284/yoori-park/yooripark/1408%20pointsettia%20pl/2de7fab487456f4b4fd5144775433b28-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034282/yoori-park/yooripark/1408%20pointsettia%20pl/0a7f78e42e090aaa7a62dfd3fa30db0a-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034278/yoori-park/yooripark/1408%20pointsettia%20pl/b766258b80c188c6324201daef7d4688-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034276/yoori-park/yooripark/1408%20pointsettia%20pl/cbba3b40c2ddbbca2a3a79428ce05e6c-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034273/yoori-park/yooripark/1408%20pointsettia%20pl/3581cf520c8248802f6d7b474d42f40f-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034271/yoori-park/yooripark/1408%20pointsettia%20pl/08b42831bd22446c82a8d3c38f1468be-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034265/yoori-park/yooripark/1408%20pointsettia%20pl/fe785a2a0d2f6c84e8662b2e1d2c9fb4-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694034263/yoori-park/yooripark/1408%20pointsettia%20pl/dde399c6fb14d2f20c3b0415d0e86878-uncropped_scaled_within_1536_1152.webp"
 ]
 
 [search_engine_optimization]
