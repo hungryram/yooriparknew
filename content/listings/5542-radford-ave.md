@@ -1,6 +1,7 @@
 +++
 cities = "Valley Village"
 date = ""
+draft = true
 featured = ""
 price = "$825,000"
 properties = ""
