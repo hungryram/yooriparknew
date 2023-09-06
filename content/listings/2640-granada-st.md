@@ -2,6 +2,7 @@
 all_sold = false
 cities = "Los Angeles"
 date = ""
+draft = true
 featured = ""
 off_market = true
 price = "1,160,000"
