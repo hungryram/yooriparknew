@@ -2,7 +2,7 @@
 all_sold = false
 cities = "Los Angeles"
 date = ""
-featured = ""
+featured = "Featured"
 price = "$10,990,000"
 properties = ""
 schema_price = ""
