@@ -2,6 +2,7 @@
 all_sold = false
 cities = "West Hollywood"
 date = ""
+draft = true
 featured = "Featured"
 price = "$1,950,000"
 properties = ""
