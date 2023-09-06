@@ -27,22 +27,26 @@ listing_agent = [ ]
 
 [photos]
 gallery = [
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_1_eezev9.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_15_0_gbbg6t.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_14_0_zy9x38.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_13_0_rwxd2w.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_12_0_mt0udh.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_11_0_yqizsz.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602913/yoori-park/yooripark/22-126849_10_0_gqt05e.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602916/yoori-park/yooripark/22-126849_9_0_glqbg6.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_8_0_cwwyt8.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_7_0_tkdfov.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_6_0_h4ygeb.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_5_0_g3wxts.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_4_0_i9qo1p.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_3_1_wfy2wp.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602916/yoori-park/yooripark/22-126849_2_1_cuumdu.jpg",
-  "https://res.cloudinary.com/hungryram19/image/upload/v1648602912/yoori-park/yooripark/22-126849_1_1_wl5cnd.jpg"
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028779/yoori-park/yooripark/1447%20n%20martel%20ave/f7310b1eca414f6b74e4ad2a9bf84a0c-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028777/yoori-park/yooripark/1447%20n%20martel%20ave/2be109e7f2f697deebc2fc779e8ffe09-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028775/yoori-park/yooripark/1447%20n%20martel%20ave/eea4da7a391e99eaafe4408a2896da18-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028772/yoori-park/yooripark/1447%20n%20martel%20ave/515248bb22073422075ddb12f75e005a-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028770/yoori-park/yooripark/1447%20n%20martel%20ave/259ee62a1d3b96c6e6a362a10e58c0a9-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028768/yoori-park/yooripark/1447%20n%20martel%20ave/8cca8f652191d944b5ea0136ddf4baf9-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028765/yoori-park/yooripark/1447%20n%20martel%20ave/e493216fd59acb662228eebb24e3e4fa-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028763/yoori-park/yooripark/1447%20n%20martel%20ave/53083abcd3db3a5f4004a12baa30ac14-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028759/yoori-park/yooripark/1447%20n%20martel%20ave/4883ee51fa174f29f6d13c99d6225013-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028757/yoori-park/yooripark/1447%20n%20martel%20ave/335f570fa96ac6c2473d0eacc923ec40-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028755/yoori-park/yooripark/1447%20n%20martel%20ave/cfaea8e424b759bd0843dcdd5ad50741-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028753/yoori-park/yooripark/1447%20n%20martel%20ave/95d5613efa2d7aaca829080d65c68cb1-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028751/yoori-park/yooripark/1447%20n%20martel%20ave/bda28d88f5ea855c36137f7af38ad155-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028749/yoori-park/yooripark/1447%20n%20martel%20ave/0462942a80c6e954bcb3eb6de6f0adde-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028747/yoori-park/yooripark/1447%20n%20martel%20ave/f1f9a136b129615a4d01a37d088de136-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028744/yoori-park/yooripark/1447%20n%20martel%20ave/50ff2b05d5787bc1bccb1218a4a6732d-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028742/yoori-park/yooripark/1447%20n%20martel%20ave/42d475241dec97073d1bb46392f265a5-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028739/yoori-park/yooripark/1447%20n%20martel%20ave/a4bf753e368de66a5a49ceabee44fe4d-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028735/yoori-park/yooripark/1447%20n%20martel%20ave/02eb2f6140af96fd754f6b254e6e702c-uncropped_scaled_within_1536_1152.webp",
+  "https://res.cloudinary.com/hungryram19/image/upload/v1694028732/yoori-park/yooripark/1447%20n%20martel%20ave/7e782e57bec79206538f11d013b5882a-cc_ft_1536.webp"
 ]
 
 [search_engine_optimization]
