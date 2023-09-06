@@ -2,6 +2,7 @@
 all_sold = false
 cities = "Los Angeles"
 date = ""
+draft = true
 featured = ""
 price = ""
 properties = ""
