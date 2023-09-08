@@ -12,7 +12,7 @@ states = "California"
 status = ""
 title = "1355 Berea Pl"
 url = ""
-zip-codes = "90802"
+zip-codes = "90272"
 weight = 10
 
 [details]
