@@ -1,7 +1,7 @@
 +++
 all_sold = false
 cities = "Pacific Palisades"
-draft = true
+draft = false
 date = ""
 featured = "Featured"
 price = "$8,950,000"
