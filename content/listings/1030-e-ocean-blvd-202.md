@@ -1,7 +1,7 @@
 +++
 all_sold = false
 cities = "Long Beach"
-draft = false
+draft = true
 date = ""
 featured = ""
 price = "$385,000"
