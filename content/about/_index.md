@@ -2,6 +2,7 @@
 meta_description = ""
 title = "About Yoori"
 title_tag = ""
+banner = "https://res.cloudinary.com/hungryram19/image/upload/v1694711914/yoori-park/yooripark/701-Nimes_FullRes_29-opt.jpg"
 +++
 Yoori graduated from the University of Washington with a Bachelor’s in Communications. With over 18 years of training and experience in both sales and customer service, she is not only results-oriented but also deeply values building rapport with each and every one of her clients.
 
