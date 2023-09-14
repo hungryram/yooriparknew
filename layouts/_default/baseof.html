@@ -21,7 +21,7 @@
     </div>
 </div>
 {{ else }}
-<div class="uk-background-cover uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle page-banner" style="background: url(https://res.cloudinary.com/hungryram19/image/upload/v1694709429/yoori-park/yooripark/701-Nimes_FullRes_31-cropped.jpg)no-repeat center;background-size:cover">
+<div class="uk-background-cover uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle page-banner" style="background: url({{ if .Params.banner }}{{ .Params.banner }}{{ else }}https://res.cloudinary.com/hungryram19/image/upload/v1694709429/yoori-park/yooripark/701-Nimes_FullRes_31-cropped.jpg{{ end }})no-repeat center;background-size:cover">
     <div class="uk-overlay-primary uk-position-cover"></div>
         <div class="uk-padding uk-text-center uk-container uk-card">
             <h1 class="uk-text-uppercase uk-white uk-text-center uk-h1">{{ .Title }}</h1>
