@@ -13,7 +13,7 @@ status = "Sold"
 title = "4543 Farmdale Ave"
 url = ""
 zip-codes = "91602"
-weight = 10
+weight = "2"
 
 [details]
 bathrooms = "5"

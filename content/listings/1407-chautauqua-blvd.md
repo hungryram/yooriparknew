@@ -14,7 +14,7 @@ title = "1407 Chautauqua Blvd"
 url = ""
 zip-codes = "90272"
 transparent = true
-weight = 1
+weight = "1"
 
 [details]
 bathrooms = "8"

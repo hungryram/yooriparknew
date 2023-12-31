@@ -12,7 +12,6 @@ status = "Sold"
 title = "623 Rosemont Ave"
 url = ""
 zip-codes = "90026"
-weight = 3
 
 [details]
 bathrooms = "1"
