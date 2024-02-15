@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="uk-section">
+    <div class="uk-container">
+        <h1>Coming Soon</h1>
+            {{ range .Pages }}
+                <a href="{{ .Permalink }}" class="uk-link-text uk-text-large">
+                     {{ .Title }}
+                </a>         
+            {{ end }}
+    </div>
+</div>
+{{ end }}

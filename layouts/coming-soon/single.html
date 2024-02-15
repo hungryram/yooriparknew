@@ -1,0 +1,37 @@
+{{ partial "global/head" . }}
+{{ partial "global/navbar" . }}
+<div class="uk-section uk-background-cover" style="background-image:url(/assets/black3.jpg)">
+    <div class="uk-container uk-text-center">
+        <img src="\assets\coming-soon\RITZ-2024-LA-LIVE-RESIDENCES-AMENITIES-2.jpg" alt="">
+        <h1 style="color:#fff">{{ .Title }}</h1>
+        <h2 style="color:#fff">{{ .Params.subtitle }}</h2>
+        <p style="color:#fff;font-size:20px">{{ .Params.text }}</p>
+    </div>
+</div>
+<div class="uk-section">
+    <div class="uk-container uk-text-center">
+        <h2>{{ .Params.below_hero }}</h2>
+    </div>
+    <div class="uk-container-large uk-text-center uk-margin-auto uk-margin-large-top">
+        <ul class="js-filter uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
+            {{ range .Params.photos }}
+            <li>
+                <div class="uk-card uk-card-default uk-card-body uk-cover-container" uk-lightbox>
+                    <a href="{{ .image }}" class="lightbox" data-caption="{{ .caption }}">
+                        <canvas class="canvas" height="300"></canvas>
+                        <img data-src="{{ .image }}" alt="{{ .caption }}" uk-cover uk-img>
+                    </a>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+<script>
+    var tr = document.getElementsByTagName('canvas');
+
+    for(i=0;i<tr.length;i++){
+        if(i%2==0) tr[i].style.height = '400px';
+    }
+</script>
+{{ partial "global/footer" . }}
