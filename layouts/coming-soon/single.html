@@ -1,6 +1,6 @@
 {{ partial "global/head" . }}
 {{ partial "global/navbar" . }}
-<div class="uk-section uk-background-cover" style="background-image:url(/assets/black3.jpg)">
+<!-- <div class="uk-section uk-background-cover" style="background-image:url(/assets/black3.jpg)">
     <div class="uk-container uk-text-center">
         <img src="\assets\coming-soon\RITZ-2024-LA-LIVE-RESIDENCES-AMENITIES-2.jpg" alt="">
         <h1 style="color:#fff">{{ .Title }}</h1>
@@ -25,6 +25,16 @@
             </li>
             {{ end }}
         </ul>
+    </div>
+</div> -->
+<div>
+    <div class="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle uk-height-viewport" style="background-image: url({{ .Params.thumbnail }});">
+    <div class="uk-text-center" style="position:relative;z-index: 10;color:#fff">
+        <h3 style="color:#fff">Coming Soon</h3>
+        <h1 style="color:#fff;font-size:4rem">{{ .Title }}</h1>
+        <p class="uk-h3" style="color:#fff">{{ .Params.text }}</p>
+    </div>
+        <div class="uk-overlay-primary uk-position-cover"></div>
     </div>
 </div>
 <script>
