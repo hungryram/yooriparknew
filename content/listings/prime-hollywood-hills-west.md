@@ -3,18 +3,16 @@ all_sold = false
 cities = "Los Angeles"
 date = ""
 draft = false
-featured = ""
-off_market = true
-price = "$1,200,000"
-properties = "Multi-Family"
+featured = "Featured"
+price = "$1,400,000"
+properties = ""
 schema_price = ""
-short_title = "Investment Opportunity "
+short_title = "Prime Hollywood Hills West"
 states = "California"
 status = "Sold"
-title = "2640 Granada St"
+title = "Development Opportunity "
 url = ""
-zip-codes = "90065"
-weight = 9
+zip-codes = ""
 [details]
 bathrooms = ""
 bedrooms = ""
@@ -27,7 +25,7 @@ year_built = ""
 [listing_agent]
 listing_agent = []
 [photos]
-gallery = ["https://res.cloudinary.com/hungryram19/image/upload/v1634591827/yoori-park/yooripark/granada_main_house-2_ent49i.jpg", "https://res.cloudinary.com/hungryram19/image/upload/v1634274654/yoori-park/yooripark/Granada_1_bedroom-17_xymeyl.jpg"]
+gallery = ["https://res.cloudinary.com/hungryram19/image/upload/v1710920464/yoori-park/yooripark/Prime%20Hollywood%20Hills%20West/HaslamTerphoto_1.jpg"]
 [search_engine_optimization]
 meta_description = ""
 title_tag = ""
@@ -54,4 +52,3 @@ interior_rooms = []
 show_interior_details = false
 
 +++
-This two-unit property is centrally located in Cypress Park alongside Mount Washington. Providing easy access to some of Los Angeles major freeways the 5, 110, and the 2 freeway. The property is within walking distance to Rio De Los Angeles State Park, minutes from the Dodger Stadium, Downtown LA, China Town, and more!

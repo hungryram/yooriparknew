@@ -1,7 +1,7 @@
 +++
 cities = "Los Angeles"
 date = ""
-draft = false
+draft = true
 featured = ""
 price = "$2,875,000"
 properties = ""
