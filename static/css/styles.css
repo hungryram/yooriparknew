@@ -297,16 +297,16 @@ ul.uk-nav-parent-icon>.uk-parent>a::after {
 .mobile__wrapper ul li a {
     font-size: 1.5rem;
     margin: 10px 0;
-    color: #000;
+    color: #fff;
     transition: .3s;
 }
 
 .mobile__wrapper ul.uk-nav-default .uk-nav-sub a {
-    color: #000;
+    color: #fff;
 }
 
 div.uk-modal-dialog {
-    background: rgb(254 254 254 / 95%);
+    background: rgb(0 0 0 / 95%);
     background-blend-mode: overlay;
     background-size:cover;
 }
