@@ -1,15 +1,15 @@
 ---
 header:
   top_header_color: ''
-  header_background_color: ''
+  header_background_color: '#000'
   transparent_background: false
-  enable_white_text: false
+  enable_white_text: true
   enable_white_text_top: false
 branding:
   site_title: Yoori Park
   white_logo: https://res.cloudinary.com/hungryram19/image/upload/v1632376724/yoori-park/yooripark/yoori-park-logo.png
-  dark_logo: https://res.cloudinary.com/hungryram19/image/upload/v1668138870/yoori-park/yooripark/yooriparklogo_ymaczj.png
-  favicon: https://res.cloudinary.com/hungryram19/image/upload/v1668138870/yoori-park/yooripark/yooriparklogo_ymaczj.png
+  dark_logo: "./assets/yoori-new-white-logo2.png"
+  favicon: "./assets/dark.png"
   logo_width: 
   logo: ''
 colors:

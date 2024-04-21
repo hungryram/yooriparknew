@@ -230,11 +230,11 @@ ul.uk-navbar-dropdown-nav>li.uk-active>a {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: rgb(0, 0, 0);
+    color: #fff;
     }
 
 .uk-navbar-sticky ul.uk-navbar-nav>li>a:not(.top-navbar a) {
-    color: #000;
+    color: #fff;
 }
 
 
@@ -255,11 +255,11 @@ div.uk-navbar-dropdown ul li {
     padding: 5px 10px;
 }
 
-div.uk-navbar-dropdown ul li:hover {
+/* div.uk-navbar-dropdown ul li:hover {
     background: #000;
     transition: .3s;
     color: #fff;
-}
+} */
 
 div.uk-navbar-dropdown ul li:hover a {
     color: #fff;

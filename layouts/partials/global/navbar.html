@@ -4,7 +4,7 @@
 {{ $headerSocial := .Site.Data.profile.social_media }}
 {{ $social := .Site.Data.profile.social_media }}
 
-    <div class="uk-visible@s{{ if $.IsHome }} uk-animation-slide-top-small{{ end }}" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: top: 100" style="background: white;">
+    <div class="uk-visible@s{{ if $.IsHome }} uk-animation-slide-top-small{{ end }}" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: top: 100" style="background: black;">
         <nav class="main-nav">
             <div class="uk-container uk-container-large">
                 <div uk-navbar>
@@ -23,7 +23,7 @@
                                 <div class="uk-navbar-dropdown">
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
                                         {{ range .Children }}
-                                        <li class="uk-active"><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+                                        <li class="uk-active"><a href="{{ .URL | absURL }}" style="color:#000">{{ .Name }}</a></li>
                                         {{ end }}
                                     </ul>
                                 </div>
