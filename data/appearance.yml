@@ -8,8 +8,8 @@ header:
 branding:
   site_title: Yoori Park
   white_logo: https://res.cloudinary.com/hungryram19/image/upload/v1632376724/yoori-park/yooripark/yoori-park-logo.png
-  dark_logo: "./assets/yoori-new-white-logo2.png"
-  favicon: "./assets/dark.png"
+  dark_logo: "https://yooripark.com/assets/yoori-new-white-logo2.png"
+  favicon: "https://yooripark.com/assets/dark.png"
   logo_width: 
   logo: ''
 colors:

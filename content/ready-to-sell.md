@@ -11,6 +11,4 @@ There is more to listing and selling a home than just a few posts here and a few
 
 Yoori’s extensive background in marketing and sales is the key to successfully listing and selling your home. Her foundational knowledge and understanding of marketing combined with her technical skills and experience is what strengthens her ability to utilize the digital platform to its fullest potential and expand the prospective client base.
 
-Contact Yoori today and book an appointment for an Action Plan to sell your home!​
-
-![](https://res.cloudinary.com/hungryram19/image/upload/v1608174592/yoori-park/yooripark/newbrochure1-1024x663_wsycix.jpg)![](https://res.cloudinary.com/hungryram19/image/upload/v1608174603/yoori-park/yooripark/newbrochure2-1024x678_sr0o5m.jpg)![](https://res.cloudinary.com/hungryram19/image/upload/v1608174612/yoori-park/yooripark/newbrochure3-1024x637_cvfcdr.jpg)
+[Contact Yoori](/contact) today and book an appointment for an Action Plan to sell your home!​
