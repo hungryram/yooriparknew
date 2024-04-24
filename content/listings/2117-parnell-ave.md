@@ -4,12 +4,12 @@ cities = "Los Angeles"
 date = ""
 draft = false
 featured = "Featured"
-price = ""
+price = "$2,450,000"
 properties = ""
 schema_price = ""
 short_title = ""
 states = "California"
-status = "Active"
+status = "Sold"
 title = "2117 Parnell Ave"
 url = ""
 zip-codes = "90025"
@@ -20,14 +20,13 @@ garage = ""
 hoa = ""
 lot_size = ""
 mls_number = ""
-square_footage = "6,766"
+square_footage = "3,478"
 year_built = ""
 [listing_agent]
 listing_agent = []
 [photos]
 gallery = [
     "https://res.cloudinary.com/hungryram19/image/upload/v1710921970/yoori-park/yooripark/2117-Parnell/4-web-or-mls-DSC07769.jpg",
-    "https://res.cloudinary.com/hungryram19/image/upload/v1710921955/yoori-park/yooripark/2117-Parnell/47-web-or-mls-DSC07974.jpg",
 ]
 [search_engine_optimization]
 meta_description = ""
