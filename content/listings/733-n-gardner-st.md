@@ -12,7 +12,7 @@ status = "Sold"
 title = "733 N Gardner St"
 url = ""
 zip-codes = "90046"
-
+weight="7"
 [details]
 bathrooms = "2"
 bedrooms = "3"

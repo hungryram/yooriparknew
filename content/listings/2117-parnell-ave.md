@@ -13,6 +13,7 @@ status = "Sold"
 title = "2117 Parnell Ave"
 url = ""
 zip-codes = "90025"
+weight="2"
 [details]
 bathrooms = "3.5"
 bedrooms = "3"

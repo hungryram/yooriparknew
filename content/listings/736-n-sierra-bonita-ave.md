@@ -12,7 +12,7 @@ status = "Sold"
 title = "736 N Sierra Bonita Ave"
 url = ""
 zip-codes = "90046"
-
+weight="5"
 [details]
 bathrooms = "2"
 bedrooms = "3"

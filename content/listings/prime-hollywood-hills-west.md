@@ -13,6 +13,7 @@ status = "Sold"
 title = "Development Opportunity "
 url = ""
 zip-codes = ""
+weight="8"
 [details]
 bathrooms = ""
 bedrooms = ""

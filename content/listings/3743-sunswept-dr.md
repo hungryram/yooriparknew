@@ -11,7 +11,7 @@ states = ""
 status = "Sold"
 title = "3743 Sunswept Dr."
 url = ""
-weight = "3"
+weight = "4"
 zip-codes = "91604"
 
 [details]

@@ -12,6 +12,7 @@ status = "Sold"
 title = "853 – 859 ½ Hyperion Ave"
 url = ""
 zip-codes = "90029"
+weight="9"
 [details]
 bathrooms = "3"
 bedrooms = "3.5"
