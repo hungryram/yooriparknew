@@ -1,7 +1,7 @@
 +++
 all_sold = false
 cities = "West Hollywood"
-draft = false
+draft = true
 date = ""
 featured = "Featured"
 price = "$3,999,000"

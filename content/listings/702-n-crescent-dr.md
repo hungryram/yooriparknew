@@ -1,7 +1,7 @@
 +++
 all_sold = false
 cities = "Beverly Hills"
-draft = false
+draft = true
 date = ""
 featured = "Featured"
 price = "$9,995,000"
