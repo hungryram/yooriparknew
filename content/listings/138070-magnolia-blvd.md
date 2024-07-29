@@ -13,6 +13,7 @@ status = "Sold"
 title = "13807 Magnolia Blvd"
 url = ""
 zip-codes = "91423"
+weight="2"
 [details]
 bathrooms = "6"
 bedrooms = "5"
