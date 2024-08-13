@@ -5,7 +5,7 @@ featured = "featured"
 price = "$24,500,000"
 properties = "Featured"
 schema_price = ""
-short_title = "Nightingale"
+short_title = ""
 states = ""
 status = "Coming Soon"
 title = "Undisclosed Location"
@@ -60,5 +60,3 @@ This opulent mid-century-inspired private residence provides a seamless experien
 The open floor plan, bathed in natural light, connects the Miele gourmet kitchen, formal dining room, and expansive living room adorned with a Du Chateau wood slat ceiling and clear-story windows. Outside, the pool pavilion boasts a covered patio, fireplace, and a pool and spa with porcelain tiles. The primary suite indulges in dual baths, closets, and romantic city views, while three ensuite guest rooms offer privacy and access to garden patios.
 
 The lower level adds to the allure with additional guest quarters, a spacious great room, a temperature-controlled wine display, billiards, an office, a home theater, and a 1000 sq ft wellness spa featuring a sauna, massage room, steam shower, and dipping/plunge pool. The property also features a climate-controlled 8-car garage with a turnstile, glass elevator, putting green, Elan smart home automation with top-notch security, and a backup generator.
-
-Experience the pinnacle of contemporary luxury living amidst nature's beauty at this Hollywood Hills masterpiece.
