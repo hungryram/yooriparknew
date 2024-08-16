@@ -31,7 +31,7 @@
                     <div class="uk-white">
                         <h3 class="uk-white uk-h4 uk-text-normal">{{ .Params.short_title }}</h3>
                         <span class="grid-address uk-display-block">{{ .Title }}</span>
-                        <span class="grid-address uk-display-block">{{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}</span>
+                        {{ if .Params.cities }} <span class="grid-address uk-display-block">{{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}</span> {{ end }}
                     </div>
                 </div>
             </div>

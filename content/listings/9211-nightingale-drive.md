@@ -25,7 +25,7 @@ year_built = ""
 listing_agent = []
 [photos]
 gallery = [
-  "/assets/nightingale/hres-1.jpeg"
+  "/assets/nightingale/hres-3.jpeg"
 ]
 
 [search_engine_optimization]
