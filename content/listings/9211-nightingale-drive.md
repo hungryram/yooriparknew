@@ -1,7 +1,7 @@
 +++
 cities = ""
 date = ""
-featured = "featured"
+featured = ""
 price = "$23,000,000"
 properties = ""
 schema_price = ""
