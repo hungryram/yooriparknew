@@ -1,16 +1,16 @@
 +++
-cities = "Hollywood "
+cities = ""
 date = ""
-featured = "featured"
-price = "$24,500,000"
-properties = "Featured"
+featured = ""
+price = "$23,000,000"
+properties = ""
 schema_price = ""
-short_title = "Nightingale"
-states = "California"
-status = "Coming Soon"
-title = "9211 Nightingale Drive"
-url = ""
-zip-codes = "90069"
+short_title = ""
+states = ""
+status = "Sold"
+title = "Undisclosed Location"
+url = "listings/undisclosed-location"
+zip-codes = ""
 weight="1"
 [details]
 bathrooms = "9"
@@ -25,32 +25,7 @@ year_built = ""
 listing_agent = []
 [photos]
 gallery = [
-  "/assets/nightingale/hres-1.jpeg",
-  "/assets/nightingale/hres-2.jpeg",
-  "/assets/nightingale/hres-3.jpeg",
-  "/assets/nightingale/hres-4.jpeg",
-  "/assets/nightingale/hres-5.jpeg",
-  "/assets/nightingale/hres-6.jpeg",
-  "/assets/nightingale/hres-7.jpeg",
-  "/assets/nightingale/hres-8.jpeg",
-  "/assets/nightingale/hres-9.jpeg",
-  "/assets/nightingale/hres-10.jpeg",
-  "/assets/nightingale/hres-11.jpeg",
-  "/assets/nightingale/hres-12.jpeg",
-  "/assets/nightingale/hres-13.jpeg",
-  "/assets/nightingale/hres-14.jpeg",
-  "/assets/nightingale/hres-15.jpeg",
-  "/assets/nightingale/hres-16.jpeg",
-  "/assets/nightingale/hres-17.jpeg",
-  "/assets/nightingale/hres-18.jpeg",
-  "/assets/nightingale/hres-19.jpeg",
-  "/assets/nightingale/hres-20.jpeg",
-  "/assets/nightingale/hres-21.jpeg",
-  "/assets/nightingale/hres-22.jpeg",
-  "/assets/nightingale/hres-23.jpeg",
-  "/assets/nightingale/hres-24.jpeg",
-  "/assets/nightingale/hres-25.jpeg",
-  "/assets/nightingale/hres-26.jpeg"
+  "/assets/nightingale/Birdstreetsphoto.png"
 ]
 
 [search_engine_optimization]
@@ -80,10 +55,5 @@ show_interior_details = false
 
 +++
 
-In the prestigious Bird Streets of Doheny Estates, this opulent mid-century-inspired private residence provides a seamless experience with carefully curated original art, designer furnishings, and exquisite finishes. Encompassing nearly 11,000 square feet, the home offers breathtaking views of city lights, the ocean, and the skyline from its main entertainment areas. Motorized Fleetwood pocket doors effortlessly merge indoor and outdoor living spaces, while the grand foyer features a stunning 20-foot glass atrium, a floating staircase wall, and oversized Italian mosaic travertine tiles.
+This luxurious mid-century-inspired private residence offers a seamless living experience, featuring meticulously curated original art, designer furnishings, and exquisite finishes. Spanning nearly 11,000 square feet, the home boasts breathtaking views of city lights, the ocean, and the skyline from its main entertainment areas. Motorized Fleetwood pocket doors create a harmonious blend of indoor and outdoor living spaces, while the grand foyer showcases a striking 20-foot glass atrium, a floating staircase wall, and oversized Italian mosaic travertine tiles.
 
-The open floor plan, bathed in natural light, connects the Miele gourmet kitchen, formal dining room, and expansive living room adorned with a Du Chateau wood slat ceiling and clear-story windows. Outside, the pool pavilion boasts a covered patio, fireplace, and a pool and spa with porcelain tiles. The primary suite indulges in dual baths, closets, and romantic city views, while three ensuite guest rooms offer privacy and access to garden patios.
-
-The lower level adds to the allure with additional guest quarters, a spacious great room, a temperature-controlled wine display, billiards, an office, a home theater, and a 1000 sq ft wellness spa featuring a sauna, massage room, steam shower, and dipping/plunge pool. The property also features a climate-controlled 8-car garage with a turnstile, glass elevator, putting green, Elan smart home automation with top-notch security, and a backup generator.
-
-Experience the pinnacle of contemporary luxury living amidst nature's beauty at this Hollywood Hills masterpiece.

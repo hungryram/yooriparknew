@@ -4,7 +4,11 @@
     <div class="uk-container uk-container-large">
         <div class="uk-card uk-card-body uk-text-center uk-margin-large-bottom">
             <h2 class="uk-h1">Location</h2>
+            {{if .Params.cities}}
             <h1 class="uk-h3">{{ .Title }}, {{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}</h1>
+            {{ else }}
+            <p>Undisclosed Location</p>
+            {{ end }}
         </div>
         <div class="uk-grid uk-grid-column-large">
             <div class="uk-width-1-2@s">
