@@ -34,7 +34,7 @@ home_sections:
     care.'
   button: Read more
   button_link: "/about-yoori"
-  image: https://res.cloudinary.com/hungryram19/image/upload/v1668746935/yoori-park/yooripark/yooriprofile_1_whutjb.jpg
+  image: '/assets/Yooriheadshot1.JPG'
   image_alt_tag: Yoori Park
   image_width: 400
 - template: sold-listings
