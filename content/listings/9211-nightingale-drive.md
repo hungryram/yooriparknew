@@ -25,7 +25,7 @@ year_built = ""
 listing_agent = []
 [photos]
 gallery = [
-  "/assets/nightingale/Birdstreetsphoto.png"
+  "/assets/nightingale/9211_NightingaleDrive_16_2048px2.jpg"
 ]
 
 [search_engine_optimization]
