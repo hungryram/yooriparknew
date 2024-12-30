@@ -13,6 +13,7 @@ status = "Sold"
 title = "3358 Coy Drive"
 url = ""
 zip-codes = "91423"
+weight=3
 [details]
 bathrooms = "4"
 bedrooms = "3"

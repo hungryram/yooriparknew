@@ -13,6 +13,7 @@ status = "Sold"
 title = "18207 Lake Encino Drive"
 url = ""
 zip-codes = "91316"
+weight=2
 [details]
 bathrooms = "5"
 bedrooms = "6"
