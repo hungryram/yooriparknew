@@ -26,10 +26,9 @@ year_built = ""
 listing_agent = []
 [photos]
 gallery = [
-  "/assets/7759skyhill_printres/001.JPG",
-  "/assets/7759skyhill_printres/002.JPG",
-  "/assets/7759skyhill_printres/003.JPG",
-  "/assets/7759skyhill_printres/004.JPG",
+  "/assets/7759skyhill_printres/0016.JPG",
+  "/assets/7759skyhill_printres/0017.JPG",
+  "/assets/7759skyhill_printres/0020.JPG",
 ]
 [search_engine_optimization]
 meta_description = ""
