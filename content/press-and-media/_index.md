@@ -5,6 +5,11 @@ title = "Press & Media"
 name = "Press and Media"
 weight = 5
 [[press]]
+heading = "International Property & Travel Magazine"
+image = "/assets/18207-encino-drive/Lake Encino Edits under 3k brighter-31 (1).jpg"
+link = "https://cdn.sanity.io/files/6q3fn21o/production/3cfc9086a2a796aebd23922054e5f38c7afaefed.pdf"
+link_label = "Read article"
+[[press]]
 body = "Yoori Park is featured in Disrupt Magazine. Read the full article to learn how Yoori has become successful in the luxury real estate market."
 heading = "Yoori Park Describes Her Incredible Journey to Success in Real Estate"
 image = "https://res.cloudinary.com/hungryram19/image/upload/v1641586044/yoori-park/yooripark/yooripark_hix0gw.jpg"
